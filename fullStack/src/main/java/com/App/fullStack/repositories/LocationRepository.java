@@ -6,4 +6,6 @@ import java.util.Optional;
 
 public interface LocationRepository extends MongoRepository<Location, String> {
     Optional<Location> findByLocationId(String locationId);
+
+    boolean existsByLocationId(Object object);
 }

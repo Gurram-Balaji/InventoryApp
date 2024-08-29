@@ -9,11 +9,11 @@ import com.App.fullStack.responseHandler.ApiResponse;
 import com.App.fullStack.service.SupplyService;
 import com.App.fullStack.utility.APIResponseForFoundOrNot;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/supply")
@@ -23,10 +23,11 @@ public class SupplyController {
         private SupplyService supplyService;
 
         @GetMapping
-        public ResponseEntity<ApiResponse<List<Supply>>> getAllSupplies() {
-                return APIResponseForFoundOrNot.generateResponse(supplyService.getAllSupplies(), "Supplies Found",
+        public ResponseEntity<ApiResponse<Page<Supply>>> getAllSupplies(@RequestParam(defaultValue = "0") int page,
+                        @RequestParam(defaultValue = "10") int size) {
+                return APIResponseForFoundOrNot.generateResponse(supplyService.getAllSupplies(page, size),
+                                "Supplies Found",
                                 "Supplies Not Found");
-                // ToDo: implement pagination
         }
 
         @GetMapping("/{supplyId}")

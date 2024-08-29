@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Location {
 
     @Id
-    private String id; // MongoDB will auto-generate this ID if you don't set it
+    private String id;
     private String locationId; // Mandatory field from the input
     private String locationDesc;
     private String locationType;

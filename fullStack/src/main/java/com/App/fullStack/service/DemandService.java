@@ -6,6 +6,8 @@ import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.Demand;
 import com.App.fullStack.pojos.DemandType;
 import com.App.fullStack.repositories.DemandRepository;
+import com.App.fullStack.utility.ItemAndLocationIDChecker;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,8 @@ public class DemandService {
 
     @Autowired
     private DemandRepository demandRepository;
+    @Autowired
+    private ItemAndLocationIDChecker itemAndLocationIDChecker;
 
     public List<Demand> getAllDemands() {
         try {
@@ -40,7 +44,8 @@ public class DemandService {
         List<Demand> demands = demandRepository.findByItemIdAndLocationId(itemId, locationId);
 
         if (demands.isEmpty()) {
-            throw new FoundException("Demands with ItemId: " + itemId + " and locationId " + locationId + " not found.");
+            throw new FoundException(
+                    "Demands with ItemId: " + itemId + " and locationId " + locationId + " not found.");
         }
 
         Map<DemandType, Integer> demandDetails = demands.stream()
@@ -53,7 +58,8 @@ public class DemandService {
         List<Demand> demands = demandRepository.findByDemandTypeAndLocationId(demandType, locationId);
 
         if (demands.isEmpty()) {
-            throw new FoundException("Demands with demandType " + demandType + " and locationId " + locationId + " not found.");
+            throw new FoundException(
+                    "Demands with demandType " + demandType + " and locationId " + locationId + " not found.");
         }
 
         Map<DemandType, Integer> demandCounts = demands.stream()
@@ -63,12 +69,13 @@ public class DemandService {
     }
 
     public Demand addDemand(Demand demand) {
-        if(demandRepository.findByDemandId(demand.getDemandId()).isPresent())
-            throw new FoundException("Demands with demandId " + demand.getDemandId() + " already exists.");
         if (!DemandType.isValid(demand.getDemandType().toString()))
             throw new FoundException("Demands with demandType: " + demand.getDemandType() + " not found.");
-        if (demandRepository.existsByItemIdAndLocationIdAndDemandType(demand.getItemId(), demand.getLocationId(), demand.getDemandType()))
-            throw new FoundException("Demands with itemId: " + demand.getItemId() + ", locationId: " + demand.getLocationId() + " and demandType: " + demand.getDemandType() + " already exists.");
+        if (demandRepository.existsByItemIdAndLocationIdAndDemandType(demand.getItemId(), demand.getLocationId(),
+                demand.getDemandType()))
+            throw new FoundException("Demands with itemId: " + demand.getItemId() + ", locationId: "
+                    + demand.getLocationId() + " and demandType: " + demand.getDemandType() + " already exists.");
+        itemAndLocationIDChecker.validateItemAndLocationID(demand.getItemId(), demand.getLocationId());
 
         return demandRepository.save(demand);
     }

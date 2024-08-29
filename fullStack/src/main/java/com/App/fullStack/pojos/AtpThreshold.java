@@ -13,7 +13,6 @@ public class AtpThreshold {
 
     @Id
     private String thresholdId; // MongoDB will auto-generate this field
-
     private String itemId;
     private String locationId;
     private int minThreshold;

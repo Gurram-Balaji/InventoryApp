@@ -5,6 +5,7 @@ import com.App.fullStack.pojos.DemandType;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -17,4 +18,8 @@ public interface DemandRepository extends MongoRepository<Demand, String> {
     Optional<Demand> findByDemandId(String demandId);
     boolean existsByItemIdAndLocationIdAndDemandType(String itemId, String locationId, DemandType demandType);
     void deleteByDemandId(String demandId);
+    List<Demand> findByItemIdAndLocationIdAndDemandType(String itemId, String locationId, String demandType);
+    List<Demand> findByItemIdAndDemandType(String itemId, String demandType);
+    List<Demand> findByItemIdAndLocationIdAndDemandTypeIn(String itemId, String locationId,
+            List<String> demandTypes);
 }

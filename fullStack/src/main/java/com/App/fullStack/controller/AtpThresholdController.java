@@ -43,7 +43,7 @@ public class AtpThresholdController {
   
     @PostMapping
     public ResponseEntity<ApiResponse<AtpThreshold>> createAtpThreshold(@RequestBody AtpThreshold atpThreshold) {
-        AtpThreshold createdThreshold = atpThresholdService.createAtpThreshold(atpThreshold);
+        AtpThreshold createdThreshold = atpThresholdService.AddAtpThreshold(atpThreshold);
         return new ResponseEntity<>(new ApiResponse<>(true, "ATP Threshold Created Successfully", createdThreshold), HttpStatus.CREATED);
     }
 

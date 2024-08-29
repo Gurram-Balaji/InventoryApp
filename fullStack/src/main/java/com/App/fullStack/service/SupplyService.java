@@ -6,7 +6,12 @@ import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.Supply;
 import com.App.fullStack.pojos.SupplyType;
 import com.App.fullStack.repositories.SupplyRepository;
+import com.App.fullStack.utility.ItemAndLocationIDChecker;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,14 +25,16 @@ public class SupplyService {
     @Autowired
     private SupplyRepository supplyRepository;
 
-    public List<Supply> getAllSupplies() {
+    @Autowired
+    private ItemAndLocationIDChecker itemAndLocationIDChecker;
+
+    public Page<Supply> getAllSupplies(int page, int size) {
         try {
-            return supplyRepository.findAll();
+            Pageable pageable = PageRequest.of(page, size);
+            return supplyRepository.findAll(pageable);
         } catch (Exception e) {
             throw new FoundException("Supplies not found.");
         }
-
-        // TODO: Advanced: Implement pagination
     }
 
     public Supply getSupplyById(String supplyId) {
@@ -62,7 +69,6 @@ public class SupplyService {
             throw new FoundException(
                     "Supplies with supplyType " + supplyType + " and locationId " + locationId + " not found.");
         }
-
         // Aggregate counts by supply type
         Map<SupplyType, Integer> supplyCounts = supplies.stream()
                 .collect(Collectors.groupingBy(Supply::getSupplyType, Collectors.summingInt(Supply::getQuantity)));
@@ -72,7 +78,6 @@ public class SupplyService {
     }
 
     public Supply addSupply(Supply supply) {
-        
         // Optional validation logic if necessary
         if (!SupplyType.isValid(supply.getSupplyType().toString()))
             throw new FoundException("Supplies with supplyType: " + supply.getSupplyType() + " not found.");
@@ -80,6 +85,8 @@ public class SupplyService {
                 supply.getSupplyType()))
             throw new FoundException("Supplies with itemId: " + supply.getItemId() + ", locationId: "
                     + supply.getLocationId() + " and supplyType: " + supply.getSupplyType() + " already exists.");
+        ;
+        itemAndLocationIDChecker.validateItemAndLocationID(supply.getItemId(), supply.getLocationId());
         return supplyRepository.save(supply);
     }
 

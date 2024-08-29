@@ -4,6 +4,7 @@ import com.App.fullStack.pojos.Supply;
 import com.App.fullStack.pojos.SupplyType;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -15,4 +16,8 @@ public interface SupplyRepository extends MongoRepository<Supply, String> {
     List<Supply> findBySupplyTypeAndLocationId(SupplyType supplyType, String locationId);
     boolean existsByItemIdAndLocationIdAndSupplyType(String itemId, String locationId, SupplyType supplyType);
     Optional<Supply> findBySupplyId(String supplyId);
+    List<Supply> findByItemIdAndLocationIdAndSupplyType(String itemId, String locationId, String supplyType);
+    List<Supply> findByItemIdAndSupplyType(String itemId, String supplyType);
+    List<Supply> findByItemIdAndLocationIdAndSupplyTypeIn(String itemId, String locationId,
+            List<String> supplyTypes);
 }
