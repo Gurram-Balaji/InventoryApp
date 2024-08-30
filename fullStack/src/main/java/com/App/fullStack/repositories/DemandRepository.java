@@ -12,14 +12,23 @@ import java.util.Optional;
 @Repository
 public interface DemandRepository extends MongoRepository<Demand, String> {
     boolean existsByItemId(String itemId); // Check if any demand exists for the given itemId
+
     boolean existsByLocationId(String locationId);
+
     List<Demand> findByItemIdAndLocationId(String itemId, String locationId);
+
     List<Demand> findByDemandTypeAndLocationId(DemandType demandType, String locationId);
+
     Optional<Demand> findByDemandId(String demandId);
+
     boolean existsByItemIdAndLocationIdAndDemandType(String itemId, String locationId, DemandType demandType);
+
     void deleteByDemandId(String demandId);
+
     List<Demand> findByItemIdAndLocationIdAndDemandType(String itemId, String locationId, String demandType);
+
     List<Demand> findByItemIdAndDemandType(String itemId, String demandType);
+
     List<Demand> findByItemIdAndLocationIdAndDemandTypeIn(String itemId, String locationId,
             List<String> demandTypes);
 }

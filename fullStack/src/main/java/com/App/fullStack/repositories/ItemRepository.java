@@ -9,6 +9,8 @@ import java.util.Optional;
 @Repository
 public interface ItemRepository extends MongoRepository<Item, String> {
     Optional<Item> findByItemId(String itemId); // Custom query to find by itemId
+
     void deleteByItemId(String itemid);
+
     boolean existsByItemId(String itemid);
 }

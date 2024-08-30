@@ -22,9 +22,9 @@ public class AtpThresholdService {
 
     public List<AtpThreshold> getAllAtpThresholds() {
         List<AtpThreshold> thresholds = atpThresholdRepository.findAll();
-        if (thresholds.isEmpty()) {
+        if (thresholds.isEmpty())
             throw new FoundException("No ATP Thresholds found.");
-        }
+
         return thresholds;
     }
 
@@ -32,8 +32,7 @@ public class AtpThresholdService {
         Optional<AtpThreshold> existingAtpThreshold = atpThresholdRepository.findByThresholdId(thresholdId);
         if (existingAtpThreshold.isPresent())
             return existingAtpThreshold.get();
-        else
-            throw new FoundException("ATP Threshold with ID " + thresholdId + " not found.");
+        throw new FoundException("ATP Threshold with ID " + thresholdId + " not found.");
     }
 
     public AtpThreshold getAtpThresholdByItemAndLocation(String itemId, String locationId) {
@@ -41,9 +40,8 @@ public class AtpThresholdService {
                 locationId);
         if (AtpThreshold.isPresent())
             return AtpThreshold.get();
-        else
-            throw new FoundException(
-                    "ATP Threshold with Item ID " + itemId + " and Location ID " + locationId + " not found.");
+        throw new FoundException(
+                "ATP Threshold with Item ID " + itemId + " and Location ID " + locationId + " not found.");
     }
 
     public AtpThreshold AddAtpThreshold(AtpThreshold atpThreshold) {
@@ -58,18 +56,12 @@ public class AtpThresholdService {
     }
 
     public AtpThreshold updateAtpThresholdById(String thresholdId, AtpThreshold atpThresholdDetails) {
-        AtpThreshold existingThreshold = getAtpThresholdById(thresholdId);
-        existingThreshold.setMinThreshold(atpThresholdDetails.getMinThreshold());
-        existingThreshold.setMaxThreshold(atpThresholdDetails.getMaxThreshold());
-        return atpThresholdRepository.save(existingThreshold);
+        return updateAndSaveThreshold(getAtpThresholdById(thresholdId), atpThresholdDetails);
     }
 
     public AtpThreshold updateAtpThresholdByItemAndLocation(String itemId, String locationId,
             AtpThreshold atpThresholdDetails) {
-        AtpThreshold existingThreshold = getAtpThresholdByItemAndLocation(itemId, locationId);
-        existingThreshold.setMinThreshold(atpThresholdDetails.getMinThreshold());
-        existingThreshold.setMaxThreshold(atpThresholdDetails.getMaxThreshold());
-        return atpThresholdRepository.save(existingThreshold);
+        return updateAndSaveThreshold(getAtpThresholdByItemAndLocation(itemId, locationId), atpThresholdDetails);
     }
 
     public String deleteAtpThresholdById(String thresholdId) {
@@ -77,9 +69,15 @@ public class AtpThresholdService {
         if (existingThreshold.isPresent()) {
             atpThresholdRepository.delete(existingThreshold.get());
             return "Threshold deleted successfully.";
-        } else {
-            throw new FoundException("Demand with demandId " + thresholdId + " not found.");
         }
+        throw new FoundException("Demand with demandId " + thresholdId + " not found.");
 
     }
+
+    private AtpThreshold updateAndSaveThreshold(AtpThreshold existingThreshold, AtpThreshold atpThresholdDetails) {
+        existingThreshold.setMinThreshold(atpThresholdDetails.getMinThreshold());
+        existingThreshold.setMaxThreshold(atpThresholdDetails.getMaxThreshold());
+        return atpThresholdRepository.save(existingThreshold);
+    }
+
 }

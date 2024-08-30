@@ -14,7 +14,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
 @RequestMapping("/supply")
 public class SupplyController {
@@ -40,7 +39,6 @@ public class SupplyController {
         public ResponseEntity<ApiResponse<SupplyDetailsResponse>> getSuppliesByItemAndLocation(
                         @PathVariable String itemId,
                         @PathVariable String locationId) {
-                System.out.println(itemId + "  " + locationId);
                 return APIResponseForFoundOrNot.generateResponse(
                                 supplyService.getSuppliesByItemIdAndLocationId(itemId, locationId),
                                 "Supplies Found", "Supplies Not Found");

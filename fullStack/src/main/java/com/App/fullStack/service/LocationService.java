@@ -24,33 +24,38 @@ public class LocationService {
     private DemandRepository demandRepository;
 
     public List<Location> getAllLocations() {
-        try {
-            return locationRepository.findAll();
-        } catch (Exception e) {
+
+        List<Location> Item = locationRepository.findAll();
+
+        if (Item.isEmpty())
             throw new FoundException("Locations not exist.");
 
-        }
+        return Item;
     }
 
     public Location getLocationById(String locationId) {
         Optional<Location> existingLocation = locationRepository.findByLocationId(locationId);
+
         if (existingLocation.isPresent())
             return existingLocation.get();
-        else
-            throw new FoundException("Location with locationId " +locationId + " not exist.");
+
+        throw new FoundException("Location with locationId " + locationId + " not exist.");
     }
 
     public Location addLocation(Location location) {
         // Check if an item with the same itemId already exists
         Optional<Location> existinglocation = locationRepository.findByLocationId(location.getLocationId());
+
+        // Throw an exception or handle the case where the itemId already exists
         if (existinglocation.isPresent())
-            // Throw an exception or handle the case where the itemId already exists
             throw new FoundException("Location with locationId " + location.getLocationId() + " already exists.");
+
         return locationRepository.save(location);
     }
 
     public Location updateLocation(String locationId, Location locationDetails) {
         Optional<Location> existingLocation = locationRepository.findByLocationId(locationId);
+
         if (existingLocation.isPresent()) {
             // Updating fields based on the new POJO structure
             Location location = existingLocation.get();
@@ -80,9 +85,9 @@ public class LocationService {
             if (locationDetails.getPinCode() != null)
                 location.setPinCode(locationDetails.getPinCode());
             return locationRepository.save(location);
-        } else {
-            throw new FoundException("Location with locationId " +locationId + " not exist.");
         }
+
+        throw new FoundException("Location with locationId " + locationId + " not exist.");
     }
 
     public String deleteLocation(String locationId) {
@@ -104,9 +109,7 @@ public class LocationService {
         if (location.isPresent()) {
             locationRepository.delete(location.get());
             return "Location deleted successfully";
-        } else {
-            throw new FoundException("Location with locationId " +locationId + " not exist.");
         }
-
+        throw new FoundException("Location with locationId " + locationId + " not exist.");
     }
 }

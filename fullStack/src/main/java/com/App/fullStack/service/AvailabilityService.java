@@ -1,13 +1,12 @@
 package com.App.fullStack.service;
 
-import com.App.fullStack.config.AvailabilityConfig;
 import com.App.fullStack.pojos.Supply;
+import com.App.fullStack.dto.AvailabilityConfig;
 import com.App.fullStack.dto.AvailabilityResponseV2V3;
 import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.AtpThreshold;
 import com.App.fullStack.pojos.Demand;
 import com.App.fullStack.repositories.SupplyRepository;
-import com.App.fullStack.utility.ItemAndLocationIDChecker;
 import com.App.fullStack.repositories.AtpThresholdRepository;
 import com.App.fullStack.repositories.DemandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,88 +26,76 @@ public class AvailabilityService {
     private AtpThresholdRepository atpThresholdRepository;
 
     @Autowired
-    private ItemAndLocationIDChecker itemAndLocationIDChecker;
-
-    @Autowired
     private DemandRepository demandRepository;
 
     @Autowired
     private AvailabilityConfig availabilityConfig;
 
-    // v1 and v2 methods
-
+    // v1 methods
+    // There is dependence of this method in v2 method
     public int calculateAvailabilityByLocation(String itemId, String locationId) {
-        itemAndLocationIDChecker.validateItemAndLocationID(itemId, locationId);
-        int totalSupply = supplyRepository.findByItemIdAndLocationIdAndSupplyType(itemId, locationId, "ONHAND")
-                .stream()
-                .mapToInt(Supply::getQuantity)
-                .sum();
-        int totalDemand = demandRepository.findByItemIdAndLocationIdAndDemandType(itemId, locationId, "HARD_PROMISED")
-                .stream()
-                .mapToInt(Demand::getQuantity)
-                .sum();
-        if (totalSupply == 0 && totalDemand == 0)
+        List<Supply> supplies = supplyRepository.findByItemIdAndLocationIdAndSupplyType(itemId, locationId, "ONHAND");
+        List<Demand> demands = demandRepository.findByItemIdAndLocationIdAndDemandType(itemId, locationId,
+                "HARD_PROMISED");
+
+        if (supplies.isEmpty() && demands.isEmpty())
             throw new FoundException(
                     "Records with ItemId: " + itemId + " And LocationId " + locationId + " not found.");
-        return totalSupply - totalDemand;
+
+        // Calculate total supply and demand
+        return SupplyQTYSum(supplies) - DemandsQTYSum(demands);
     }
 
     public int calculateAvailabilityByItem(String itemId) {
-        itemAndLocationIDChecker.validateItemId(itemId);
-        int totalSupply = supplyRepository.findByItemIdAndSupplyType(itemId, "ONHAND")
-                .stream()
-                .mapToInt(Supply::getQuantity)
-                .sum();
-        int totalDemand = demandRepository.findByItemIdAndDemandType(itemId, "HARD_PROMISED")
-                .stream()
-                .mapToInt(Demand::getQuantity)
-                .sum();
-        if (totalSupply == 0 && totalDemand == 0)
+        List<Supply> supplies = supplyRepository.findByItemIdAndSupplyType(itemId, "ONHAND");
+        List<Demand> demands = demandRepository.findByItemIdAndDemandType(itemId, "HARD_PROMISED");
+
+        if (supplies.isEmpty() && demands.isEmpty())
             throw new FoundException("Records with ItemId: " + itemId + " not found.");
-        return totalSupply - totalDemand;
+
+        // Calculate total supply and demand
+        return SupplyQTYSum(supplies) - DemandsQTYSum(demands);
     }
 
+    // v2 methods
     public AvailabilityResponseV2V3 calculateV2AvailabilityByLocation(String itemId, String locationId) {
-        Optional<AtpThreshold> threshold = atpThresholdRepository.findByItemIdAndLocationId(itemId, locationId);
         int availableQty = calculateAvailabilityByLocation(itemId, locationId);
+        Optional<AtpThreshold> threshold = atpThresholdRepository.findByItemIdAndLocationId(itemId, locationId);
         String stockLevel = calculateStockLevel(availableQty, threshold);
 
         return new AvailabilityResponseV2V3(itemId, locationId, availableQty, stockLevel);
     }
 
-    //  v3 logic
+    // v3 methods
     public AvailabilityResponseV2V3 calculateV3AvailabilityByLocation(String itemId, String locationId) {
-        itemAndLocationIDChecker.validateItemAndLocationID(itemId, locationId);
 
         // Get valid supply and demand types from the configuration
         List<String> validSupplyTypes = Arrays.asList(availabilityConfig.getSupplies());
         List<String> validDemandTypes = Arrays.asList(availabilityConfig.getDemands());
-        
+
         // Check if location is excluded
-        if (isExcludedLocation(locationId)) {
+        if (isExcludedLocation(locationId))
             throw new FoundException("LocationId " + locationId + " is excluded from availability checks.");
-        }
+
+        // Fetch supplies and demands based on the criteria
+        List<Supply> supplies = supplyRepository.findByItemIdAndLocationIdAndSupplyTypeIn(itemId, locationId,
+                validSupplyTypes);
+        List<Demand> demands = demandRepository.findByItemIdAndLocationIdAndDemandTypeIn(itemId, locationId,
+                validDemandTypes);
+
+        // Check if no records are found for supply and demand
+        if (supplies.isEmpty() && demands.isEmpty())
+            throw new FoundException(
+                    "Records with ItemId: " + itemId + " and LocationId: " + locationId + " not found.");
 
         // Calculate total supply and demand
-        int totalSupply = supplyRepository.findByItemIdAndLocationIdAndSupplyTypeIn(itemId, locationId, validSupplyTypes)
-                .stream()
-                .mapToInt(Supply::getQuantity)
-                .sum();
-
-        int totalDemand = demandRepository.findByItemIdAndLocationIdAndDemandTypeIn(itemId, locationId, validDemandTypes)
-                .stream()
-                .mapToInt(Demand::getQuantity)
-                .sum();
-
-        if (totalSupply == 0 && totalDemand == 0) {
-            throw new FoundException("Records with ItemId: " + itemId + " and LocationId: " + locationId + " not found.");
-        }
+        int totalQTY = SupplyQTYSum(supplies) - DemandsQTYSum(demands);
 
         // Get thresholds and calculate stock level
         Optional<AtpThreshold> threshold = atpThresholdRepository.findByItemIdAndLocationId(itemId, locationId);
-        String stockLevel = calculateStockLevel(totalSupply - totalDemand, threshold);
+        String stockLevel = calculateStockLevel(totalQTY, threshold);
 
-        return new AvailabilityResponseV2V3(itemId, locationId, totalSupply - totalDemand, stockLevel);
+        return new AvailabilityResponseV2V3(itemId, locationId, totalQTY, stockLevel);
     }
 
     private boolean isExcludedLocation(String locationId) {
@@ -118,14 +105,25 @@ public class AvailabilityService {
     private String calculateStockLevel(int availableQty, Optional<AtpThreshold> thresholdOpt) {
         if (thresholdOpt.isPresent()) {
             AtpThreshold threshold = thresholdOpt.get();
-            if (availableQty < threshold.getMinThreshold()) {
+            if (availableQty < threshold.getMinThreshold())
                 return "Red";
-            } else if (availableQty > threshold.getMaxThreshold()) {
+            else if (availableQty > threshold.getMaxThreshold())
                 return "Green";
-            } else {
-                return "Yellow";
-            }
+
+            return "Yellow";
         }
         return "Unknown";
+    }
+
+    private int SupplyQTYSum(List<Supply> supplies) {
+        return supplies.stream()
+                .mapToInt(Supply::getQuantity)
+                .sum();
+    }
+
+    private int DemandsQTYSum(List<Demand> demands) {
+        return demands.stream()
+                .mapToInt(Demand::getQuantity)
+                .sum();
     }
 }

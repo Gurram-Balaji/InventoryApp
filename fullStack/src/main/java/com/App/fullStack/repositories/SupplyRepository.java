@@ -11,13 +11,21 @@ import java.util.Optional;
 @Repository
 public interface SupplyRepository extends MongoRepository<Supply, String> {
     boolean existsByItemId(String itemId); // Check if any supply exists for the given itemId
+
     boolean existsByLocationId(String locationId);
+
     List<Supply> findByItemIdAndLocationId(String itemId, String locationId);
+
     List<Supply> findBySupplyTypeAndLocationId(SupplyType supplyType, String locationId);
+
     boolean existsByItemIdAndLocationIdAndSupplyType(String itemId, String locationId, SupplyType supplyType);
+
     Optional<Supply> findBySupplyId(String supplyId);
+
     List<Supply> findByItemIdAndLocationIdAndSupplyType(String itemId, String locationId, String supplyType);
+
     List<Supply> findByItemIdAndSupplyType(String itemId, String supplyType);
+
     List<Supply> findByItemIdAndLocationIdAndSupplyTypeIn(String itemId, String locationId,
             List<String> supplyTypes);
 }

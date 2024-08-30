@@ -1,4 +1,4 @@
-package com.App.fullStack.config;
+package com.App.fullStack.dto;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
