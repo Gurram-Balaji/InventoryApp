@@ -1,16 +1,22 @@
 package com.App.fullStack.pojos;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum DemandType {
     HARD_PROMISED,
     PLANNED;
 
-    public static boolean isValid(String value) {
+    private static final Map<String, DemandType> lookup = new HashMap<>();
+
+    static {
         for (DemandType type : DemandType.values()) {
-            if (type.name().equalsIgnoreCase(value)) {
-                return true;
-            }
+            lookup.put(type.name().toUpperCase(), type);
         }
-        return false;
     }
-    
+
+    public static boolean isValid(String value) {
+        return !lookup.containsKey(value.toUpperCase());
+    }
+
 }

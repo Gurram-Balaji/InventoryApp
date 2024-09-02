@@ -11,10 +11,10 @@ import com.App.fullStack.repositories.LocationRepository;
 public class ItemAndLocationIDChecker {
 
     @Autowired
-    private ItemRepository itemRepository;
+    public ItemRepository itemRepository;
 
     @Autowired
-    private LocationRepository locationRepository;
+    public LocationRepository locationRepository;
 
     public void validateItemAndLocationID(String itemId, String LocationId) {
         if (itemId != null && !itemRepository.existsByItemId(itemId))

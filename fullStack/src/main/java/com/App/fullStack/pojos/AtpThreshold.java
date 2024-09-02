@@ -4,11 +4,12 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Document(collection = "atpThresholds")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class AtpThreshold {
 
     @Id

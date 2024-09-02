@@ -23,12 +23,10 @@ public interface DemandRepository extends MongoRepository<Demand, String> {
 
     boolean existsByItemIdAndLocationIdAndDemandType(String itemId, String locationId, DemandType demandType);
 
-    void deleteByDemandId(String demandId);
-
     List<Demand> findByItemIdAndLocationIdAndDemandType(String itemId, String locationId, String demandType);
 
     List<Demand> findByItemIdAndDemandType(String itemId, String demandType);
 
     List<Demand> findByItemIdAndLocationIdAndDemandTypeIn(String itemId, String locationId,
-            List<String> demandTypes);
+                                                          List<String> demandTypes);
 }

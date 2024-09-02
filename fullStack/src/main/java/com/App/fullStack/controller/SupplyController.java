@@ -18,66 +18,65 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/supply")
 public class SupplyController {
 
-        @Autowired
-        private SupplyService supplyService;
+    @Autowired
+    public SupplyService supplyService;
 
-        @GetMapping
-        public ResponseEntity<ApiResponse<Page<Supply>>> getAllSupplies(@RequestParam(defaultValue = "0") int page,
-                        @RequestParam(defaultValue = "10") int size) {
-                return APIResponseForFoundOrNot.generateResponse(supplyService.getAllSupplies(page, size),
-                                "Supplies Found",
-                                "Supplies Not Found");
+    @GetMapping
+    public ResponseEntity<ApiResponse<Page<Supply>>> getAllSupplies(@RequestParam(defaultValue = "0") int page,
+                                                                    @RequestParam(defaultValue = "10") int size) {
+        return APIResponseForFoundOrNot.generateResponse(supplyService.getAllSupplies(page, size),
+                "Supplies Found",
+                "Supplies Not Found");
+    }
+
+    @GetMapping("/{supplyId}")
+    public ResponseEntity<ApiResponse<Supply>> getSupplyById(@PathVariable String supplyId) {
+        return APIResponseForFoundOrNot.generateResponse(supplyService.getSupplyById(supplyId), "Supply Found",
+                "Supply Not Found");
+    }
+
+    @GetMapping("byItem/{itemId}/{locationId}")
+    public ResponseEntity<ApiResponse<SupplyDetailsResponse>> getSuppliesByItemAndLocation(
+            @PathVariable String itemId,
+            @PathVariable String locationId) {
+        return APIResponseForFoundOrNot.generateResponse(
+                supplyService.getSuppliesByItemIdAndLocationId(itemId, locationId),
+                "Supplies Found", "Supplies Not Found");
+    }
+
+    @GetMapping("byType/{supplyType}/{locationId}")
+    public ResponseEntity<ApiResponse<SupplySummaryResponse>> getSuppliesByTypeAndLocation(
+            @PathVariable String supplyType,
+            @PathVariable String locationId) {
+
+        if (SupplyType.isValid(supplyType)) {
+            throw new FoundException(
+                    "Supplies with supplyType: " + supplyType + " not found.");
         }
+        SupplyType type = SupplyType.valueOf(supplyType.toUpperCase());
 
-        @GetMapping("/{supplyId}")
-        public ResponseEntity<ApiResponse<Supply>> getSupplyById(@PathVariable String supplyId) {
-                return APIResponseForFoundOrNot.generateResponse(supplyService.getSupplyById(supplyId), "Supply Found",
-                                "Supply Not Found");
-        }
+        return APIResponseForFoundOrNot.generateResponse(
+                supplyService.getSuppliesByTypeAndLocationId(type, locationId),
+                "Supplies Found", "Supplies Not Found");
+    }
 
-        @GetMapping("byItem/{itemId}/{locationId}")
-        public ResponseEntity<ApiResponse<SupplyDetailsResponse>> getSuppliesByItemAndLocation(
-                        @PathVariable String itemId,
-                        @PathVariable String locationId) {
-                return APIResponseForFoundOrNot.generateResponse(
-                                supplyService.getSuppliesByItemIdAndLocationId(itemId, locationId),
-                                "Supplies Found", "Supplies Not Found");
-        }
+    @PostMapping
+    public ResponseEntity<ApiResponse<Supply>> addSupply(@RequestBody Supply supply) {
+        return APIResponseForFoundOrNot.generateResponse(supplyService.addSupply(supply), "Supply Added",
+                "Supply Not Added");
+    }
 
-        @GetMapping("byType/{supplyType}/{locationId}")
-        public ResponseEntity<ApiResponse<SupplySummaryResponse>> getSuppliesByTypeAndLocation(
-                        @PathVariable String supplyType,
-                        @PathVariable String locationId) {
+    @PatchMapping("/{supplyId}")
+    public ResponseEntity<ApiResponse<Supply>> updateSupply(@PathVariable String supplyId,
+                                                            @RequestBody Supply supplyDetails) {
+        return APIResponseForFoundOrNot.generateResponse(supplyService.updateSupply(supplyId, supplyDetails),
+                "Supply Updated", "Supply Not Updated");
+    }
 
-                if (!SupplyType.isValid(supplyType)) {
-                        throw new FoundException(
-                                        "Supplies with supplyType: " + supplyType + " not found.");
-
-                }
-                SupplyType type = SupplyType.valueOf(supplyType.toUpperCase());
-
-                return APIResponseForFoundOrNot.generateResponse(
-                                supplyService.getSuppliesByTypeAndLocationId(type, locationId),
-                                "Supplies Found", "Supplies Not Found");
-        }
-
-        @PostMapping
-        public ResponseEntity<ApiResponse<Supply>> addSupply(@RequestBody Supply supply) {
-                return APIResponseForFoundOrNot.generateResponse(supplyService.addSupply(supply), "Supply Added",
-                                "Supply Not Added");
-        }
-
-        @PatchMapping("/{supplyId}")
-        public ResponseEntity<ApiResponse<Supply>> updateSupply(@PathVariable String supplyId,
-                        @RequestBody Supply supplyDetails) {
-                return APIResponseForFoundOrNot.generateResponse(supplyService.updateSupply(supplyId, supplyDetails),
-                                "Supply Updated", "Supply Not Updated");
-        }
-
-        @DeleteMapping("/{supplyId}")
-        public ResponseEntity<ApiResponse<String>> deleteSupply(@PathVariable String supplyId) {
-                return ResponseEntity.status(HttpStatus.OK)
-                                .body(new ApiResponse<>(true, "Supply Delete Operation.",
-                                                supplyService.deleteSupply(supplyId)));
-        }
+    @DeleteMapping("/{supplyId}")
+    public ResponseEntity<ApiResponse<String>> deleteSupply(@PathVariable String supplyId) {
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(new ApiResponse<>(true, "Supply Delete Operation.",
+                        supplyService.deleteSupply(supplyId)));
+    }
 }

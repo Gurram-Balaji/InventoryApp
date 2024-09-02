@@ -6,26 +6,28 @@ import com.App.fullStack.service.ItemService;
 import com.App.fullStack.utility.APIResponseForFoundOrNot;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
+
 
 @RestController
 @RequestMapping("/items")
 public class ItemController {
 
     @Autowired
-    private ItemService itemService;
+    public ItemService itemService;
 
     @GetMapping
-    public ResponseEntity<ApiResponse<List<Item>>> getAllItems() {
-        return APIResponseForFoundOrNot.generateResponse(itemService.getAllItems(), "Items Found", "Items Not Found");
+    public ResponseEntity<ApiResponse<Page<Item>>> getAllItems(@RequestParam(defaultValue = "0") int page,
+                                                               @RequestParam(defaultValue = "10") int size) {
+        return APIResponseForFoundOrNot.generateResponse(itemService.getAllItems(page, size), "Items Found", "Items Not Found");
     }
 
-    @GetMapping("/{itemid}")
-    public ResponseEntity<ApiResponse<Item>> getItemById(@PathVariable String itemid) {
-        return APIResponseForFoundOrNot.generateResponse(itemService.getItemByItemId(itemid), "Item Found",
+    @GetMapping("/{itemId}")
+    public ResponseEntity<ApiResponse<Item>> getItemById(@PathVariable String itemId) {
+        return APIResponseForFoundOrNot.generateResponse(itemService.getItemByItemId(itemId), "Item Found",
                 "Item Not Found");
     }
 
@@ -34,15 +36,22 @@ public class ItemController {
         return APIResponseForFoundOrNot.generateResponse(itemService.addItem(item), "Item Added", "Item Not Added");
     }
 
-    @PatchMapping("/{itemid}")
-    public ResponseEntity<ApiResponse<Item>> updateItem(@PathVariable String itemid, @RequestBody Item itemDetails) {
-        return APIResponseForFoundOrNot.generateResponse(itemService.updateItem(itemid, itemDetails), "Item Updated",
+    @PatchMapping("/{itemId}")
+    public ResponseEntity<ApiResponse<Item>> updateItem(@PathVariable String itemId, @RequestBody Item itemDetails) {
+        return APIResponseForFoundOrNot.generateResponse(itemService.updateItem(itemId, itemDetails), "Item Updated",
                 "Item Not Updated");
     }
 
-    @DeleteMapping("/{itemid}")
-    public ResponseEntity<ApiResponse<String>> deleteItem(@PathVariable String itemid) {
+
+    @PatchMapping("FulfillmentOptions/{itemId}")
+    public ResponseEntity<ApiResponse<Item>> updateItemFulfillmentOptions(@PathVariable String itemId, @RequestBody Item itemDetails) {
+        return APIResponseForFoundOrNot.generateResponse(itemService.updateItemFulfillmentOptions(itemId, itemDetails), "Item Updated",
+                "Item Not Updated");
+    }
+
+    @DeleteMapping("/{itemId}")
+    public ResponseEntity<ApiResponse<String>> deleteItem(@PathVariable String itemId) {
         return ResponseEntity.status(HttpStatus.OK)
-                .body(new ApiResponse<>(true, "Item Delete Operation.", itemService.deleteItem(itemid)));
+                .body(new ApiResponse<>(true, "Item Delete Operation.", itemService.deleteItem(itemId)));
     }
 }

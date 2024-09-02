@@ -4,28 +4,32 @@ import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.Location;
 import com.App.fullStack.repositories.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.App.fullStack.repositories.DemandRepository;
 import com.App.fullStack.repositories.SupplyRepository;
-import java.util.List;
+
 import java.util.Optional;
 
 @Service
 public class LocationService {
 
     @Autowired
-    private LocationRepository locationRepository;
+    public LocationRepository locationRepository;
 
     @Autowired
-    private SupplyRepository supplyRepository;
+    public SupplyRepository supplyRepository;
 
     @Autowired
-    private DemandRepository demandRepository;
+    public DemandRepository demandRepository;
 
-    public List<Location> getAllLocations() {
+    public Page<Location> getAllLocations(int page, int size) {
 
-        List<Location> Item = locationRepository.findAll();
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Location> Item = locationRepository.findAll(pageable);
 
         if (Item.isEmpty())
             throw new FoundException("Locations not exist.");
@@ -44,10 +48,10 @@ public class LocationService {
 
     public Location addLocation(Location location) {
         // Check if an item with the same itemId already exists
-        Optional<Location> existinglocation = locationRepository.findByLocationId(location.getLocationId());
+        Optional<Location> existingLocation = locationRepository.findByLocationId(location.getLocationId());
 
         // Throw an exception or handle the case where the itemId already exists
-        if (existinglocation.isPresent())
+        if (existingLocation.isPresent())
             throw new FoundException("Location with locationId " + location.getLocationId() + " already exists.");
 
         return locationRepository.save(location);
@@ -62,28 +66,9 @@ public class LocationService {
             // Update fields only if they are not null
             if (locationDetails.getLocationDesc() != null)
                 location.setLocationDesc(locationDetails.getLocationDesc());
-            if (locationDetails.getLocationType() != null)
-                location.setLocationType(locationDetails.getLocationType());
-            if (locationDetails.isPickupAllowed())
-                location.setPickupAllowed(locationDetails.isPickupAllowed());
-            if (locationDetails.isShippingAllowed())
-                location.setShippingAllowed(locationDetails.isShippingAllowed());
-            if (locationDetails.isDeliveryAllowed())
-                location.setDeliveryAllowed(locationDetails.isDeliveryAllowed());
-            if (locationDetails.getAddressLine1() != null)
-                location.setAddressLine1(locationDetails.getAddressLine1());
-            if (locationDetails.getAddressLine2() != null)
-                location.setAddressLine2(locationDetails.getAddressLine2());
-            if (locationDetails.getAddressLine3() != null)
-                location.setAddressLine3(locationDetails.getAddressLine3());
-            if (locationDetails.getCity() != null)
-                location.setCity(locationDetails.getCity());
-            if (locationDetails.getState() != null)
-                location.setState(locationDetails.getState());
-            if (locationDetails.getCountry() != null)
-                location.setCountry(locationDetails.getCountry());
-            if (locationDetails.getPinCode() != null)
-                location.setPinCode(locationDetails.getPinCode());
+            location.setPickupAllowed(locationDetails.isPickupAllowed());
+            location.setShippingAllowed(locationDetails.isShippingAllowed());
+            location.setDeliveryAllowed(locationDetails.isDeliveryAllowed());
             return locationRepository.save(location);
         }
 
@@ -101,8 +86,7 @@ public class LocationService {
                 throw new FoundException("Item cannot be deleted because it has associated supply or demand records.");
             if (supplyExists)
                 throw new FoundException("Item cannot be deleted because it has associated supply records.");
-            if (demandExists)
-                throw new FoundException("Item cannot be deleted because it has associated demand records.");
+            throw new FoundException("Item cannot be deleted because it has associated demand records.");
         }
 
         Optional<Location> location = locationRepository.findByLocationId(locationId);

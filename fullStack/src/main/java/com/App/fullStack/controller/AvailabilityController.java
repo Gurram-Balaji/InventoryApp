@@ -12,43 +12,43 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class AvailabilityController {
 
-        @Autowired
-        private AvailabilityService availabilityService;
+    @Autowired
+    public AvailabilityService availabilityService;
 
-        @GetMapping("/v1/availability/{itemid}/{locationid}")
-        public ResponseEntity<ApiResponse<AvailabilityResponse>> getAvailabilityByLocation(
-                        @PathVariable String itemid, @PathVariable String locationid) {
-                return ResponseEntity.ok(new ApiResponse<AvailabilityResponse>(true, "Available Quantity",
-                                new AvailabilityResponse(itemid, locationid,
-                                                availabilityService.calculateAvailabilityByLocation(itemid,
-                                                                locationid))));
-        }
+    @GetMapping("/v1/availability/{itemId}/{locationId}")
+    public ResponseEntity<ApiResponse<AvailabilityResponse>> getAvailabilityByLocation(
+            @PathVariable String itemId, @PathVariable String locationId) {
+        return ResponseEntity.ok(new ApiResponse<>(true, "Available Quantity",
+                new AvailabilityResponse(itemId, locationId,
+                        availabilityService.calculateAvailabilityByLocation(itemId,
+                                locationId))));
+    }
 
-        @GetMapping("/v1/availability/{itemid}")
-        public ResponseEntity<ApiResponse<AvailabilityResponse>> getAvailabilityByItem(
-                        @PathVariable String itemid) {
-                return ResponseEntity.ok(
-                                new ApiResponse<AvailabilityResponse>(true, "Available Quantity",
-                                                new AvailabilityResponse(itemid, "NETWORK",
-                                                                availabilityService
-                                                                                .calculateAvailabilityByItem(itemid))));
-        }
+    @GetMapping("/v1/availability/{itemId}")
+    public ResponseEntity<ApiResponse<AvailabilityResponse>> getAvailabilityByItem(
+            @PathVariable String itemId) {
+        return ResponseEntity.ok(
+                new ApiResponse<>(true, "Available Quantity",
+                        new AvailabilityResponse(itemId, "NETWORK",
+                                availabilityService
+                                        .calculateAvailabilityByItem(itemId))));
+    }
 
-        @GetMapping("/v2/availability/{itemid}/{locationid}")
-        public ResponseEntity<ApiResponse<AvailabilityResponseV2V3>> getV2AvailabilityByLocation(
-                        @PathVariable String itemid, @PathVariable String locationid) {
-                return ResponseEntity.ok(
-                                new ApiResponse<>(true, "Available Quantity",
-                                                availabilityService.calculateV2AvailabilityByLocation(itemid,
-                                                                locationid)));
-        }
+    @GetMapping("/v2/availability/{itemId}/{locationId}")
+    public ResponseEntity<ApiResponse<AvailabilityResponseV2V3>> getV2AvailabilityByLocation(
+            @PathVariable String itemId, @PathVariable String locationId) {
+        return ResponseEntity.ok(
+                new ApiResponse<>(true, "Available Quantity",
+                        availabilityService.calculateV2AvailabilityByLocation(itemId,
+                                locationId)));
+    }
 
-        @GetMapping("/v3/availability/{itemid}/{locationid}")
-        public ResponseEntity<ApiResponse<AvailabilityResponseV2V3>> getV3AvailabilityByLocation(
-                        @PathVariable String itemid, @PathVariable String locationid) {
-                return ResponseEntity.ok(
-                                new ApiResponse<>(true, "Available Quantity",
-                                                availabilityService.calculateV3AvailabilityByLocation(itemid,
-                                                                locationid)));
-        }
+    @GetMapping("/v3/availability/{itemId}/{locationId}")
+    public ResponseEntity<ApiResponse<AvailabilityResponseV2V3>> getV3AvailabilityByLocation(
+            @PathVariable String itemId, @PathVariable String locationId) {
+        return ResponseEntity.ok(
+                new ApiResponse<>(true, "Available Quantity",
+                        availabilityService.calculateV3AvailabilityByLocation(itemId,
+                                locationId)));
+    }
 }

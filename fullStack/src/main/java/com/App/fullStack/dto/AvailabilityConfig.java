@@ -1,31 +1,31 @@
 package com.App.fullStack.dto;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Configuration
 @PropertySource("classpath:availability.config")
 public class AvailabilityConfig {
 
-    @Value("${availability.supplies}")
-    private String[] supplies;
+    @Autowired
+    private Environment env;
 
-    @Value("${availability.demands}")
-    private String[] demands;
-
-    @Value("${availability.locations.exclude}")
-    private String[] excludedLocations;
+    private String[] getPropertyOrDefault(String propertyName, String defaultValue) {
+        String value = env.getProperty(propertyName, defaultValue);
+        return value.split(",");
+    }
 
     public String[] getSupplies() {
-        return supplies;
+        return getPropertyOrDefault("availability.supplies", "ONHAND,PLANNED,INTRANSIT");
     }
 
     public String[] getDemands() {
-        return demands;
+        return getPropertyOrDefault("availability.demands", "CONFIRMED,HARDPROMISED");
     }
 
     public String[] getExcludedLocations() {
-        return excludedLocations;
+        return getPropertyOrDefault("availability.locations.exclude", "");
     }
 }

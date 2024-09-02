@@ -4,20 +4,15 @@ import java.util.Map;
 
 import com.App.fullStack.pojos.SupplyType;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
+@AllArgsConstructor
 @Getter
+@Setter
 public class SupplySummaryResponse {
     private String locationId;
     private Map<SupplyType, Integer> supplyDetails;
-
-    // Constructors, getters, and setters
-    public SupplySummaryResponse(String locationId, Map<SupplyType, Integer> supplyDetails) {
-        this.locationId = locationId;
-        this.supplyDetails = supplyDetails;
-    }
-
-   
 }

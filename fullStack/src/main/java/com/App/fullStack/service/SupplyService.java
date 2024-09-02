@@ -23,10 +23,10 @@ import java.util.stream.Collectors;
 public class SupplyService {
 
     @Autowired
-    private SupplyRepository supplyRepository;
+    public SupplyRepository supplyRepository;
 
     @Autowired
-    private ItemAndLocationIDChecker itemAndLocationIDChecker;
+    public ItemAndLocationIDChecker itemAndLocationIDChecker;
 
     public Page<Supply> getAllSupplies(int page, int size) {
 
@@ -84,10 +84,6 @@ public class SupplyService {
     }
 
     public Supply addSupply(Supply supply) {
-
-        // Optional validation logic if necessary
-        if (!SupplyType.isValid(supply.getSupplyType().toString()))
-            throw new FoundException("Supplies with supplyType: " + supply.getSupplyType() + " not found.");
 
         if (supplyRepository.existsByItemIdAndLocationIdAndSupplyType(supply.getItemId(), supply.getLocationId(),
                 supply.getSupplyType()))

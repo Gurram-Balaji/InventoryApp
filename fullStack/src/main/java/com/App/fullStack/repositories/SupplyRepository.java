@@ -27,5 +27,5 @@ public interface SupplyRepository extends MongoRepository<Supply, String> {
     List<Supply> findByItemIdAndSupplyType(String itemId, String supplyType);
 
     List<Supply> findByItemIdAndLocationIdAndSupplyTypeIn(String itemId, String locationId,
-            List<String> supplyTypes);
+                                                          List<String> supplyTypes);
 }

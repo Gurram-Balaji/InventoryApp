@@ -7,28 +7,30 @@ import com.App.fullStack.repositories.ItemRepository;
 import com.App.fullStack.repositories.SupplyRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
 public class ItemService {
 
     @Autowired
-    private ItemRepository itemRepository;
+    public ItemRepository itemRepository;
 
     @Autowired
-    private SupplyRepository supplyRepository;
+    public SupplyRepository supplyRepository;
 
     @Autowired
-    private DemandRepository demandRepository;
+    public DemandRepository demandRepository;
 
-    public List<Item> getAllItems() {
-        List<Item> Item = itemRepository.findAll();
+    public Page<Item> getAllItems(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Item> Item = itemRepository.findAll(pageable);
 
-        if (Item.isEmpty())
-            throw new FoundException("Items records not found.");
+        if (Item.isEmpty()) throw new FoundException("Items records not found.");
 
         return Item;
     }
@@ -36,8 +38,7 @@ public class ItemService {
     public Item getItemByItemId(String itemId) {
         Optional<Item> existingItem = itemRepository.findByItemId(itemId);
 
-        if (existingItem.isPresent())
-            return existingItem.get();
+        if (existingItem.isPresent()) return existingItem.get();
 
         throw new FoundException("Item with itemId " + itemId + " not exist.");
     }
@@ -49,13 +50,13 @@ public class ItemService {
         if (existingItem.isPresent())
             // Throw an exception or handle the case where the itemId already exists
             throw new FoundException("Item with itemId " + item.getItemId() + " already exists.");
-            
+
         // If the itemId does not exist, save the new item
         return itemRepository.save(item);
     }
 
-    public Item updateItem(String itemid, Item itemDetails) {
-        Optional<Item> itemOptional = itemRepository.findByItemId(itemid);
+    public Item updateItem(String itemId, Item itemDetails) {
+        Optional<Item> itemOptional = itemRepository.findByItemId(itemId);
 
         if (itemOptional.isPresent()) {
             Item item = itemOptional.get();
@@ -64,18 +65,23 @@ public class ItemService {
             if (itemDetails.getItemDescription() != null) {
                 item.setItemDescription(itemDetails.getItemDescription());
             }
-            if (itemDetails.getCategory() != null) {
-                item.setCategory(itemDetails.getCategory());
-            }
-            if (itemDetails.getType() != null) {
-                item.setType(itemDetails.getType());
-            }
             if (itemDetails.getStatus() != null) {
                 item.setStatus(itemDetails.getStatus());
             }
             if (itemDetails.getPrice() != null) {
                 item.setPrice(itemDetails.getPrice());
             }
+            return itemRepository.save(item);
+        }
+
+        throw new FoundException("Item with itemId " + itemId + " not exist.");
+    }
+
+    public Item updateItemFulfillmentOptions(String itemId, Item itemDetails) {
+        Optional<Item> itemOptional = itemRepository.findByItemId(itemId);
+
+        if (itemOptional.isPresent()) {
+            Item item = itemOptional.get();
             // Update boolean fields directly
             item.setPickupAllowed(itemDetails.isPickupAllowed());
             item.setShippingAllowed(itemDetails.isShippingAllowed());
@@ -83,21 +89,21 @@ public class ItemService {
             return itemRepository.save(item);
         }
 
-        throw new FoundException("Item with itemId " + itemid + " not exist.");
+        throw new FoundException("Item with itemId " + itemId + " not exist.");
     }
 
-    public String deleteItem(String itemid) {
+    public String deleteItem(String itemId) {
         // Check if any supply or demand exists for this item
-        if (supplyRepository.existsByItemId(itemid) || demandRepository.existsByItemId(itemid))
+        if (supplyRepository.existsByItemId(itemId) || demandRepository.existsByItemId(itemId))
             // Throw an exception or handle the case where deletion is not allowed
             throw new FoundException("Item cannot be deleted because it has associated supply or demand records.");
 
-        if (itemRepository.existsByItemId(itemid)) {
+        if (itemRepository.existsByItemId(itemId)) {
             // If no supply or demand exists, delete the item
-            itemRepository.deleteByItemId(itemid);
+            itemRepository.deleteByItemId(itemId);
             return "Item deleted successfully.";
         }
 
-        throw new FoundException("Item with itemId " + itemid + " not exist.");
+        throw new FoundException("Item with itemId " + itemId + " not exist.");
     }
 }

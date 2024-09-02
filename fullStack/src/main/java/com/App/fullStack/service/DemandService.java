@@ -9,6 +9,9 @@ import com.App.fullStack.repositories.DemandRepository;
 import com.App.fullStack.utility.ItemAndLocationIDChecker;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,12 +23,14 @@ import java.util.stream.Collectors;
 public class DemandService {
 
     @Autowired
-    private DemandRepository demandRepository;
+    public DemandRepository demandRepository;
     @Autowired
-    private ItemAndLocationIDChecker itemAndLocationIDChecker;
+    public ItemAndLocationIDChecker itemAndLocationIDChecker;
 
-    public List<Demand> getAllDemands() {
-        List<Demand> demand = demandRepository.findAll();
+    public Page<Demand> getAllDemands(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+
+        Page<Demand> demand = demandRepository.findAll(pageable);
 
         if (demand.isEmpty())
             throw new FoundException("Demand records not found.");
@@ -68,9 +73,6 @@ public class DemandService {
     }
 
     public Demand addDemand(Demand demand) {
-
-        if (!DemandType.isValid(demand.getDemandType().toString()))
-            throw new FoundException("Demands with demandType: " + demand.getDemandType() + " not found.");
 
         if (demandRepository.existsByItemIdAndLocationIdAndDemandType(demand.getItemId(), demand.getLocationId(),
                 demand.getDemandType()))
