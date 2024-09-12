@@ -15,3 +15,5 @@ public interface AtpThresholdRepository extends MongoRepository<AtpThreshold, St
 
     Optional<AtpThreshold> findByThresholdId(String thresholdId);
 }
+
+

@@ -7,6 +7,7 @@ import java.util.Map;
 
 @AllArgsConstructor
 @Getter
+@NoArgsConstructor
 @Setter
 public class DemandSummaryResponse {
 

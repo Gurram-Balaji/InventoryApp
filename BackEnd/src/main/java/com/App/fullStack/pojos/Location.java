@@ -8,13 +8,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Location {
 
     @Id
     private String id;
     private String locationId; // Mandatory field from the input
     private String locationDesc;
-    private String locationType;
+    private LocationType locationType;
     private boolean pickupAllowed;
     private boolean shippingAllowed;
     private boolean deliveryAllowed;

@@ -65,6 +65,17 @@ public class AvailabilityService {
         return new AvailabilityResponseV2V3(itemId, locationId, availableQty, stockLevel);
     }
 
+    
+
+    public AvailabilityResponseV2V3 calculateV2AvailabilityInAllLocation(String itemId) {
+        int availableQty = calculateAvailabilityByItem(itemId);
+        Optional<AtpThreshold> threshold = atpThresholdRepository.findById(itemId);
+        String stockLevel = calculateStockLevel(threshold, availableQty);
+
+        return new AvailabilityResponseV2V3(itemId, "NETWORK", availableQty, stockLevel);
+    }
+
+
     // v3 methods
     public AvailabilityResponseV2V3 calculateV3AvailabilityByLocation(String itemId, String locationId) {
 
@@ -94,11 +105,6 @@ public class AvailabilityService {
         String stockLevel = calculateStockLevel(threshold, totalQTY);
 
         return new AvailabilityResponseV2V3(itemId, locationId, totalQTY, stockLevel);
-    }
-
-
-    private boolean isExcludedLocation(String locationId) {
-        return Arrays.asList(availabilityConfig.getExcludedLocations()).contains(locationId);
     }
 
     private String calculateStockLevel(Optional<AtpThreshold> thresholdOpt, int availableQty) {

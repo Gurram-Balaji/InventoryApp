@@ -1,8 +1,4 @@
 package com.App.fullStack.pojos;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public enum ItemStatus {
     //Available: The item is in stock and ready for purchase or use.
     AVAILABLE,
@@ -16,19 +12,6 @@ public enum ItemStatus {
     ON_HOLD,
     //Pre-Order: The item is not yet released but can be pre-ordered.
     PRE_ORDER;
-
-    private static final Map<String, ItemStatus> lookup = new HashMap<>();
-
-    static {
-        for (ItemStatus type : ItemStatus.values()) {
-            lookup.put(type.name().toUpperCase(), type);
-        }
-    }
-
-    public static boolean isValid(String value) {
-        return !lookup.containsKey(value.toUpperCase());
-    }
-
 }
 
 

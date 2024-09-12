@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "spring.security.csrf.disabled",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.security.csrf.disabled'"
+  },
+  {
+    "name": "spring.security.filter.chain.request-matcher.path.authenticated",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.security.filter.chain.request-matcher.path.authenticated'"
+  },
+  {
+    "name": "spring.security.filter.chain.content-negotiation.parameter-strategy",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.security.filter.chain.content-negotiation.parameter-strategy'"
+  },
+  {
+    "name": "spring.security.filter.chain.any-request.authorized",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.security.filter.chain.any-request.authorized'"
+  },
+  {
+    "name": "spring.security.filter.chain.request-matcher.path.pattern",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.security.filter.chain.request-matcher.path.pattern'"
+  }
+]}

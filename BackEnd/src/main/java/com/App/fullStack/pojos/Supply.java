@@ -17,4 +17,5 @@ public class Supply {
     private String locationId;
     private SupplyType supplyType; // Supply type can be ONHAND, INTRANSIT, or DAMAGED
     private int quantity;
+  
 }

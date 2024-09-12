@@ -17,4 +17,7 @@ public class Demand {
     private int quantity;
     private String itemId;
     private String locationId;
+
+    public Demand(String itemId, String locationId, DemandType demandType, int i) {
+    }
 }

@@ -13,6 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.List;
+
 
 @Service
 public class ItemService {
@@ -26,13 +28,14 @@ public class ItemService {
     @Autowired
     public DemandRepository demandRepository;
 
-    public Page<Item> getAllItems(int page, int size) {
+    public Page<Item> getAllItems(int page, int size, String keyword) {
         Pageable pageable = PageRequest.of(page, size);
-        Page<Item> Item = itemRepository.findAll(pageable);
 
-        if (Item.isEmpty()) throw new FoundException("Items records not found.");
-
-        return Item;
+        if (keyword != null && !keyword.isEmpty()) {
+            return itemRepository.searchItemsByKeyword(keyword, pageable);
+        } else {
+            return itemRepository.findAll(pageable);
+        }
     }
 
     public Item getItemByItemId(String itemId) {
@@ -71,18 +74,12 @@ public class ItemService {
             if (itemDetails.getPrice() != null) {
                 item.setPrice(itemDetails.getPrice());
             }
-            return itemRepository.save(item);
-        }
-
-        throw new FoundException("Item with itemId " + itemId + " not exist.");
-    }
-
-    public Item updateItemFulfillmentOptions(String itemId, Item itemDetails) {
-        Optional<Item> itemOptional = itemRepository.findByItemId(itemId);
-
-        if (itemOptional.isPresent()) {
-            Item item = itemOptional.get();
-            // Update boolean fields directly
+            if (itemDetails.getCategory() != null) {
+                item.setCategory(itemDetails.getCategory());
+            }
+            if (itemDetails.getType() != null) {
+                item.setType(itemDetails.getType());
+            }
             item.setPickupAllowed(itemDetails.isPickupAllowed());
             item.setShippingAllowed(itemDetails.isShippingAllowed());
             item.setDeliveryAllowed(itemDetails.isDeliveryAllowed());
@@ -105,5 +102,18 @@ public class ItemService {
         }
 
         throw new FoundException("Item with itemId " + itemId + " not exist.");
+    }
+
+    public List<String> getAllItemIds() {
+        return itemRepository.findDistinctItemIds();
+    }
+
+    public Item getItemByItemIdWithOutException(String itemId) {
+        Optional<Item> existingItem = itemRepository.findByItemId(itemId);
+
+        if (existingItem.isPresent())
+         return existingItem.get();
+         else
+         return null;
     }
 }

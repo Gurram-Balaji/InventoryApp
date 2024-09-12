@@ -2,18 +2,23 @@ package com.App.fullStack.service;
 
 import com.App.fullStack.dto.DemandDetailsResponse;
 import com.App.fullStack.dto.DemandSummaryResponse;
+import com.App.fullStack.dto.DemandDTO;
 import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.Demand;
 import com.App.fullStack.pojos.DemandType;
+import com.App.fullStack.pojos.Item;
+import com.App.fullStack.pojos.Location;
 import com.App.fullStack.repositories.DemandRepository;
 import com.App.fullStack.utility.ItemAndLocationIDChecker;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -26,6 +31,10 @@ public class DemandService {
     public DemandRepository demandRepository;
     @Autowired
     public ItemAndLocationIDChecker itemAndLocationIDChecker;
+    @Autowired
+    private ItemService itemService;
+    @Autowired
+    private LocationService locationService;
 
     public Page<Demand> getAllDemands(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
@@ -104,4 +113,66 @@ public class DemandService {
         }
         throw new FoundException("Demand with demandId " + demandId + " not found.");
     }
+
+    public Page<DemandDTO> getAllDemandWithDetails(int page, int size, String search) {
+        Pageable pageable = PageRequest.of(page, size);
+
+        // Fetch all demands (or add a better way of filtering directly from DB using
+        // pageable)
+        List<Demand> demands = demandRepository.findAll();
+
+        if (demands.isEmpty()) {
+            throw new FoundException("Demands not found.");
+        }
+
+        // Convert Demand to DemandDTO
+        List<DemandDTO> demandDTOs = new ArrayList<>();
+        for (Demand demand : demands) {
+            Item item = itemService.getItemByItemIdWithOutException(demand.getItemId());
+            Location location = locationService.getLocationByIdWithoutException(demand.getLocationId());
+
+            DemandDTO demandDTO = new DemandDTO(
+                    demand.getDemandId(),
+                    demand.getItemId(),
+                    item != null ? item.getItemDescription() : null,
+                    demand.getLocationId(),
+                    location != null ? location.getLocationDesc() : null,
+                    demand.getDemandType(),
+                    demand.getQuantity());
+
+            demandDTOs.add(demandDTO);
+        }
+
+        // Perform the search only if the search string is not null and not empty
+        if (search != null && !search.trim().isEmpty()) {
+            demandDTOs = demandDTOs.stream()
+                    .filter(dto -> (dto.getDemandId() != null
+                            && dto.getDemandId().toLowerCase().contains(search.toLowerCase())) ||
+                            (dto.getItemId() != null && dto.getItemId().toLowerCase().contains(search.toLowerCase())) ||
+                            (dto.getItemDescription() != null
+                                    && dto.getItemDescription().toLowerCase().contains(search.toLowerCase()))
+                            ||
+                            (dto.getLocationId() != null
+                                    && dto.getLocationId().toLowerCase().contains(search.toLowerCase()))
+                            ||
+                            (dto.getLocationDescription() != null
+                                    && dto.getLocationDescription().toLowerCase().contains(search.toLowerCase()))
+                            ||
+                            (dto.getDemandType() != null
+                                    && dto.getDemandType().toString().toLowerCase().contains(search.toLowerCase()))
+                            ||
+                            String.valueOf(dto.getQuantity()).contains(search))
+                    .collect(Collectors.toList());
+        }
+
+        // Manually handle pagination
+        int start = (int) pageable.getOffset();
+        int end = Math.min((start + pageable.getPageSize()), demandDTOs.size());
+        List<DemandDTO> paginatedList = demandDTOs.subList(start, end);
+
+        // Return the PageImpl with the paginated results and total count of the
+        // original list
+        return new PageImpl<>(paginatedList, pageable, demandDTOs.size());
+    }
+
 }

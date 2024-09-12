@@ -8,6 +8,7 @@ import java.util.Map;
 @Setter
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class DemandDetailsResponse {
     private String itemId;
     private String locationId;

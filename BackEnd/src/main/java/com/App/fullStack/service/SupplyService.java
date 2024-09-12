@@ -3,17 +3,23 @@ package com.App.fullStack.service;
 import com.App.fullStack.dto.SupplyDetailsResponse;
 import com.App.fullStack.dto.SupplySummaryResponse;
 import com.App.fullStack.exception.FoundException;
+import com.App.fullStack.pojos.Item;
+import com.App.fullStack.pojos.Location;
 import com.App.fullStack.pojos.Supply;
 import com.App.fullStack.pojos.SupplyType;
 import com.App.fullStack.repositories.SupplyRepository;
+import com.App.fullStack.dto.SupplyDTO;
+
 import com.App.fullStack.utility.ItemAndLocationIDChecker;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -27,6 +33,11 @@ public class SupplyService {
 
     @Autowired
     public ItemAndLocationIDChecker itemAndLocationIDChecker;
+    @Autowired
+    private ItemService itemService;
+
+    @Autowired
+    private LocationService locationService;
 
     public Page<Supply> getAllSupplies(int page, int size) {
 
@@ -121,4 +132,60 @@ public class SupplyService {
         throw new FoundException("Supply with supplyId " + supplyId + " not found.");
 
     }
+
+    public Page<SupplyDTO> getAllSuppliesWithDetails(int page, int size, String search) {
+        Pageable pageable = PageRequest.of(page, size);
+        
+        // Fetch all supplies (or add a better way of filtering directly from DB using pageable)
+        List<Supply> supplies = supplyRepository.findAll();
+        
+        if (supplies.isEmpty()) {
+            throw new FoundException("Supplies not found.");
+        }
+    
+        // Convert Supply to SupplyDTO
+        List<SupplyDTO> supplyDTOs = new ArrayList<>();
+        for (Supply supply : supplies) {
+            Item item = itemService.getItemByItemIdWithOutException(supply.getItemId());
+            Location location = locationService.getLocationByIdWithoutException(supply.getLocationId());
+    
+            SupplyDTO supplyDTO = new SupplyDTO(
+                supply.getSupplyId(),
+                supply.getItemId(),
+                item != null ? item.getItemDescription() : null,
+                supply.getLocationId(),
+                location != null ? location.getLocationDesc() : null,
+                supply.getSupplyType(),
+                supply.getQuantity()
+            );
+    
+            supplyDTOs.add(supplyDTO);
+        }
+    
+        // Perform the search only if the search string is not null and not empty
+        if (search != null && !search.trim().isEmpty()) {
+            supplyDTOs = supplyDTOs.stream()
+                .filter(dto -> 
+                    (dto.getSupplyId() != null && dto.getSupplyId().toLowerCase().contains(search.toLowerCase())) ||
+                    (dto.getItemId() != null && dto.getItemId().toLowerCase().contains(search.toLowerCase())) ||
+                    (dto.getItemDescription() != null && dto.getItemDescription().toLowerCase().contains(search.toLowerCase())) ||
+                    (dto.getLocationId() != null && dto.getLocationId().toLowerCase().contains(search.toLowerCase())) ||
+                    (dto.getLocationDescription() != null && dto.getLocationDescription().toLowerCase().contains(search.toLowerCase())) ||
+                    (dto.getSupplyType() != null && dto.getSupplyType().toString().toLowerCase().contains(search.toLowerCase())) ||
+                    String.valueOf(dto.getQuantity()).contains(search)
+                )
+                .collect(Collectors.toList());
+        }
+    
+        // Manually handle pagination
+        int start = (int) pageable.getOffset();
+        int end = Math.min((start + pageable.getPageSize()), supplyDTOs.size());
+        List<SupplyDTO> paginatedList = supplyDTOs.subList(start, end);
+    
+        // Return the PageImpl with the paginated results and total count of the original list
+        return new PageImpl<>(paginatedList, pageable, supplyDTOs.size());
+    }
+    
+    
+
 }

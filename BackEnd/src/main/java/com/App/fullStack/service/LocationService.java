@@ -13,6 +13,7 @@ import com.App.fullStack.repositories.DemandRepository;
 import com.App.fullStack.repositories.SupplyRepository;
 
 import java.util.Optional;
+import java.util.List;
 
 @Service
 public class LocationService {
@@ -26,15 +27,14 @@ public class LocationService {
     @Autowired
     public DemandRepository demandRepository;
 
-    public Page<Location> getAllLocations(int page, int size) {
-
+    public Page<Location> getAllLocations(int page, int size, String keyword) {
         Pageable pageable = PageRequest.of(page, size);
-        Page<Location> Item = locationRepository.findAll(pageable);
 
-        if (Item.isEmpty())
-            throw new FoundException("Locations not exist.");
-
-        return Item;
+        if (keyword != null && !keyword.isEmpty()) {
+            return locationRepository.searchLocationsByKeyword(keyword, pageable);
+        } else {
+            return locationRepository.findAll(pageable);
+        }
     }
 
     public Location getLocationById(String locationId) {
@@ -61,14 +61,43 @@ public class LocationService {
         Optional<Location> existingLocation = locationRepository.findByLocationId(locationId);
 
         if (existingLocation.isPresent()) {
-            // Updating fields based on the new POJO structure
+            // Retrieve the existing location entity
             Location location = existingLocation.get();
-            // Update fields only if they are not null
+
+            // Update fields from locationDetails
             if (locationDetails.getLocationDesc() != null)
                 location.setLocationDesc(locationDetails.getLocationDesc());
+
+            if (locationDetails.getLocationType() != null)
+                location.setLocationType(locationDetails.getLocationType());
+
+            if (locationDetails.getAddressLine1() != null)
+                location.setAddressLine1(locationDetails.getAddressLine1());
+
+            if (locationDetails.getAddressLine2() != null)
+                location.setAddressLine2(locationDetails.getAddressLine2());
+
+            if (locationDetails.getAddressLine3() != null)
+                location.setAddressLine3(locationDetails.getAddressLine3());
+
+            if (locationDetails.getCity() != null)
+                location.setCity(locationDetails.getCity());
+
+            if (locationDetails.getState() != null)
+                location.setState(locationDetails.getState());
+
+            if (locationDetails.getCountry() != null)
+                location.setCountry(locationDetails.getCountry());
+
+            if (locationDetails.getPinCode() != null)
+                location.setPinCode(locationDetails.getPinCode());
+
+            // Update boolean values
             location.setPickupAllowed(locationDetails.isPickupAllowed());
             location.setShippingAllowed(locationDetails.isShippingAllowed());
             location.setDeliveryAllowed(locationDetails.isDeliveryAllowed());
+
+            // Save the updated location object to the database
             return locationRepository.save(location);
         }
 
@@ -96,4 +125,19 @@ public class LocationService {
         }
         throw new FoundException("Location with locationId " + locationId + " not exist.");
     }
+
+    public List<String> getAllLocationIds() {
+        return locationRepository.findDistinctLocationIds();
+    }
+
+    public Location getLocationByIdWithoutException(String locationId) {
+
+        Optional<Location> existingLocation = locationRepository.findByLocationId(locationId);
+
+        if (existingLocation.isPresent())
+            return existingLocation.get();
+        else
+            return null;
+    }
+
 }

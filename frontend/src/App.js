@@ -1,23 +1,58 @@
-import React from 'react'; 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
-import LoginPage from './components/LoginPage'; 
-import SignupPage from './components/SignUpPage'; 
-import Dashboard from "./components/Dashboard"; 
+import { Route, Routes, useLocation } from "react-router";
+import Sidebar from "./sidebar";
+import Home from "./screens/Home";
+import Items from "./screens/items";
+import Supply from "./screens/supply";
+import Location from "./screens/location";
+import Threshold from "./screens/threshold";
+import Demand from "./screens/demand";
+import Available from "./screens/Availability";
 
-function App() { 
-return ( 
-	<div className="App"> 
-	<Router> 
+import styled from "styled-components";
+import { AnimatePresence } from "framer-motion";
+import LoginComponent from './screens/LoginPage';
+import PrivateRoute from "./components/PrivateRoute";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
-			<Routes> 
-			<Route path="/" element={<LoginPage/>} /> 
-			<Route path="/signup" element={ <SignupPage/>} /> 
-				<Route path = "/dashboard" element={<Dashboard/>}/> 
-			</Routes> 
+const Pages = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	</Router> 
-	</div> 
-); 
-} 
+  h1 {
+    font-size: calc(2rem + 2vw);
+    background: linear-gradient(to right, #803bec 30%, #1b1b1b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+`;
 
-export default App; 
+function App() {
+  const location = useLocation();
+  
+  return (
+    <>
+     <PrivateRoute><Sidebar /></PrivateRoute> 
+      <Pages>
+        <AnimatePresence>
+          <Routes location={location} key={location.pathname}>
+            <Route exact path="/" element={<LoginComponent mode={"login"} />} />
+            <Route path="/dashboard" element={<PrivateRoute><Home /></PrivateRoute>}/>
+            <Route path="/items" element={<PrivateRoute><Items /></PrivateRoute>} />
+            <Route path="/location" element={<PrivateRoute><Location /></PrivateRoute>} />
+            <Route path="/supply" element={<PrivateRoute><Supply /></PrivateRoute>} />
+            <Route path="/demand" element={<PrivateRoute><Demand /></PrivateRoute>} />
+            <Route path="/threshold" element={<PrivateRoute><Threshold /></PrivateRoute>} />
+            <Route path="/available" element={<PrivateRoute><Available /></PrivateRoute>} />
+          </Routes>
+          <ToastContainer />
+        </AnimatePresence>
+      </Pages>
+    </>
+  );
+}
+
+export default App;

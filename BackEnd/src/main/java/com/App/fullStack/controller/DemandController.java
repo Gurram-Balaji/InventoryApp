@@ -1,8 +1,8 @@
 package com.App.fullStack.controller;
 
+import com.App.fullStack.dto.DemandDTO;
 import com.App.fullStack.dto.DemandDetailsResponse;
 import com.App.fullStack.dto.DemandSummaryResponse;
-import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.Demand;
 import com.App.fullStack.pojos.DemandType;
 import com.App.fullStack.responseHandler.ApiResponse;
@@ -14,70 +14,84 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/demand")
 public class DemandController {
 
     @Autowired
-    public DemandService demandService;
+    private DemandService demandService;
 
+    // Constants for pagination defaults
+    private static final String DEFAULT_PAGE = "0";
+    private static final String DEFAULT_SIZE = "8";
+    private static final String DEMANDS_FOUND = "Demands Found";
+    private static final String DEMANDS_NOT_FOUND = "Demands Not Found";
+
+    // Get all demands with pagination
     @GetMapping
-    public ResponseEntity<ApiResponse<Page<Demand>>> getAllDemands(@RequestParam(defaultValue = "0") int page,
-                                                                   @RequestParam(defaultValue = "10") int size) {
-        return APIResponseForFoundOrNot.generateResponse(demandService.getAllDemands(page, size), "Demands Found",
-                "Demands Not Found");
+    public ResponseEntity<ApiResponse<Page<Demand>>> getAllDemands(
+            @RequestParam(defaultValue = DEFAULT_PAGE) int page,
+            @RequestParam(defaultValue = DEFAULT_SIZE) int size) {
+        
+        Page<Demand> demands = demandService.getAllDemands(page, size);
+        return APIResponseForFoundOrNot.generateResponse(demands, DEMANDS_FOUND, DEMANDS_NOT_FOUND);
     }
 
+    // Get all demand details (with item and location names) with pagination and optional search
+    @GetMapping("/all")
+    public ResponseEntity<ApiResponse<Page<DemandDTO>>> getAllDemandWithDetails(
+            @RequestParam(defaultValue = DEFAULT_PAGE) int page,
+            @RequestParam(defaultValue = DEFAULT_SIZE) int size,
+            @RequestParam(required = false) String search) {
+        Page<DemandDTO> demandDetails = demandService.getAllDemandWithDetails(page, size, search);
+        return APIResponseForFoundOrNot.generateResponse(demandDetails, DEMANDS_FOUND, DEMANDS_NOT_FOUND);
+    }
+
+    // Get demand by ID
     @GetMapping("/{demandId}")
     public ResponseEntity<ApiResponse<Demand>> getDemandById(@PathVariable String demandId) {
-        return APIResponseForFoundOrNot.generateResponse(demandService.getDemandById(demandId), "Demand Found",
-                "Demand Not Found");
+        Demand demand = demandService.getDemandById(demandId);
+        return APIResponseForFoundOrNot.generateResponse(demand, DEMANDS_FOUND, DEMANDS_NOT_FOUND);
     }
 
-    @GetMapping("byItem/{itemId}/{locationId}")
+    // Get demands by item and location
+    @GetMapping("/byItem/{itemId}/{locationId}")
     public ResponseEntity<ApiResponse<DemandDetailsResponse>> getDemandsByItemAndLocation(
-            @PathVariable String itemId,
-            @PathVariable String locationId) {
-        return APIResponseForFoundOrNot.generateResponse(
-                demandService.getDemandsByItemIdAndLocationId(itemId, locationId),
-                "Demands Found", "Demands Not Found");
+            @PathVariable String itemId, @PathVariable String locationId) {
+        DemandDetailsResponse demandDetails = demandService.getDemandsByItemIdAndLocationId(itemId, locationId);
+        return APIResponseForFoundOrNot.generateResponse(demandDetails, DEMANDS_FOUND, DEMANDS_NOT_FOUND);
     }
 
-    @GetMapping("byType/{demandType}/{locationId}")
+    // Get demands by demand type and location
+    @GetMapping("/byType/{demandType}/{locationId}")
     public ResponseEntity<ApiResponse<DemandSummaryResponse>> getDemandsByTypeAndLocation(
-            @PathVariable String demandType,
-            @PathVariable String locationId) {
+            @PathVariable DemandType demandType, @PathVariable String locationId) {
 
-        if (DemandType.isValid(demandType)) {
-            throw new FoundException(
-                    "Demands with demandType: " + demandType + " not found.");
-        }
-        DemandType type = DemandType.valueOf(demandType.toUpperCase());
+        DemandSummaryResponse demandSummary = demandService.getDemandsByTypeAndLocationId(demandType, locationId);
 
-        return APIResponseForFoundOrNot.generateResponse(
-                demandService.getDemandsByTypeAndLocationId(type, locationId),
-                "Demands Found", "Demands Not Found");
+        return APIResponseForFoundOrNot.generateResponse(demandSummary, DEMANDS_FOUND, DEMANDS_NOT_FOUND);
     }
 
+    // Add a new demand
     @PostMapping
     public ResponseEntity<ApiResponse<Demand>> addDemand(@RequestBody Demand demand) {
-        return APIResponseForFoundOrNot.generateResponse(demandService.addDemand(demand), "Demand Added",
-                "Demand Not Added");
+        Demand addedDemand = demandService.addDemand(demand);
+        return APIResponseForFoundOrNot.generateResponse(addedDemand, "Demand Added", "Demand Not Added");
     }
 
+    // Update an existing demand
     @PatchMapping("/{demandId}")
-    public ResponseEntity<ApiResponse<Demand>> updateDemand(@PathVariable String demandId,
-                                                            @RequestBody Demand demandDetails) {
-        return APIResponseForFoundOrNot.generateResponse(demandService.updateDemand(demandId, demandDetails),
-                "Demand Updated", "Demand Not Updated");
+    public ResponseEntity<ApiResponse<Demand>> updateDemand(
+            @PathVariable String demandId, @RequestBody Demand demandDetails) {
+        Demand updatedDemand = demandService.updateDemand(demandId, demandDetails);
+        return APIResponseForFoundOrNot.generateResponse(updatedDemand, "Demand Updated", "Demand Not Updated");
     }
 
+    // Delete a demand
     @DeleteMapping("/{demandId}")
     public ResponseEntity<ApiResponse<String>> deleteDemand(@PathVariable String demandId) {
+        String result = demandService.deleteDemand(demandId);
         return ResponseEntity.status(HttpStatus.OK)
-                .body(new ApiResponse<>(true, "Demand Delete Operation.",
-                        demandService.deleteDemand(demandId)));
+                .body(new ApiResponse<>(true, "Demand Delete Operation.", result));
     }
 }
