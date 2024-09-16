@@ -2,6 +2,7 @@ package com.App.fullStack.repositories;
 
 import com.App.fullStack.pojos.Demand;
 import com.App.fullStack.pojos.DemandType;
+import org.springframework.data.mongodb.repository.Query;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -29,4 +30,14 @@ public interface DemandRepository extends MongoRepository<Demand, String> {
 
     List<Demand> findByItemIdAndLocationIdAndDemandTypeIn(String itemId, String locationId,
                                                           List<String> demandTypes);
+
+
+    @Query(value = "{ 'locationId': ?0, 'demandType': ?1 }", fields = "{ 'quantity': 1 }")
+    List<Demand> findDemandsByLocationIdAndDemandType(String locationId, String demandType);
+
+    default int getTotalDemandByLocationAndType(String locationId, String demandType) {
+        List<Demand> demands = findDemandsByLocationIdAndDemandType(locationId, demandType);
+        return demands.stream().mapToInt(Demand::getQuantity).sum();
+    }
+
 }

@@ -28,11 +28,18 @@ public interface ItemRepository extends MongoRepository<Item, String> {
             "{ 'category': { $regex: ?0, $options: 'i' } }, " +
             "{ 'type': { $regex: ?0, $options: 'i' } }, " +
             "{ 'status': { $regex: ?0, $options: 'i' } }, " +
-            "{ 'price': { $regex: ?0, $options: 'i' } } " +
+            "{ $expr: { $regexMatch: { input: { $toString: '$price' }, regex: ?0, options: 'i' } } } "+
             "] }")
     Page<Item> searchItemsByKeyword(String keyword, Pageable pageable);
 
-    @Query(value = "{}", fields = "{ 'itemId' : 1, 'itemDescription':1 }")
-    List<String> findDistinctItemIds();
+    @Query(value="{ $or: [ " +
+            "{ 'itemId': { $regex: ?0, $options: 'i' } }, " +
+            "{ 'itemDescription': { $regex: ?0, $options: 'i' } }, " +
+            "] }",  fields = "{ 'itemId' : 1, 'itemDescription':1 , '_id': 0}")
+    Page<String> searchItemIdsByKeyword(String keyword, Pageable pageable);
+
+    @Query(value = "{}", fields = "{ 'itemId' : 1, 'itemDescription':1 , '_id': 0}")
+    Page<String> findDistinctItemIds(Pageable pageable);
+
 }
 

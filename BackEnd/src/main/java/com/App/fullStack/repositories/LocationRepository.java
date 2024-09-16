@@ -31,6 +31,12 @@ public interface LocationRepository extends MongoRepository<Location, String> {
         "] }")
     Page<Location> searchLocationsByKeyword(@Param("keyword") String keyword, Pageable pageable);
 
+    @Query(value="{ $or: [ " +
+            "{ 'locationId': { $regex: ?0, $options: 'i' } }, " +
+            "{ 'locationDesc': { $regex: ?0, $options: 'i' } }, " +
+            "] }",  fields = "{ 'locationId' : 1, 'locationDesc':1 , '_id': 0}")
+    Page<String> searchLocationIdsByKeyword(String keyword, Pageable pageable);
+
 @Query(value = "{}", fields = "{ 'locationId' : 1 , '_id': 0, 'locationDesc': 1}")
-    List<String> findDistinctLocationIds();
+    Page<String> findDistinctLocationIds(Pageable pageable);
 }

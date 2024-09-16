@@ -60,7 +60,7 @@ class UserControllerTest {
         ApiResponse<String> response = new ApiResponse<>(true, "User Found.", username);
         when(userService.GetUsername()).thenReturn(username);
 
-        ResponseEntity<ApiResponse<String>> result = userController.getName("Bearer token");
+        ResponseEntity<ApiResponse<String>> result = userController.getName();
 
         assertEquals(HttpStatus.OK, result.getStatusCode());
         assertEquals(response.getPayload(), Objects.requireNonNull(result.getBody()).getPayload());

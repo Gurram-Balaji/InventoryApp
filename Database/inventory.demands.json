@@ -1,0 +1,7532 @@
+[{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf067"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 54,
+  "itemId": "000001",
+  "locationId": "01501",
+  "_class": "com.App.fullStack.pojos.Demand"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf068"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000001",
+  "locationId": "01501",
+  "_class": "com.App.fullStack.pojos.Demand"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf069"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000001",
+  "locationId": "01502",
+  "_class": "com.App.fullStack.pojos.Demand"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf06a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000001",
+  "locationId": "01502",
+  "_class": "com.App.fullStack.pojos.Demand"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf06b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000001",
+  "locationId": "01503",
+  "_class": "com.App.fullStack.pojos.Demand"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf06c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 59,
+  "itemId": "000001",
+  "locationId": "01503",
+  "_class": "com.App.fullStack.pojos.Demand"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf06d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 45,
+  "itemId": "000001",
+  "locationId": "01504",
+  "_class": "com.App.fullStack.pojos.Demand"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf06e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000001",
+  "locationId": "01504",
+  "_class": "com.App.fullStack.pojos.Demand"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf06f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 36,
+  "itemId": "000001",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf070"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000001",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf071"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 36,
+  "itemId": "000001",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf072"
+  },
+  "demandType": "PLANNED",
+  "quantity": 44,
+  "itemId": "000001",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf073"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000001",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf074"
+  },
+  "demandType": "PLANNED",
+  "quantity": 36,
+  "itemId": "000001",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf075"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000001",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf076"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000001",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf077"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000001",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf078"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000001",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf079"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000001",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf07a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000001",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf07b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 35,
+  "itemId": "000001",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf07c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000001",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf07d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000001",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf07e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 37,
+  "itemId": "000001",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf07f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000001",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf080"
+  },
+  "demandType": "PLANNED",
+  "quantity": 20,
+  "itemId": "000001",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf081"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000001",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf082"
+  },
+  "demandType": "PLANNED",
+  "quantity": 47,
+  "itemId": "000001",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf083"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000001",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf084"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000001",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf085"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000001",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf086"
+  },
+  "demandType": "PLANNED",
+  "quantity": 20,
+  "itemId": "000001",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf087"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000001",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf088"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000001",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf089"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000001",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf08a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000001",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf08b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000001",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf08c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000001",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf08d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000001",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf08e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 39,
+  "itemId": "000001",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf08f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 44,
+  "itemId": "000001",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf090"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000001",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf091"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 58,
+  "itemId": "000001",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf092"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000001",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf093"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000002",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf094"
+  },
+  "demandType": "PLANNED",
+  "quantity": 37,
+  "itemId": "000002",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf095"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000002",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf096"
+  },
+  "demandType": "PLANNED",
+  "quantity": 36,
+  "itemId": "000002",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf097"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000002",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf098"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000002",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf099"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000002",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf09a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000002",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf09b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000002",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf09c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000002",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf09d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000002",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf09e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000002",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf09f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000002",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000002",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000002",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 23,
+  "itemId": "000002",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000002",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000002",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000002",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000002",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 59,
+  "itemId": "000002",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 48,
+  "itemId": "000002",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0a9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000002",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0aa"
+  },
+  "demandType": "PLANNED",
+  "quantity": 20,
+  "itemId": "000002",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ab"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 35,
+  "itemId": "000002",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ac"
+  },
+  "demandType": "PLANNED",
+  "quantity": 23,
+  "itemId": "000002",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ad"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000002",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ae"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000002",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0af"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000002",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 50,
+  "itemId": "000002",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000002",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000002",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000002",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000002",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000002",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000002",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000002",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 52,
+  "itemId": "000002",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0b9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000002",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ba"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000002",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0bb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000002",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0bc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000002",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0bd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000002",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0be"
+  },
+  "demandType": "PLANNED",
+  "quantity": 37,
+  "itemId": "000002",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0bf"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 29,
+  "itemId": "000003",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000003",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000003",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000003",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000003",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000003",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000003",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 52,
+  "itemId": "000003",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000003",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000003",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0c9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000003",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ca"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000003",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0cb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000003",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0cc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 59,
+  "itemId": "000003",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0cd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000003",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ce"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000003",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0cf"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000003",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000003",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000003",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000003",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 32,
+  "itemId": "000003",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000003",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000003",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000003",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 51,
+  "itemId": "000003",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000003",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0d9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000003",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0da"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000003",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0db"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000003",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0dc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000003",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0dd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 24,
+  "itemId": "000003",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0de"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000003",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0df"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000003",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000003",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 35,
+  "itemId": "000003",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000003",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000003",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000003",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000003",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000003",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000003",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000003",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0e9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000003",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ea"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000003",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0eb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 24,
+  "itemId": "000004",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ec"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000004",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ed"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000004",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ee"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000004",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ef"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 49,
+  "itemId": "000004",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000004",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 58,
+  "itemId": "000004",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000004",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000004",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000004",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000004",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000004",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000004",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 58,
+  "itemId": "000004",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0f9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000004",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0fa"
+  },
+  "demandType": "PLANNED",
+  "quantity": 59,
+  "itemId": "000004",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0fb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 29,
+  "itemId": "000004",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0fc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000004",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0fd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000004",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0fe"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000004",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf0ff"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000004",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf100"
+  },
+  "demandType": "PLANNED",
+  "quantity": 50,
+  "itemId": "000004",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf101"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000004",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf102"
+  },
+  "demandType": "PLANNED",
+  "quantity": 39,
+  "itemId": "000004",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf103"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000004",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf104"
+  },
+  "demandType": "PLANNED",
+  "quantity": 48,
+  "itemId": "000004",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf105"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000004",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf106"
+  },
+  "demandType": "PLANNED",
+  "quantity": 37,
+  "itemId": "000004",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf107"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000004",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf108"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000004",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf109"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000004",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf10a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000004",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf10b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000004",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf10c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 47,
+  "itemId": "000004",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf10d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000004",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf10e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 37,
+  "itemId": "000004",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf10f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000004",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf110"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000004",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf111"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000004",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf112"
+  },
+  "demandType": "PLANNED",
+  "quantity": 53,
+  "itemId": "000004",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf113"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000004",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf114"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000004",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf115"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000004",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf116"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000004",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf117"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 60,
+  "itemId": "000005",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf118"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000005",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf119"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000005",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf11a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 44,
+  "itemId": "000005",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf11b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 54,
+  "itemId": "000005",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf11c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000005",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf11d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000005",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf11e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 47,
+  "itemId": "000005",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf11f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 51,
+  "itemId": "000005",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf120"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000005",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf121"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 44,
+  "itemId": "000005",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf122"
+  },
+  "demandType": "PLANNED",
+  "quantity": 41,
+  "itemId": "000005",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf123"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000005",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf124"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000005",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf125"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000005",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf126"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000005",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf127"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000005",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf128"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000005",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf129"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000005",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf12a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000005",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf12b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000005",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf12c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 47,
+  "itemId": "000005",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf12d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 60,
+  "itemId": "000005",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf12e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 50,
+  "itemId": "000005",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf12f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000005",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf130"
+  },
+  "demandType": "PLANNED",
+  "quantity": 58,
+  "itemId": "000005",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf131"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000005",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf132"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000005",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf133"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000005",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf134"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000005",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf135"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000005",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf136"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000005",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf137"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000005",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf138"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000005",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf139"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000005",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf13a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000005",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf13b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000005",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf13c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000005",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf13d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000005",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf13e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000005",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf13f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000005",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf140"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000005",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf141"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 39,
+  "itemId": "000005",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf142"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000005",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf143"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 49,
+  "itemId": "000006",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf144"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000006",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf145"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000006",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf146"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000006",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf147"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000006",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf148"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000006",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf149"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 59,
+  "itemId": "000006",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf14a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000006",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf14b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000006",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf14c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 37,
+  "itemId": "000006",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf14d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000006",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf14e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000006",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf14f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 45,
+  "itemId": "000006",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf150"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000006",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf151"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000006",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf152"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000006",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf153"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000006",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf154"
+  },
+  "demandType": "PLANNED",
+  "quantity": 25,
+  "itemId": "000006",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf155"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 32,
+  "itemId": "000006",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf156"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000006",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf157"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000006",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf158"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000006",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf159"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 24,
+  "itemId": "000006",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf15a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000006",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf15b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000006",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf15c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 25,
+  "itemId": "000006",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf15d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000006",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf15e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000006",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf15f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000006",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf160"
+  },
+  "demandType": "PLANNED",
+  "quantity": 22,
+  "itemId": "000006",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf161"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000006",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf162"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000006",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf163"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000006",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf164"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000006",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf165"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000006",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf166"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000006",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf167"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000006",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf168"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000006",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf169"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000006",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf16a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 25,
+  "itemId": "000006",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf16b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000006",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf16c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 53,
+  "itemId": "000006",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf16d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 45,
+  "itemId": "000006",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf16e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000006",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf16f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 47,
+  "itemId": "000007",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf170"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000007",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf171"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000007",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf172"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000007",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf173"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000007",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf174"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000007",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf175"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000007",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf176"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000007",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf177"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000007",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf178"
+  },
+  "demandType": "PLANNED",
+  "quantity": 20,
+  "itemId": "000007",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf179"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000007",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf17a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 22,
+  "itemId": "000007",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf17b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000007",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf17c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000007",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf17d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000007",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf17e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000007",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf17f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000007",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf180"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000007",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf181"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000007",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf182"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000007",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf183"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000007",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf184"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000007",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf185"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 35,
+  "itemId": "000007",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf186"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000007",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf187"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000007",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf188"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000007",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf189"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000007",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf18a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000007",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf18b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000007",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf18c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 52,
+  "itemId": "000007",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf18d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000007",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf18e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000007",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf18f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000007",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf190"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000007",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf191"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 31,
+  "itemId": "000007",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf192"
+  },
+  "demandType": "PLANNED",
+  "quantity": 37,
+  "itemId": "000007",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf193"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000007",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf194"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000007",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf195"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000007",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf196"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000007",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf197"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000007",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf198"
+  },
+  "demandType": "PLANNED",
+  "quantity": 54,
+  "itemId": "000007",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf199"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000007",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf19a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000007",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf19b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000008",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf19c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000008",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf19d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000008",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf19e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000008",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf19f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000008",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000008",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000008",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000008",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000008",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000008",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000008",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000008",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000008",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000008",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1a9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 29,
+  "itemId": "000008",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1aa"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000008",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ab"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 60,
+  "itemId": "000008",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ac"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000008",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ad"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000008",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ae"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000008",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1af"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000008",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 23,
+  "itemId": "000008",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000008",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000008",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000008",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000008",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000008",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000008",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 51,
+  "itemId": "000008",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 44,
+  "itemId": "000008",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1b9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000008",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ba"
+  },
+  "demandType": "PLANNED",
+  "quantity": 36,
+  "itemId": "000008",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1bb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000008",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1bc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 23,
+  "itemId": "000008",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1bd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 29,
+  "itemId": "000008",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1be"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000008",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1bf"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 51,
+  "itemId": "000008",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 44,
+  "itemId": "000008",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000008",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000008",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000008",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 53,
+  "itemId": "000008",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 32,
+  "itemId": "000008",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000008",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000009",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000009",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1c9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 59,
+  "itemId": "000009",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ca"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000009",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1cb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 59,
+  "itemId": "000009",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1cc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000009",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1cd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 36,
+  "itemId": "000009",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ce"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000009",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1cf"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000009",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 58,
+  "itemId": "000009",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000009",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000009",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000009",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 36,
+  "itemId": "000009",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 51,
+  "itemId": "000009",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000009",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000009",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 54,
+  "itemId": "000009",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1d9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000009",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1da"
+  },
+  "demandType": "PLANNED",
+  "quantity": 41,
+  "itemId": "000009",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1db"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000009",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1dc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000009",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1dd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 58,
+  "itemId": "000009",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1de"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000009",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1df"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000009",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000009",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000009",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 41,
+  "itemId": "000009",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 29,
+  "itemId": "000009",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000009",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 54,
+  "itemId": "000009",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000009",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000009",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000009",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1e9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000009",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ea"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000009",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1eb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 59,
+  "itemId": "000009",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ec"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000009",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ed"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 29,
+  "itemId": "000009",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ee"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000009",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ef"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 32,
+  "itemId": "000009",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000009",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000009",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000009",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000010",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 37,
+  "itemId": "000010",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000010",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000010",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 44,
+  "itemId": "000010",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000010",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1f9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000010",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1fa"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000010",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1fb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000010",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1fc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 36,
+  "itemId": "000010",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1fd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000010",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1fe"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000010",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf1ff"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000010",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf200"
+  },
+  "demandType": "PLANNED",
+  "quantity": 36,
+  "itemId": "000010",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf201"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000010",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf202"
+  },
+  "demandType": "PLANNED",
+  "quantity": 20,
+  "itemId": "000010",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf203"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000010",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf204"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000010",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf205"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000010",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf206"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000010",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf207"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000010",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf208"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000010",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf209"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 31,
+  "itemId": "000010",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf20a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000010",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf20b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000010",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf20c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000010",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf20d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000010",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf20e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000010",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf20f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000010",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf210"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000010",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf211"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 49,
+  "itemId": "000010",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf212"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000010",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf213"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000010",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf214"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000010",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf215"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000010",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf216"
+  },
+  "demandType": "PLANNED",
+  "quantity": 22,
+  "itemId": "000010",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf217"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000010",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf218"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000010",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf219"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000010",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf21a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000010",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf21b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000010",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf21c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000010",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf21d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000010",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf21e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000010",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf21f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 31,
+  "itemId": "000011",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf220"
+  },
+  "demandType": "PLANNED",
+  "quantity": 37,
+  "itemId": "000011",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf221"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000011",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf222"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000011",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf223"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000011",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf224"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000011",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf225"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000011",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf226"
+  },
+  "demandType": "PLANNED",
+  "quantity": 39,
+  "itemId": "000011",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf227"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000011",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf228"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000011",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf229"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 54,
+  "itemId": "000011",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf22a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000011",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf22b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000011",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf22c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 25,
+  "itemId": "000011",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf22d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000011",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf22e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000011",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf22f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000011",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf230"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000011",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf231"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 32,
+  "itemId": "000011",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf232"
+  },
+  "demandType": "PLANNED",
+  "quantity": 48,
+  "itemId": "000011",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf233"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000011",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf234"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000011",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf235"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000011",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf236"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000011",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf237"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000011",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf238"
+  },
+  "demandType": "PLANNED",
+  "quantity": 20,
+  "itemId": "000011",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf239"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000011",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf23a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000011",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf23b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000011",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf23c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000011",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf23d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000011",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf23e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 44,
+  "itemId": "000011",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf23f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000011",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf240"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000011",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf241"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 59,
+  "itemId": "000011",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf242"
+  },
+  "demandType": "PLANNED",
+  "quantity": 20,
+  "itemId": "000011",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf243"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000011",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf244"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000011",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf245"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 44,
+  "itemId": "000011",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf246"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000011",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf247"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000011",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf248"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000011",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf249"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 29,
+  "itemId": "000011",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf24a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000011",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf24b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000012",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf24c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000012",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf24d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 58,
+  "itemId": "000012",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf24e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000012",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf24f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 24,
+  "itemId": "000012",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf250"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000012",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf251"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000012",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf252"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000012",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf253"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 24,
+  "itemId": "000012",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf254"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000012",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf255"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000012",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf256"
+  },
+  "demandType": "PLANNED",
+  "quantity": 48,
+  "itemId": "000012",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf257"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000012",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf258"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000012",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf259"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000012",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf25a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000012",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf25b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000012",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf25c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 25,
+  "itemId": "000012",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf25d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000012",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf25e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000012",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf25f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000012",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf260"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000012",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf261"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 24,
+  "itemId": "000012",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf262"
+  },
+  "demandType": "PLANNED",
+  "quantity": 41,
+  "itemId": "000012",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf263"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000012",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf264"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000012",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf265"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000012",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf266"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000012",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf267"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 54,
+  "itemId": "000012",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf268"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000012",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf269"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 51,
+  "itemId": "000012",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf26a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000012",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf26b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000012",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf26c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000012",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf26d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000012",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf26e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000012",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf26f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000012",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf270"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000012",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf271"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 49,
+  "itemId": "000012",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf272"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000012",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf273"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 39,
+  "itemId": "000012",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf274"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000012",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf275"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000012",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf276"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000012",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf277"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000013",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf278"
+  },
+  "demandType": "PLANNED",
+  "quantity": 59,
+  "itemId": "000013",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf279"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 32,
+  "itemId": "000013",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf27a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 54,
+  "itemId": "000013",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf27b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 31,
+  "itemId": "000013",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf27c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000013",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf27d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 39,
+  "itemId": "000013",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf27e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 59,
+  "itemId": "000013",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf27f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 36,
+  "itemId": "000013",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf280"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000013",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf281"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 59,
+  "itemId": "000013",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf282"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000013",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf283"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000013",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf284"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000013",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf285"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000013",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf286"
+  },
+  "demandType": "PLANNED",
+  "quantity": 41,
+  "itemId": "000013",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf287"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 44,
+  "itemId": "000013",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf288"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000013",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf289"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000013",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf28a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 48,
+  "itemId": "000013",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf28b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000013",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf28c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000013",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf28d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000013",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf28e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000013",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf28f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 49,
+  "itemId": "000013",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf290"
+  },
+  "demandType": "PLANNED",
+  "quantity": 22,
+  "itemId": "000013",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf291"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 54,
+  "itemId": "000013",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf292"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000013",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf293"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 35,
+  "itemId": "000013",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf294"
+  },
+  "demandType": "PLANNED",
+  "quantity": 48,
+  "itemId": "000013",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf295"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000013",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf296"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000013",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf297"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000013",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf298"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000013",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf299"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000013",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf29a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 47,
+  "itemId": "000013",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf29b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000013",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf29c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000013",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf29d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000013",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf29e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 52,
+  "itemId": "000013",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf29f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000013",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 36,
+  "itemId": "000013",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 36,
+  "itemId": "000013",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 44,
+  "itemId": "000013",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 39,
+  "itemId": "000014",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 50,
+  "itemId": "000014",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 47,
+  "itemId": "000014",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000014",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000014",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000014",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2a9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000014",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2aa"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000014",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ab"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000014",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ac"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000014",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ad"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000014",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ae"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000014",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2af"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000014",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000014",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000014",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000014",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000014",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 48,
+  "itemId": "000014",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 60,
+  "itemId": "000014",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000014",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 59,
+  "itemId": "000014",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 54,
+  "itemId": "000014",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2b9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000014",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ba"
+  },
+  "demandType": "PLANNED",
+  "quantity": 52,
+  "itemId": "000014",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2bb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000014",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2bc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 41,
+  "itemId": "000014",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2bd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000014",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2be"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000014",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2bf"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000014",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000014",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 32,
+  "itemId": "000014",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000014",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000014",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000014",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000014",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000014",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 60,
+  "itemId": "000014",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000014",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2c9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 47,
+  "itemId": "000014",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ca"
+  },
+  "demandType": "PLANNED",
+  "quantity": 44,
+  "itemId": "000014",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2cb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000014",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2cc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000014",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2cd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 32,
+  "itemId": "000014",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ce"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000014",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2cf"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000015",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 23,
+  "itemId": "000015",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000015",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000015",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000015",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000015",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 58,
+  "itemId": "000015",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000015",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 41,
+  "itemId": "000015",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000015",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2d9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000015",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2da"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000015",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2db"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000015",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2dc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000015",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2dd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 51,
+  "itemId": "000015",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2de"
+  },
+  "demandType": "PLANNED",
+  "quantity": 39,
+  "itemId": "000015",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2df"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000015",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 54,
+  "itemId": "000015",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 31,
+  "itemId": "000015",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000015",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 44,
+  "itemId": "000015",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 47,
+  "itemId": "000015",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000015",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000015",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000015",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000015",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2e9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000015",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ea"
+  },
+  "demandType": "PLANNED",
+  "quantity": 54,
+  "itemId": "000015",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2eb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 59,
+  "itemId": "000015",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ec"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000015",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ed"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 31,
+  "itemId": "000015",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ee"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000015",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ef"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000015",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 36,
+  "itemId": "000015",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 47,
+  "itemId": "000015",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000015",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 24,
+  "itemId": "000015",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000015",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000015",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 47,
+  "itemId": "000015",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 32,
+  "itemId": "000015",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 41,
+  "itemId": "000015",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2f9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 51,
+  "itemId": "000015",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2fa"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000015",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2fb"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000016",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2fc"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000016",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2fd"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 58,
+  "itemId": "000016",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2fe"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000016",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf2ff"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 58,
+  "itemId": "000016",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf300"
+  },
+  "demandType": "PLANNED",
+  "quantity": 50,
+  "itemId": "000016",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf301"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000016",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf302"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000016",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf303"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000016",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf304"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000016",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf305"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000016",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf306"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000016",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf307"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000016",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf308"
+  },
+  "demandType": "PLANNED",
+  "quantity": 23,
+  "itemId": "000016",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf309"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000016",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf30a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000016",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf30b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 38,
+  "itemId": "000016",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf30c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 39,
+  "itemId": "000016",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf30d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 31,
+  "itemId": "000016",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf30e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000016",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf30f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000016",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf310"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000016",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf311"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000016",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf312"
+  },
+  "demandType": "PLANNED",
+  "quantity": 48,
+  "itemId": "000016",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf313"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000016",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf314"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000016",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf315"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 20,
+  "itemId": "000016",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf316"
+  },
+  "demandType": "PLANNED",
+  "quantity": 24,
+  "itemId": "000016",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf317"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000016",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf318"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000016",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf319"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000016",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf31a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 36,
+  "itemId": "000016",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf31b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000016",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf31c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000016",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf31d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000016",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf31e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 52,
+  "itemId": "000016",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf31f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 36,
+  "itemId": "000016",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf320"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000016",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf321"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 54,
+  "itemId": "000016",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf322"
+  },
+  "demandType": "PLANNED",
+  "quantity": 20,
+  "itemId": "000016",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf323"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000016",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf324"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000016",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf325"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000016",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf326"
+  },
+  "demandType": "PLANNED",
+  "quantity": 25,
+  "itemId": "000016",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf327"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000017",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf328"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000017",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf329"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000017",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf32a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000017",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf32b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 31,
+  "itemId": "000017",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf32c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000017",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf32d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000017",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf32e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000017",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf32f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000017",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf330"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000017",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf331"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 34,
+  "itemId": "000017",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf332"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000017",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf333"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000017",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf334"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000017",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf335"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 35,
+  "itemId": "000017",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf336"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000017",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf337"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000017",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf338"
+  },
+  "demandType": "PLANNED",
+  "quantity": 20,
+  "itemId": "000017",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf339"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 35,
+  "itemId": "000017",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf33a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000017",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf33b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000017",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf33c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 59,
+  "itemId": "000017",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf33d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000017",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf33e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000017",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf33f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000017",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf340"
+  },
+  "demandType": "PLANNED",
+  "quantity": 26,
+  "itemId": "000017",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf341"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 52,
+  "itemId": "000017",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf342"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000017",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf343"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000017",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf344"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000017",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf345"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000017",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf346"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000017",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf347"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000017",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf348"
+  },
+  "demandType": "PLANNED",
+  "quantity": 31,
+  "itemId": "000017",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf349"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000017",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf34a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000017",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf34b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000017",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf34c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 54,
+  "itemId": "000017",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf34d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000017",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf34e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000017",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf34f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000017",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf350"
+  },
+  "demandType": "PLANNED",
+  "quantity": 41,
+  "itemId": "000017",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf351"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 56,
+  "itemId": "000017",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf352"
+  },
+  "demandType": "PLANNED",
+  "quantity": 41,
+  "itemId": "000017",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf353"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000018",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf354"
+  },
+  "demandType": "PLANNED",
+  "quantity": 32,
+  "itemId": "000018",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf355"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 35,
+  "itemId": "000018",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf356"
+  },
+  "demandType": "PLANNED",
+  "quantity": 23,
+  "itemId": "000018",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf357"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 48,
+  "itemId": "000018",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf358"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000018",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf359"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000018",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf35a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 28,
+  "itemId": "000018",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf35b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 36,
+  "itemId": "000018",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf35c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 57,
+  "itemId": "000018",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf35d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 51,
+  "itemId": "000018",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf35e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000018",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf35f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000018",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf360"
+  },
+  "demandType": "PLANNED",
+  "quantity": 53,
+  "itemId": "000018",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf361"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 31,
+  "itemId": "000018",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf362"
+  },
+  "demandType": "PLANNED",
+  "quantity": 27,
+  "itemId": "000018",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf363"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000018",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf364"
+  },
+  "demandType": "PLANNED",
+  "quantity": 34,
+  "itemId": "000018",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf365"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000018",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf366"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000018",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf367"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000018",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf368"
+  },
+  "demandType": "PLANNED",
+  "quantity": 38,
+  "itemId": "000018",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf369"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000018",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf36a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 50,
+  "itemId": "000018",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf36b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 39,
+  "itemId": "000018",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf36c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 44,
+  "itemId": "000018",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf36d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 53,
+  "itemId": "000018",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf36e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 23,
+  "itemId": "000018",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf36f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 29,
+  "itemId": "000018",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf370"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000018",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf371"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 23,
+  "itemId": "000018",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf372"
+  },
+  "demandType": "PLANNED",
+  "quantity": 22,
+  "itemId": "000018",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf373"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000018",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf374"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000018",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf375"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000018",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf376"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000018",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf377"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000018",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf378"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000018",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf379"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000018",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf37a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 33,
+  "itemId": "000018",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf37b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 45,
+  "itemId": "000018",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf37c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 39,
+  "itemId": "000018",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf37d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 25,
+  "itemId": "000018",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf37e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 30,
+  "itemId": "000018",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf37f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000019",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf380"
+  },
+  "demandType": "PLANNED",
+  "quantity": 60,
+  "itemId": "000019",
+  "locationId": "01501"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf381"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 33,
+  "itemId": "000019",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf382"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000019",
+  "locationId": "01502"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf383"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 37,
+  "itemId": "000019",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf384"
+  },
+  "demandType": "PLANNED",
+  "quantity": 47,
+  "itemId": "000019",
+  "locationId": "01503"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf385"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 27,
+  "itemId": "000019",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf386"
+  },
+  "demandType": "PLANNED",
+  "quantity": 29,
+  "itemId": "000019",
+  "locationId": "01504"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf387"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 21,
+  "itemId": "000019",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf388"
+  },
+  "demandType": "PLANNED",
+  "quantity": 25,
+  "itemId": "000019",
+  "locationId": "01505"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf389"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000019",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf38a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 51,
+  "itemId": "000019",
+  "locationId": "01506"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf38b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 24,
+  "itemId": "000019",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf38c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000019",
+  "locationId": "01507"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf38d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 54,
+  "itemId": "000019",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf38e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 55,
+  "itemId": "000019",
+  "locationId": "01509"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf38f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 49,
+  "itemId": "000019",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf390"
+  },
+  "demandType": "PLANNED",
+  "quantity": 21,
+  "itemId": "000019",
+  "locationId": "01510"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf391"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 26,
+  "itemId": "000019",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf392"
+  },
+  "demandType": "PLANNED",
+  "quantity": 56,
+  "itemId": "000019",
+  "locationId": "01511"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf393"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 50,
+  "itemId": "000019",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf394"
+  },
+  "demandType": "PLANNED",
+  "quantity": 59,
+  "itemId": "000019",
+  "locationId": "01512"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf395"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 30,
+  "itemId": "000019",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf396"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000019",
+  "locationId": "01513"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf397"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000019",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf398"
+  },
+  "demandType": "PLANNED",
+  "quantity": 40,
+  "itemId": "000019",
+  "locationId": "01514"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf399"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 29,
+  "itemId": "000019",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf39a"
+  },
+  "demandType": "PLANNED",
+  "quantity": 45,
+  "itemId": "000019",
+  "locationId": "01515"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf39b"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 42,
+  "itemId": "000019",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf39c"
+  },
+  "demandType": "PLANNED",
+  "quantity": 42,
+  "itemId": "000019",
+  "locationId": "01516"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf39d"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 40,
+  "itemId": "000019",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf39e"
+  },
+  "demandType": "PLANNED",
+  "quantity": 25,
+  "itemId": "000019",
+  "locationId": "01517"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf39f"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 43,
+  "itemId": "000019",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a0"
+  },
+  "demandType": "PLANNED",
+  "quantity": 22,
+  "itemId": "000019",
+  "locationId": "01519"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a1"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 57,
+  "itemId": "000019",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a2"
+  },
+  "demandType": "PLANNED",
+  "quantity": 25,
+  "itemId": "000019",
+  "locationId": "01520"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a3"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 46,
+  "itemId": "000019",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a4"
+  },
+  "demandType": "PLANNED",
+  "quantity": 49,
+  "itemId": "000019",
+  "locationId": "474747"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a5"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 22,
+  "itemId": "000019",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a6"
+  },
+  "demandType": "PLANNED",
+  "quantity": 35,
+  "itemId": "000019",
+  "locationId": "wqefet"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a7"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 55,
+  "itemId": "000019",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a8"
+  },
+  "demandType": "PLANNED",
+  "quantity": 46,
+  "itemId": "000019",
+  "locationId": "wew"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3a9"
+  },
+  "demandType": "HARD_PROMISED",
+  "quantity": 28,
+  "itemId": "000019",
+  "locationId": "we"
+},
+{
+  "_id": {
+    "$oid": "66e7c97d1b8ef4959d8cf3aa"
+  },
+  "demandType": "PLANNED",
+  "quantity": 43,
+  "itemId": "000019",
+  "locationId": "we"
+}]

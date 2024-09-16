@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, FormControl } from '@mui/material';
+import Autocomplete from '@mui/material/Autocomplete';
 import { errorToast, successToast } from '../../components/Toast';
 import apiClient from '../../components/baseUrl';
 
@@ -22,8 +23,8 @@ export default function NewDemandForm({ fetchRow, page, setOpenAddDialog, openAd
             return;
         }
 
-        if (minThreshold<0 || maxThreshold<0) {
-            errorToast("Quantity should not be negitive.");
+        if (minThreshold < 0 || maxThreshold < 0) {
+            errorToast("Quantity should not be negative.");
             return;
         }
 
@@ -33,7 +34,6 @@ export default function NewDemandForm({ fetchRow, page, setOpenAddDialog, openAd
                 errorToast(response.data.message);
             else if (response.data.success === true) {
                 successToast("Threshold added successfully!");
-              
                 fetchRow(page);
             }
         } catch (error) {
@@ -48,84 +48,78 @@ export default function NewDemandForm({ fetchRow, page, setOpenAddDialog, openAd
         });
     };
 
+    // Fetch locations
+    const fetchLocations = async (searchTerm = '') => {
+        try {
+            const locationResponse = await apiClient.get(`/locations/ids?search=${searchTerm}`);
+            const locationData = locationResponse.data.payload.content || [];
+            const locations = locationData.map(item => {
+                const parsedItem = JSON.parse(item);
+                return {
+                    id: parsedItem.locationId || null,
+                    name: parsedItem.locationDesc || ''
+                };
+            });
+            setLocationOptions(locations);
+        } catch (error) {
+            console.error("Error fetching locations:", error);
+            errorToast("Failed to fetch locations");
+        }
+    };
+
+    // Fetch items
+    const fetchItems = async (searchTerm = '') => {
+        try {
+            const itemResponse = await apiClient.get(`/items/ids?search=${searchTerm}`);
+            const itemData = itemResponse.data.payload.content || [];
+            const items = itemData.map(item => {
+                const parsedItem = JSON.parse(item);
+                return {
+                    id: parsedItem.itemId || null,
+                    name: parsedItem.itemDescription || ''
+                };
+            });
+            setItemOptions(items);
+        } catch (error) {
+            console.error("Error fetching items:", error);
+            errorToast("Failed to fetch items");
+        }
+    };
+
     useEffect(() => {
-        const fetchIds = async () => {
-            try {
-                // Fetch location IDs and descriptions
-                const locationResponse = await apiClient.get('/locations/ids');
-                const locationData = locationResponse.data.payload || [];
-                const locations = locationData.map(item => {
-                    try {
-                        const parsedItem = JSON.parse(item);
-                        return {
-                            id: parsedItem.locationId || null,
-                            name: parsedItem.locationDesc || ''  // Extract description
-                        };
-                    } catch (e) {
-                        console.error("Error parsing location JSON:", e);
-                        return null;
-                    }
-                }).filter(item => item !== null);  // Remove any null values
-
-                setLocationOptions(locations);
-                // Fetch item IDs and descriptions
-                const itemResponse = await apiClient.get('/items/ids');
-                const itemData = itemResponse.data.payload || [];
-                const items = itemData.map(item => {
-                    try {
-                        const parsedItem = JSON.parse(item);
-                        return {
-                            id: parsedItem.itemId || null,
-                            name: parsedItem.itemDescription || ''  // Extract description
-                        };
-                    } catch (e) {
-                        console.error("Error parsing item JSON:", e);
-                        return null;
-                    }
-                }).filter(item => item !== null);  // Remove any null values
-
-                setItemOptions(items);
-
-            } catch (error) {
-                console.error("Error fetching IDs:", error);
-                errorToast("Failed to fetch IDs");
-            }
-        };
-
-        fetchIds();
+        fetchLocations(); // Fetch initial locations
+        fetchItems(); // Fetch initial items
     }, []);
 
-
-
-
     return (
-        <Dialog open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
-            <DialogTitle>Add New Demand</DialogTitle>
+         <Dialog PaperProps={{ className: 'dialog-custom' }} open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
+            <DialogTitle className="dialog-title-custom">Add New Demand</DialogTitle>
             <DialogContent style={{ padding: '30px 50px 10px' }}>
-                {/* Location ID Select Box */}
-                <FormControl fullWidth margin="dense" variant="standard">
-                    <InputLabel>Location</InputLabel>
-                    <Select
-                        value={newData.locationId || ''}
-                        onChange={(e) => setNewData({ ...newData, locationId: e.target.value })}
-                    >
-                        {Array.isArray(locationOptions) && locationOptions.map((location) => (
-                            <MenuItem key={location.id} value={location.id}>{location.name}</MenuItem>
-                        ))}
-                    </Select>
+                
+                {/* Location Autocomplete */}
+                <FormControl fullWidth margin="dense">
+                    <Autocomplete
+                        options={locationOptions}
+                        getOptionLabel={(option) => option.name || ''}
+                        onInputChange={(event, newInputValue) => fetchLocations(newInputValue)} // Search locations as user types
+                        onChange={(event, newValue) => setNewData({ ...newData, locationId: newValue ? newValue.id : '' })} // Set selected locationId
+                        renderInput={(params) => (
+                            <TextField {...params} label="Search Location" variant="outlined" fullWidth margin="dense" />
+                        )}
+                    />
                 </FormControl>
 
-                {/* Item ID Select Box */}
-                <FormControl fullWidth margin="dense" variant="standard">
-                    <InputLabel>Item</InputLabel>
-                    <Select
-                        value={newData.itemId || ''}
-                        onChange={(e) => setNewData({ ...newData, itemId: e.target.value })}
-                    >
-                        {Array.isArray(itemOptions) && itemOptions.map((item) => (
-                            <MenuItem key={item.id} value={item.id}>{item.name}</MenuItem>
-                        ))}
-                    </Select>
+                {/* Item Autocomplete */}
+                <FormControl fullWidth margin="dense">
+                    <Autocomplete
+                        options={itemOptions}
+                        getOptionLabel={(option) => option.name || ''}
+                        onInputChange={(event, newInputValue) => fetchItems(newInputValue)} // Search items as user types
+                        onChange={(event, newValue) => setNewData({ ...newData, itemId: newValue ? newValue.id : '' })} // Set selected itemId
+                        renderInput={(params) => (
+                            <TextField {...params} label="Search Item" variant="outlined" fullWidth margin="dense" />
+                        )}
+                    />
                 </FormControl>
 
                 <TextField
@@ -133,7 +127,6 @@ export default function NewDemandForm({ fetchRow, page, setOpenAddDialog, openAd
                     label="Min Threshold"
                     type="number"
                     fullWidth
-                    variant="standard"
                     value={newData.minThreshold || ''}
                     onChange={(e) => setNewData({ ...newData, minThreshold: e.target.value })}
                 />
@@ -143,7 +136,6 @@ export default function NewDemandForm({ fetchRow, page, setOpenAddDialog, openAd
                     label="Max Threshold"
                     type="number"
                     fullWidth
-                    variant="standard"
                     value={newData.maxThreshold || ''}
                     onChange={(e) => setNewData({ ...newData, maxThreshold: e.target.value })}
                 />

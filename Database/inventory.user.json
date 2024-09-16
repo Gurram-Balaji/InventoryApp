@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "66d69daa506b8d0aa83f1945"
+  },
+  "fullName": "Guram Balaji",
+  "email": "darlingbalaji55@gmail.com",
+  "password": "$2a$10$ksw6ncH0XDrsFDk79ABt.O47eSL.Bfd4RyM0HTpwXHcRVpyWfCZXK",
+  "_class": "com.App.fullStack.pojos.User"
+},
+{
+  "_id": {
+    "$oid": "66e15ca09d44e040d1452c14"
+  },
+  "email": "sureshgurram1976@gmail.com",
+  "password": "$2a$10$B9NcZixog5fhp7w09ju5KOHpG84RTJWwLuuJGKDrnBKV.nKg.zWUm",
+  "_class": "com.App.fullStack.pojos.User"
+}]

@@ -3,6 +3,7 @@ package com.App.fullStack.repositories;
 import com.App.fullStack.pojos.Supply;
 import com.App.fullStack.pojos.SupplyType;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -28,4 +29,11 @@ public interface SupplyRepository extends MongoRepository<Supply, String> {
 
     List<Supply> findByItemIdAndLocationIdAndSupplyTypeIn(String itemId, String locationId,
                                                           List<String> supplyTypes);
+    @Query(value = "{ 'locationId': ?0, 'supplyType': ?1 }", fields = "{ 'quantity': 1 }")
+    List<Supply> findSuppliesByLocationIdAndSupplyType(String locationId, String supplyType);
+
+    default int getTotalSupplyByLocationAndType(String locationId, String supplyType) {
+        List<Supply> supplies = findSuppliesByLocationIdAndSupplyType(locationId, supplyType);
+        return supplies.stream().mapToInt(Supply::getQuantity).sum();
+    }
 }

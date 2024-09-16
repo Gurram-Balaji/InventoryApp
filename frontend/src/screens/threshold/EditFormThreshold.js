@@ -34,18 +34,20 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
   };
 
   return (
-    <Dialog open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
-      <DialogTitle>Edit Threshold...</DialogTitle>
+     <Dialog PaperProps={{className: 'dialog-custom',  }}open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
+      <DialogTitle className="dialog-title-custom" >Edit Threshold...</DialogTitle>
       <DialogContent style={{ padding: '30px 50px 10px' }}>
 
         <TextField
           label="Item"
           fullWidth
           margin="normal"
-          variant="standard"
           value={editData.itemId || ''}
           InputProps={{
             readOnly: true,
+            style: {
+              pointerEvents: 'none', // Prevent any interaction
+            },
           }}
         />
 
@@ -53,10 +55,13 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
           label="Location"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.locationId || ''}
           InputProps={{
             readOnly: true,
+            style: {
+              pointerEvents: 'none', // Prevent any interaction
+            },
           }}
         />
 
@@ -65,7 +70,7 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
           type="number"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.minThreshold || ''}
           onChange={(e) => setEditData({ ...editData, minThreshold: e.target.value })}
         />
@@ -75,7 +80,7 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
           type="number"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.maxThreshold || ''}
           onChange={(e) => setEditData({ ...editData, maxThreshold: e.target.value })}
         />

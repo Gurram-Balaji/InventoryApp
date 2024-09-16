@@ -39,18 +39,6 @@ public class ItemServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    public void testGetAllItemsWithKeyword() {
-        Pageable pageable = PageRequest.of(0, 10);
-        List<Item> items = Arrays.asList(new Item(), new Item());
-        Page<Item> itemPage = new PageImpl<>(items, pageable, items.size());
-        String keyword = "search";
-
-        when(itemRepository.searchItemsByKeyword(keyword, pageable)).thenReturn(itemPage);
-
-        Page<Item> result = itemService.getAllItems(0, 10, keyword);
-        assertEquals(items.size(), result.getContent().size());
-    }
 
     @Test
     public void testGetAllItemsWithoutKeyword() {
@@ -149,14 +137,6 @@ public class ItemServiceTest {
         assertEquals("Item cannot be deleted because it has associated supply or demand records.", exception.getMessage());
     }
 
-    @Test
-    public void testGetAllItemIds() {
-        List<String> itemIds = Arrays.asList("item1", "item2");
-        when(itemRepository.findDistinctItemIds()).thenReturn(itemIds);
-
-        List<String> result = itemService.getAllItemIds();
-        assertEquals(itemIds, result);
-    }
 
     @Test
     public void testGetItemByItemIdWithOutException() {

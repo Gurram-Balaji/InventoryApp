@@ -1,20 +1,16 @@
 package com.App.fullStack.service;
 
-import com.App.fullStack.pojos.Supply;
+import com.App.fullStack.dto.ScatterDataDTO;
+import com.App.fullStack.dto.ScatterLocationDataDTO;
+import com.App.fullStack.pojos.*;
 import com.App.fullStack.dto.AvailabilityConfig;
 import com.App.fullStack.dto.AvailabilityResponseV2V3;
 import com.App.fullStack.exception.FoundException;
-import com.App.fullStack.pojos.AtpThreshold;
-import com.App.fullStack.pojos.Demand;
-import com.App.fullStack.repositories.SupplyRepository;
-import com.App.fullStack.repositories.AtpThresholdRepository;
-import com.App.fullStack.repositories.DemandRepository;
+import com.App.fullStack.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class AvailabilityService {
@@ -26,10 +22,17 @@ public class AvailabilityService {
     public AtpThresholdRepository atpThresholdRepository;
 
     @Autowired
+    public ItemRepository itemRepository;
+
+    @Autowired
     public DemandRepository demandRepository;
 
     @Autowired
     public AvailabilityConfig availabilityConfig;
+
+    @Autowired
+    public LocationRepository locationRepository;
+
 
     // v1 methods
     // There is dependence of this method in v2 method
@@ -130,5 +133,36 @@ public class AvailabilityService {
         return demands.stream()
                 .mapToInt(Demand::getQuantity)
                 .sum();
+    }
+
+
+
+    public ScatterLocationDataDTO getAvailabilityScatterData(String locationId) {
+        List<Item> items = itemRepository.findAll();
+        // Initialize a list to store the scatter data
+        List<ScatterDataDTO> scatterData = new ArrayList<>();
+
+        String locationName;
+            Optional<Location> location = locationRepository.findByLocationId(locationId);
+            if(location.isPresent())
+                locationName=location.get().getLocationDesc();
+            else
+                locationName="NETWORK";
+        // Calculate availability for each item
+        for (Item item : items) {
+            String itemId = item.getItemId();
+            int availableQuantity=0;
+            if(Objects.equals(locationName, "NETWORK"))
+                availableQuantity = calculateAvailabilityByItem(itemId); // Using existing method
+            else
+                availableQuantity = calculateAvailabilityByLocation(itemId, locationId); // Using existing method
+
+            scatterData.add(new ScatterDataDTO(
+                    item.getPrice(), // Assuming price is stored as String
+                    availableQuantity,
+                    item.getItemDescription()
+            ));
+        }
+        return new ScatterLocationDataDTO(scatterData,locationName);
     }
 }

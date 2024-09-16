@@ -28,18 +28,20 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
   };
 
   return (
-    <Dialog open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
-      <DialogTitle>Edit Location...</DialogTitle>
+     <Dialog PaperProps={{className: 'dialog-custom',  }}open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
+      <DialogTitle className="dialog-title-custom" >Edit Location...</DialogTitle>
       <DialogContent style={{ padding: '30px 50px 10px' }}>
         {editData && (
           <TextField
-            label="Location ID"
+            label="Location"
             fullWidth
             margin="normal"
-            variant="standard"
             value={editData.locationId || ''}
             InputProps={{
               readOnly: true,
+            style: {
+              pointerEvents: 'none', // Prevent any interaction
+            },
             }}
           />
         )}
@@ -47,18 +49,18 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
           label="Description"
           fullWidth
           margin="normal"
-          variant="standard"
           value={editData.locationDesc || ''}
           onChange={(e) => setEditData({ ...editData, locationDesc: e.target.value })}
         />
 
         {/* Location Type Select */}
-        <FormControl fullWidth margin="dense">
+          
+          <FormControl fullWidth margin="dense"  >
           <InputLabel>Location Type</InputLabel>
-          <Select
+          <Select label="Location Type"
             value={editData.locationType || ''}
             onChange={(e) => setEditData({ ...editData, locationType: e.target.value })}
-            variant="standard"
+            
           >
             {locationTypeOptions.map((type) => (
               <MenuItem key={type} value={type}>
@@ -73,7 +75,7 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
           label="Address Line 1"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.addressLine1 || ''}
           onChange={(e) => setEditData({ ...editData, addressLine1: e.target.value })}
         />
@@ -81,7 +83,7 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
           label="Address Line 2"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.addressLine2 || ''}
           onChange={(e) => setEditData({ ...editData, addressLine2: e.target.value })}
         />
@@ -89,7 +91,7 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
           label="Address Line 3"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.addressLine3 || ''}
           onChange={(e) => setEditData({ ...editData, addressLine3: e.target.value })}
         />
@@ -97,7 +99,7 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
           label="City"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.city || ''}
           onChange={(e) => setEditData({ ...editData, city: e.target.value })}
         />
@@ -105,7 +107,7 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
           label="State"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.state || ''}
           onChange={(e) => setEditData({ ...editData, state: e.target.value })}
         />
@@ -113,7 +115,7 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
           label="Country"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.country || ''}
           onChange={(e) => setEditData({ ...editData, country: e.target.value })}
         />
@@ -121,7 +123,7 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
           label="Pin Code"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.pinCode || ''}
           onChange={(e) => setEditData({ ...editData, pinCode: e.target.value })}
         />

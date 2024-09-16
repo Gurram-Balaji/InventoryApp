@@ -1,5 +1,6 @@
 package com.App.fullStack.controller;
 
+import com.App.fullStack.dto.LocationData;
 import com.App.fullStack.pojos.Location;
 import com.App.fullStack.responseHandler.ApiResponse;
 import com.App.fullStack.service.LocationService;
@@ -78,9 +79,20 @@ public class LocationController {
 
     // Get all location IDs
     @GetMapping("/ids")
-    public ResponseEntity<ApiResponse<List<String>>> getAllLocationIds() {
-        List<String> locationIds = locationService.getAllLocationIds();
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(new ApiResponse<>(true, LOCATION_IDS_FOUND, locationIds));
+    public ResponseEntity<ApiResponse<Page<String>>> getAllLocationIds(@RequestParam(defaultValue = DEFAULT_PAGE) int page,
+                                                                       @RequestParam(defaultValue = DEFAULT_SIZE) int size,
+                                                                       @RequestParam(required = false) String search) {
+        Page<String> locationIds = locationService.getAllLocationIds(page, size, search);
+
+        return APIResponseForFoundOrNot.generateResponse(locationIds, LOCATIONS_FOUND, LOCATIONS_NOT_FOUND);
+
     }
+
+
+    @GetMapping("/stackedBarData")
+    public ResponseEntity<ApiResponse<List<LocationData>>> stackedBarData() {
+        return APIResponseForFoundOrNot.generateResponse(locationService.getStackedBarData(),  LOCATIONS_FOUND, LOCATIONS_NOT_FOUND);
+    }
+
+
 }

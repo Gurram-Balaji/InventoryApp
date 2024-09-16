@@ -63,8 +63,8 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
     };
 
     return (
-        <Dialog open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
-            <DialogTitle>Add New Location...</DialogTitle>
+         <Dialog PaperProps={{className: 'dialog-custom',  }}open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
+            <DialogTitle className="dialog-title-custom" >Add New Location...</DialogTitle>
             <DialogContent style={{ padding: '30px 50px 10px' }}>
                 <TextField
                     autoFocus
@@ -72,7 +72,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                     label="Location ID"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newData.locationId}
                     onChange={(e) => setNewData({ ...newData, locationId: e.target.value })}
                 />
@@ -81,15 +81,15 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                     label="Description"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newData.locationDesc}
                     onChange={(e) => setNewData({ ...newData, locationDesc: e.target.value })}
                 />
 
                 {/* Location Type Select Box */}
-                <FormControl fullWidth margin="dense" variant="standard">
+                <FormControl fullWidth margin="dense" >
                     <InputLabel>Location Type</InputLabel>
-                    <Select
+                    <Select label="Location Type"
                         value={newData.locationType}
                         onChange={(e) => setNewData({ ...newData, locationType: e.target.value })}
                     >
@@ -105,7 +105,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                     label="Address Line 1"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newData.addressLine1}
                     onChange={(e) => setNewData({ ...newData, addressLine1: e.target.value })}
                 />
@@ -114,7 +114,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                     label="Address Line 2"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newData.addressLine2}
                     onChange={(e) => setNewData({ ...newData, addressLine2: e.target.value })}
                 />
@@ -123,7 +123,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                     label="Address Line 3"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newData.addressLine3}
                     onChange={(e) => setNewData({ ...newData, addressLine3: e.target.value })}
                 />
@@ -132,7 +132,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                     label="City"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newData.city}
                     onChange={(e) => setNewData({ ...newData, city: e.target.value })}
                 />
@@ -141,7 +141,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                     label="State"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newData.state}
                     onChange={(e) => setNewData({ ...newData, state: e.target.value })}
                 />
@@ -150,7 +150,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                     label="Country"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newData.country}
                     onChange={(e) => setNewData({ ...newData, country: e.target.value })}
                 />
@@ -159,7 +159,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                     label="Pin Code"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newData.pinCode}
                     onChange={(e) => setNewData({ ...newData, pinCode: e.target.value })}
                 />

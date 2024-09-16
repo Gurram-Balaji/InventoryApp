@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate from react
 import '../form.css'; // Adjust based on your styles
 import apiClient from '../components/baseUrl'; // Adjust based on your actual base URL setup
 import MotionHoc from "./MotionHoc";
+import ScatterPlot from '../components/ScatterPlot';
+
 
 const Dashboard = () => {
     const [dashboardData, setDashboardData] = useState({
@@ -35,7 +37,10 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard-container">
-            <h1>Dashboard</h1>
+            <h1 style={{marginBottom:'20px'}}>Dashboard</h1>
+            <ScatterPlot />
+           
+
             <div className="dashboard-grid">
                 <div className="dashboard-card" onClick={() => handleNavigation('/items')}>
                     <h3>Total Items</h3>

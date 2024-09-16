@@ -1,11 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import LoginForm from '../components/LoginForm';
-import '../index.css';
+import LoginForm from '../../components/LoginForm';
 import { useSelector } from "react-redux";
-import { selectToken } from "../store/authSlice";
-
+import { selectToken } from "../../store/authSlice";
+import '../../index.css';
 
 
 const LoginComponent = ({ mode: initialMode }) => {

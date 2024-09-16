@@ -71,7 +71,7 @@ public class ItemService {
             if (itemDetails.getStatus() != null) {
                 item.setStatus(itemDetails.getStatus());
             }
-            if (itemDetails.getPrice() != null) {
+            if (itemDetails.getPrice() != 0) {
                 item.setPrice(itemDetails.getPrice());
             }
             if (itemDetails.getCategory() != null) {
@@ -104,8 +104,15 @@ public class ItemService {
         throw new FoundException("Item with itemId " + itemId + " not exist.");
     }
 
-    public List<String> getAllItemIds() {
-        return itemRepository.findDistinctItemIds();
+    public Page<String> getAllItemIds(int page,int size,String search ) {
+
+        Pageable pageable = PageRequest.of(page, size);
+
+        if (search != null && !search.isEmpty()) {
+            return itemRepository.searchItemIdsByKeyword(search, pageable);
+        } else {
+            return itemRepository.findDistinctItemIds(pageable);
+        }
     }
 
     public Item getItemByItemIdWithOutException(String itemId) {

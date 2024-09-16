@@ -1,0 +1,271 @@
+[{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd79"
+  },
+  "itemId": "000001",
+  "itemDescription": "Red T-Shirt",
+  "category": "Apparel",
+  "type": "HSN001",
+  "status": "ACTIVE",
+  "price": 3676,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "_class": "com.App.fullStack.pojos.Item"
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd7a"
+  },
+  "itemId": "000002",
+  "itemDescription": "Black Sneakers",
+  "category": "Footwear",
+  "type": "HSN002",
+  "status": "ACTIVE",
+  "price": 9060,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": false,
+  "_class": "com.App.fullStack.pojos.Item"
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd7b"
+  },
+  "itemId": "000003",
+  "itemDescription": "Leather Jacket",
+  "category": "Apparel",
+  "type": "HSN003",
+  "status": "INACTIVE",
+  "price": 4234,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "_class": "com.App.fullStack.pojos.Item"
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd7c"
+  },
+  "itemId": "000004",
+  "itemDescription": "Office Chair",
+  "category": "Furniture",
+  "type": "HSN004",
+  "status": "ACTIVE",
+  "price": 2888,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd7d"
+  },
+  "itemId": "000005",
+  "itemDescription": "Wireless Mouse",
+  "category": "Electronics",
+  "type": "HSN005",
+  "status": "INACTIVE",
+  "price": 1677,
+  "pickupAllowed": false,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "_class": "com.App.fullStack.pojos.Item"
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd7e"
+  },
+  "itemId": "000006",
+  "itemDescription": "Smartphone Case",
+  "category": "Accessories",
+  "type": "HSN006",
+  "status": "ACTIVE",
+  "price": 4059,
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": false
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd7f"
+  },
+  "itemId": "000007",
+  "itemDescription": "Gaming Laptop",
+  "category": "Electronics",
+  "type": "HSN007",
+  "status": "DISCONTINUED",
+  "price": 2728,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "_class": "com.App.fullStack.pojos.Item"
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd80"
+  },
+  "itemId": "000008",
+  "itemDescription": "Wool Sweater",
+  "category": "Apparel",
+  "type": "HSN008",
+  "status": "ACTIVE",
+  "price": 6645,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd81"
+  },
+  "itemId": "000009",
+  "itemDescription": "Bluetooth Speaker",
+  "category": "Electronics",
+  "type": "HSN009",
+  "status": "ACTIVE",
+  "price": 4737,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": false
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd82"
+  },
+  "itemId": "000010",
+  "itemDescription": "Cookware Set",
+  "category": "Kitchenware",
+  "type": "HSN010",
+  "status": "ACTIVE",
+  "price": 2837,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd83"
+  },
+  "itemId": "000011",
+  "itemDescription": "Leather Wallet",
+  "category": "Accessories",
+  "type": "HSN011",
+  "status": "ACTIVE",
+  "price": 4005,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd84"
+  },
+  "itemId": "000012",
+  "itemDescription": "Electric Kettle",
+  "category": "Kitchenware",
+  "type": "HSN012",
+  "status": "ACTIVE",
+  "price": 7808,
+  "pickupAllowed": false,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd85"
+  },
+  "itemId": "000013",
+  "itemDescription": "Yoga Mat",
+  "category": "Fitness",
+  "type": "HSN013",
+  "status": "ACTIVE",
+  "price": 6572,
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": false
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd86"
+  },
+  "itemId": "000014",
+  "itemDescription": "Digital Camera",
+  "category": "Electronics",
+  "type": "HSN014",
+  "status": "ACTIVE",
+  "price": 7776,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd87"
+  },
+  "itemId": "000015",
+  "itemDescription": "Sports Watch",
+  "category": "Accessories",
+  "type": "HSN015",
+  "status": "ACTIVE",
+  "price": 3514,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd88"
+  },
+  "itemId": "000016",
+  "itemDescription": "Desk Lamp",
+  "category": "Furniture",
+  "type": "HSN016",
+  "status": "ACTIVE",
+  "price": 7727,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": false
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd89"
+  },
+  "itemId": "000017",
+  "itemDescription": "Travel Backpack",
+  "category": "Accessories",
+  "type": "HSN017",
+  "status": "ACTIVE",
+  "price": 2117,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd8a"
+  },
+  "itemId": "000018",
+  "itemDescription": "Office Desk",
+  "category": "Furniture",
+  "type": "HSN018",
+  "status": "ACTIVE",
+  "price": 6318,
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+},
+{
+  "_id": {
+    "$oid": "66dfe4327bdda9a3c30ffd8b"
+  },
+  "itemId": "000019",
+  "itemDescription": "Noise-Canceling Headphones",
+  "category": "Electronics",
+  "type": "HSN019",
+  "status": "ACTIVE",
+  "price": 5960,
+  "pickupAllowed": false,
+  "shippingAllowed": true,
+  "deliveryAllowed": true
+}]

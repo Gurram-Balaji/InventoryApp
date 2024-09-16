@@ -1,0 +1,3762 @@
+[{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857add1"
+  },
+  "itemId": "000001",
+  "locationId": "01501",
+  "minThreshold": 17,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857add2"
+  },
+  "itemId": "000001",
+  "locationId": "01502",
+  "minThreshold": 75,
+  "maxThreshold": 79
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857add3"
+  },
+  "itemId": "000001",
+  "locationId": "01503",
+  "minThreshold": 15,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857add4"
+  },
+  "itemId": "000001",
+  "locationId": "01504",
+  "minThreshold": 7,
+  "maxThreshold": 67
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857add5"
+  },
+  "itemId": "000001",
+  "locationId": "01505",
+  "minThreshold": 18,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857add6"
+  },
+  "itemId": "000001",
+  "locationId": "01506",
+  "minThreshold": 7,
+  "maxThreshold": 54
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857add7"
+  },
+  "itemId": "000001",
+  "locationId": "01507",
+  "minThreshold": 88,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857add8"
+  },
+  "itemId": "000001",
+  "locationId": "01509",
+  "minThreshold": 82,
+  "maxThreshold": 92
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857add9"
+  },
+  "itemId": "000001",
+  "locationId": "01510",
+  "minThreshold": 78,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adda"
+  },
+  "itemId": "000001",
+  "locationId": "01511",
+  "minThreshold": 96,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857addb"
+  },
+  "itemId": "000001",
+  "locationId": "01512",
+  "minThreshold": 67,
+  "maxThreshold": 70
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857addc"
+  },
+  "itemId": "000001",
+  "locationId": "01513",
+  "minThreshold": 15,
+  "maxThreshold": 54
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857addd"
+  },
+  "itemId": "000001",
+  "locationId": "01514",
+  "minThreshold": 75,
+  "maxThreshold": 92
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adde"
+  },
+  "itemId": "000001",
+  "locationId": "01515",
+  "minThreshold": 74,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857addf"
+  },
+  "itemId": "000001",
+  "locationId": "01516",
+  "minThreshold": 45,
+  "maxThreshold": 84
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade0"
+  },
+  "itemId": "000001",
+  "locationId": "01517",
+  "minThreshold": 44,
+  "maxThreshold": 65
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade1"
+  },
+  "itemId": "000001",
+  "locationId": "01519",
+  "minThreshold": 28,
+  "maxThreshold": 60
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade2"
+  },
+  "itemId": "000001",
+  "locationId": "01520",
+  "minThreshold": 38,
+  "maxThreshold": 68
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade3"
+  },
+  "itemId": "000001",
+  "locationId": "474747",
+  "minThreshold": 39,
+  "maxThreshold": 52
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade4"
+  },
+  "itemId": "000001",
+  "locationId": "wqefet",
+  "minThreshold": 19,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade5"
+  },
+  "itemId": "000001",
+  "locationId": "wew",
+  "minThreshold": 7,
+  "maxThreshold": 51
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade6"
+  },
+  "itemId": "000001",
+  "locationId": "we",
+  "minThreshold": 56,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade7"
+  },
+  "itemId": "000002",
+  "locationId": "01501",
+  "minThreshold": 45,
+  "maxThreshold": 68
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade8"
+  },
+  "itemId": "000002",
+  "locationId": "01502",
+  "minThreshold": 61,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ade9"
+  },
+  "itemId": "000002",
+  "locationId": "01503",
+  "minThreshold": 59,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adea"
+  },
+  "itemId": "000002",
+  "locationId": "01504",
+  "minThreshold": 61,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adeb"
+  },
+  "itemId": "000002",
+  "locationId": "01505",
+  "minThreshold": 99,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adec"
+  },
+  "itemId": "000002",
+  "locationId": "01506",
+  "minThreshold": 94,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aded"
+  },
+  "itemId": "000002",
+  "locationId": "01507",
+  "minThreshold": 56,
+  "maxThreshold": 67
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adee"
+  },
+  "itemId": "000002",
+  "locationId": "01509",
+  "minThreshold": 75,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adef"
+  },
+  "itemId": "000002",
+  "locationId": "01510",
+  "minThreshold": 55,
+  "maxThreshold": 56
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf0"
+  },
+  "itemId": "000002",
+  "locationId": "01511",
+  "minThreshold": 9,
+  "maxThreshold": 42
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf1"
+  },
+  "itemId": "000002",
+  "locationId": "01512",
+  "minThreshold": 90,
+  "maxThreshold": 92
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf2"
+  },
+  "itemId": "000002",
+  "locationId": "01513",
+  "minThreshold": 68,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf3"
+  },
+  "itemId": "000002",
+  "locationId": "01514",
+  "minThreshold": 68,
+  "maxThreshold": 74
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf4"
+  },
+  "itemId": "000002",
+  "locationId": "01515",
+  "minThreshold": 48,
+  "maxThreshold": 50
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf5"
+  },
+  "itemId": "000002",
+  "locationId": "01516",
+  "minThreshold": 35,
+  "maxThreshold": 60
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf6"
+  },
+  "itemId": "000002",
+  "locationId": "01517",
+  "minThreshold": 32,
+  "maxThreshold": 61
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf7"
+  },
+  "itemId": "000002",
+  "locationId": "01519",
+  "minThreshold": 84,
+  "maxThreshold": 91
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf8"
+  },
+  "itemId": "000002",
+  "locationId": "01520",
+  "minThreshold": 36,
+  "maxThreshold": 53
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adf9"
+  },
+  "itemId": "000002",
+  "locationId": "474747",
+  "minThreshold": 29,
+  "maxThreshold": 51
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adfa"
+  },
+  "itemId": "000002",
+  "locationId": "wqefet",
+  "minThreshold": 17,
+  "maxThreshold": 66
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adfb"
+  },
+  "itemId": "000002",
+  "locationId": "wew",
+  "minThreshold": 24,
+  "maxThreshold": 75
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adfc"
+  },
+  "itemId": "000002",
+  "locationId": "we",
+  "minThreshold": 72,
+  "maxThreshold": 81
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adfd"
+  },
+  "itemId": "000003",
+  "locationId": "01501",
+  "minThreshold": 72,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adfe"
+  },
+  "itemId": "000003",
+  "locationId": "01502",
+  "minThreshold": 97,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857adff"
+  },
+  "itemId": "000003",
+  "locationId": "01503",
+  "minThreshold": 91,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae00"
+  },
+  "itemId": "000003",
+  "locationId": "01504",
+  "minThreshold": 31,
+  "maxThreshold": 61
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae01"
+  },
+  "itemId": "000003",
+  "locationId": "01505",
+  "minThreshold": 95,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae02"
+  },
+  "itemId": "000003",
+  "locationId": "01506",
+  "minThreshold": 83,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae03"
+  },
+  "itemId": "000003",
+  "locationId": "01507",
+  "minThreshold": 39,
+  "maxThreshold": 94
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae04"
+  },
+  "itemId": "000003",
+  "locationId": "01509",
+  "minThreshold": 72,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae05"
+  },
+  "itemId": "000003",
+  "locationId": "01510",
+  "minThreshold": 16,
+  "maxThreshold": 79
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae06"
+  },
+  "itemId": "000003",
+  "locationId": "01511",
+  "minThreshold": 89,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae07"
+  },
+  "itemId": "000003",
+  "locationId": "01512",
+  "minThreshold": 90,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae08"
+  },
+  "itemId": "000003",
+  "locationId": "01513",
+  "minThreshold": 70,
+  "maxThreshold": 72
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae09"
+  },
+  "itemId": "000003",
+  "locationId": "01514",
+  "minThreshold": 17,
+  "maxThreshold": 44
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae0a"
+  },
+  "itemId": "000003",
+  "locationId": "01515",
+  "minThreshold": 28,
+  "maxThreshold": 53
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae0b"
+  },
+  "itemId": "000003",
+  "locationId": "01516",
+  "minThreshold": 41,
+  "maxThreshold": 78
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae0c"
+  },
+  "itemId": "000003",
+  "locationId": "01517",
+  "minThreshold": 68,
+  "maxThreshold": 92
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae0d"
+  },
+  "itemId": "000003",
+  "locationId": "01519",
+  "minThreshold": 12,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae0e"
+  },
+  "itemId": "000003",
+  "locationId": "01520",
+  "minThreshold": 53,
+  "maxThreshold": 65
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae0f"
+  },
+  "itemId": "000003",
+  "locationId": "474747",
+  "minThreshold": 54,
+  "maxThreshold": 73
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae10"
+  },
+  "itemId": "000003",
+  "locationId": "wqefet",
+  "minThreshold": 34,
+  "maxThreshold": 60
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae11"
+  },
+  "itemId": "000003",
+  "locationId": "wew",
+  "minThreshold": 28,
+  "maxThreshold": 42
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae12"
+  },
+  "itemId": "000003",
+  "locationId": "we",
+  "minThreshold": 21,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae13"
+  },
+  "itemId": "000004",
+  "locationId": "01501",
+  "minThreshold": 75,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae14"
+  },
+  "itemId": "000004",
+  "locationId": "01502",
+  "minThreshold": 92,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae15"
+  },
+  "itemId": "000004",
+  "locationId": "01503",
+  "minThreshold": 11,
+  "maxThreshold": 60
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae16"
+  },
+  "itemId": "000004",
+  "locationId": "01504",
+  "minThreshold": 75,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae17"
+  },
+  "itemId": "000004",
+  "locationId": "01505",
+  "minThreshold": 21,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae18"
+  },
+  "itemId": "000004",
+  "locationId": "01506",
+  "minThreshold": 49,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae19"
+  },
+  "itemId": "000004",
+  "locationId": "01507",
+  "minThreshold": 61,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae1a"
+  },
+  "itemId": "000004",
+  "locationId": "01509",
+  "minThreshold": 51,
+  "maxThreshold": 58
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae1b"
+  },
+  "itemId": "000004",
+  "locationId": "01510",
+  "minThreshold": 57,
+  "maxThreshold": 75
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae1c"
+  },
+  "itemId": "000004",
+  "locationId": "01511",
+  "minThreshold": 40,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae1d"
+  },
+  "itemId": "000004",
+  "locationId": "01512",
+  "minThreshold": 89,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae1e"
+  },
+  "itemId": "000004",
+  "locationId": "01513",
+  "minThreshold": 66,
+  "maxThreshold": 73
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae1f"
+  },
+  "itemId": "000004",
+  "locationId": "01514",
+  "minThreshold": 96,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae20"
+  },
+  "itemId": "000004",
+  "locationId": "01515",
+  "minThreshold": 67,
+  "maxThreshold": 77
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae21"
+  },
+  "itemId": "000004",
+  "locationId": "01516",
+  "minThreshold": 77,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae22"
+  },
+  "itemId": "000004",
+  "locationId": "01517",
+  "minThreshold": 10,
+  "maxThreshold": 51
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae23"
+  },
+  "itemId": "000004",
+  "locationId": "01519",
+  "minThreshold": 84,
+  "maxThreshold": 91
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae24"
+  },
+  "itemId": "000004",
+  "locationId": "01520",
+  "minThreshold": 52,
+  "maxThreshold": 82
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae25"
+  },
+  "itemId": "000004",
+  "locationId": "474747",
+  "minThreshold": 39,
+  "maxThreshold": 65
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae26"
+  },
+  "itemId": "000004",
+  "locationId": "wqefet",
+  "minThreshold": 26,
+  "maxThreshold": 41
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae27"
+  },
+  "itemId": "000004",
+  "locationId": "wew",
+  "minThreshold": 53,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae28"
+  },
+  "itemId": "000004",
+  "locationId": "we",
+  "minThreshold": 72,
+  "maxThreshold": 92
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae29"
+  },
+  "itemId": "000005",
+  "locationId": "01501",
+  "minThreshold": 12,
+  "maxThreshold": 53
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae2a"
+  },
+  "itemId": "000005",
+  "locationId": "01502",
+  "minThreshold": 93,
+  "maxThreshold": 94
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae2b"
+  },
+  "itemId": "000005",
+  "locationId": "01503",
+  "minThreshold": 49,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae2c"
+  },
+  "itemId": "000005",
+  "locationId": "01504",
+  "minThreshold": 88,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae2d"
+  },
+  "itemId": "000005",
+  "locationId": "01505",
+  "minThreshold": 84,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae2e"
+  },
+  "itemId": "000005",
+  "locationId": "01506",
+  "minThreshold": 15,
+  "maxThreshold": 72
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae2f"
+  },
+  "itemId": "000005",
+  "locationId": "01507",
+  "minThreshold": 70,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae30"
+  },
+  "itemId": "000005",
+  "locationId": "01509",
+  "minThreshold": 67,
+  "maxThreshold": 69
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae31"
+  },
+  "itemId": "000005",
+  "locationId": "01510",
+  "minThreshold": 10,
+  "maxThreshold": 66
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae32"
+  },
+  "itemId": "000005",
+  "locationId": "01511",
+  "minThreshold": 44,
+  "maxThreshold": 59
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae33"
+  },
+  "itemId": "000005",
+  "locationId": "01512",
+  "minThreshold": 38,
+  "maxThreshold": 50
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae34"
+  },
+  "itemId": "000005",
+  "locationId": "01513",
+  "minThreshold": 30,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae35"
+  },
+  "itemId": "000005",
+  "locationId": "01514",
+  "minThreshold": 20,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae36"
+  },
+  "itemId": "000005",
+  "locationId": "01515",
+  "minThreshold": 58,
+  "maxThreshold": 65
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae37"
+  },
+  "itemId": "000005",
+  "locationId": "01516",
+  "minThreshold": 27,
+  "maxThreshold": 82
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae38"
+  },
+  "itemId": "000005",
+  "locationId": "01517",
+  "minThreshold": 16,
+  "maxThreshold": 72
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae39"
+  },
+  "itemId": "000005",
+  "locationId": "01519",
+  "minThreshold": 19,
+  "maxThreshold": 44
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae3a"
+  },
+  "itemId": "000005",
+  "locationId": "01520",
+  "minThreshold": 64,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae3b"
+  },
+  "itemId": "000005",
+  "locationId": "474747",
+  "minThreshold": 51,
+  "maxThreshold": 69
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae3c"
+  },
+  "itemId": "000005",
+  "locationId": "wqefet",
+  "minThreshold": 96,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae3d"
+  },
+  "itemId": "000005",
+  "locationId": "wew",
+  "minThreshold": 69,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae3e"
+  },
+  "itemId": "000005",
+  "locationId": "we",
+  "minThreshold": 40,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae3f"
+  },
+  "itemId": "000006",
+  "locationId": "01501",
+  "minThreshold": 57,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae40"
+  },
+  "itemId": "000006",
+  "locationId": "01502",
+  "minThreshold": 44,
+  "maxThreshold": 49
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae41"
+  },
+  "itemId": "000006",
+  "locationId": "01503",
+  "minThreshold": 66,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae42"
+  },
+  "itemId": "000006",
+  "locationId": "01504",
+  "minThreshold": 44,
+  "maxThreshold": 59
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae43"
+  },
+  "itemId": "000006",
+  "locationId": "01505",
+  "minThreshold": 25,
+  "maxThreshold": 41
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae44"
+  },
+  "itemId": "000006",
+  "locationId": "01506",
+  "minThreshold": 30,
+  "maxThreshold": 87
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae45"
+  },
+  "itemId": "000006",
+  "locationId": "01507",
+  "minThreshold": 57,
+  "maxThreshold": 63
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae46"
+  },
+  "itemId": "000006",
+  "locationId": "01509",
+  "minThreshold": 9,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae47"
+  },
+  "itemId": "000006",
+  "locationId": "01510",
+  "minThreshold": 61,
+  "maxThreshold": 65
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae48"
+  },
+  "itemId": "000006",
+  "locationId": "01511",
+  "minThreshold": 64,
+  "maxThreshold": 92
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae49"
+  },
+  "itemId": "000006",
+  "locationId": "01512",
+  "minThreshold": 13,
+  "maxThreshold": 46
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae4a"
+  },
+  "itemId": "000006",
+  "locationId": "01513",
+  "minThreshold": 95,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae4b"
+  },
+  "itemId": "000006",
+  "locationId": "01514",
+  "minThreshold": 87,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae4c"
+  },
+  "itemId": "000006",
+  "locationId": "01515",
+  "minThreshold": 45,
+  "maxThreshold": 84
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae4d"
+  },
+  "itemId": "000006",
+  "locationId": "01516",
+  "minThreshold": 31,
+  "maxThreshold": 69
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae4e"
+  },
+  "itemId": "000006",
+  "locationId": "01517",
+  "minThreshold": 76,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae4f"
+  },
+  "itemId": "000006",
+  "locationId": "01519",
+  "minThreshold": 87,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae50"
+  },
+  "itemId": "000006",
+  "locationId": "01520",
+  "minThreshold": 62,
+  "maxThreshold": 91
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae51"
+  },
+  "itemId": "000006",
+  "locationId": "474747",
+  "minThreshold": 65,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae52"
+  },
+  "itemId": "000006",
+  "locationId": "wqefet",
+  "minThreshold": 28,
+  "maxThreshold": 68
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae53"
+  },
+  "itemId": "000006",
+  "locationId": "wew",
+  "minThreshold": 62,
+  "maxThreshold": 63
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae54"
+  },
+  "itemId": "000006",
+  "locationId": "we",
+  "minThreshold": 23,
+  "maxThreshold": 60
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae55"
+  },
+  "itemId": "000007",
+  "locationId": "01501",
+  "minThreshold": 34,
+  "maxThreshold": 81
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae56"
+  },
+  "itemId": "000007",
+  "locationId": "01502",
+  "minThreshold": 24,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae57"
+  },
+  "itemId": "000007",
+  "locationId": "01503",
+  "minThreshold": 30,
+  "maxThreshold": 92
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae58"
+  },
+  "itemId": "000007",
+  "locationId": "01504",
+  "minThreshold": 45,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae59"
+  },
+  "itemId": "000007",
+  "locationId": "01505",
+  "minThreshold": 31,
+  "maxThreshold": 78
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae5a"
+  },
+  "itemId": "000007",
+  "locationId": "01506",
+  "minThreshold": 54,
+  "maxThreshold": 79
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae5b"
+  },
+  "itemId": "000007",
+  "locationId": "01507",
+  "minThreshold": 74,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae5c"
+  },
+  "itemId": "000007",
+  "locationId": "01509",
+  "minThreshold": 43,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae5d"
+  },
+  "itemId": "000007",
+  "locationId": "01510",
+  "minThreshold": 60,
+  "maxThreshold": 64
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae5e"
+  },
+  "itemId": "000007",
+  "locationId": "01511",
+  "minThreshold": 46,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae5f"
+  },
+  "itemId": "000007",
+  "locationId": "01512",
+  "minThreshold": 46,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae60"
+  },
+  "itemId": "000007",
+  "locationId": "01513",
+  "minThreshold": 94,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae61"
+  },
+  "itemId": "000007",
+  "locationId": "01514",
+  "minThreshold": 31,
+  "maxThreshold": 73
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae62"
+  },
+  "itemId": "000007",
+  "locationId": "01515",
+  "minThreshold": 94,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae63"
+  },
+  "itemId": "000007",
+  "locationId": "01516",
+  "minThreshold": 26,
+  "maxThreshold": 69
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae64"
+  },
+  "itemId": "000007",
+  "locationId": "01517",
+  "minThreshold": 13,
+  "maxThreshold": 58
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae65"
+  },
+  "itemId": "000007",
+  "locationId": "01519",
+  "minThreshold": 74,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae66"
+  },
+  "itemId": "000007",
+  "locationId": "01520",
+  "minThreshold": 67,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae67"
+  },
+  "itemId": "000007",
+  "locationId": "474747",
+  "minThreshold": 65,
+  "maxThreshold": 70
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae68"
+  },
+  "itemId": "000007",
+  "locationId": "wqefet",
+  "minThreshold": 84,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae69"
+  },
+  "itemId": "000007",
+  "locationId": "wew",
+  "minThreshold": 56,
+  "maxThreshold": 63
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae6a"
+  },
+  "itemId": "000007",
+  "locationId": "we",
+  "minThreshold": 61,
+  "maxThreshold": 75
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae6b"
+  },
+  "itemId": "000008",
+  "locationId": "01501",
+  "minThreshold": 48,
+  "maxThreshold": 72
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae6c"
+  },
+  "itemId": "000008",
+  "locationId": "01502",
+  "minThreshold": 10,
+  "maxThreshold": 66
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae6d"
+  },
+  "itemId": "000008",
+  "locationId": "01503",
+  "minThreshold": 87,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae6e"
+  },
+  "itemId": "000008",
+  "locationId": "01504",
+  "minThreshold": 20,
+  "maxThreshold": 91
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae6f"
+  },
+  "itemId": "000008",
+  "locationId": "01505",
+  "minThreshold": 50,
+  "maxThreshold": 74
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae70"
+  },
+  "itemId": "000008",
+  "locationId": "01506",
+  "minThreshold": 87,
+  "maxThreshold": 91
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae71"
+  },
+  "itemId": "000008",
+  "locationId": "01507",
+  "minThreshold": 23,
+  "maxThreshold": 61
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae72"
+  },
+  "itemId": "000008",
+  "locationId": "01509",
+  "minThreshold": 64,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae73"
+  },
+  "itemId": "000008",
+  "locationId": "01510",
+  "minThreshold": 61,
+  "maxThreshold": 76
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae74"
+  },
+  "itemId": "000008",
+  "locationId": "01511",
+  "minThreshold": 53,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae75"
+  },
+  "itemId": "000008",
+  "locationId": "01512",
+  "minThreshold": 34,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae76"
+  },
+  "itemId": "000008",
+  "locationId": "01513",
+  "minThreshold": 9,
+  "maxThreshold": 47
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae77"
+  },
+  "itemId": "000008",
+  "locationId": "01514",
+  "minThreshold": 53,
+  "maxThreshold": 77
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae78"
+  },
+  "itemId": "000008",
+  "locationId": "01515",
+  "minThreshold": 8,
+  "maxThreshold": 42
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae79"
+  },
+  "itemId": "000008",
+  "locationId": "01516",
+  "minThreshold": 14,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae7a"
+  },
+  "itemId": "000008",
+  "locationId": "01517",
+  "minThreshold": 29,
+  "maxThreshold": 69
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae7b"
+  },
+  "itemId": "000008",
+  "locationId": "01519",
+  "minThreshold": 82,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae7c"
+  },
+  "itemId": "000008",
+  "locationId": "01520",
+  "minThreshold": 42,
+  "maxThreshold": 75
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae7d"
+  },
+  "itemId": "000008",
+  "locationId": "474747",
+  "minThreshold": 51,
+  "maxThreshold": 53
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae7e"
+  },
+  "itemId": "000008",
+  "locationId": "wqefet",
+  "minThreshold": 58,
+  "maxThreshold": 64
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae7f"
+  },
+  "itemId": "000008",
+  "locationId": "wew",
+  "minThreshold": 82,
+  "maxThreshold": 94
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae80"
+  },
+  "itemId": "000008",
+  "locationId": "we",
+  "minThreshold": 43,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae81"
+  },
+  "itemId": "000009",
+  "locationId": "01501",
+  "minThreshold": 7,
+  "maxThreshold": 69
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae82"
+  },
+  "itemId": "000009",
+  "locationId": "01502",
+  "minThreshold": 53,
+  "maxThreshold": 68
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae83"
+  },
+  "itemId": "000009",
+  "locationId": "01503",
+  "minThreshold": 67,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae84"
+  },
+  "itemId": "000009",
+  "locationId": "01504",
+  "minThreshold": 10,
+  "maxThreshold": 58
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae85"
+  },
+  "itemId": "000009",
+  "locationId": "01505",
+  "minThreshold": 94,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae86"
+  },
+  "itemId": "000009",
+  "locationId": "01506",
+  "minThreshold": 31,
+  "maxThreshold": 84
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae87"
+  },
+  "itemId": "000009",
+  "locationId": "01507",
+  "minThreshold": 12,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae88"
+  },
+  "itemId": "000009",
+  "locationId": "01509",
+  "minThreshold": 77,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae89"
+  },
+  "itemId": "000009",
+  "locationId": "01510",
+  "minThreshold": 72,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae8a"
+  },
+  "itemId": "000009",
+  "locationId": "01511",
+  "minThreshold": 89,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae8b"
+  },
+  "itemId": "000009",
+  "locationId": "01512",
+  "minThreshold": 57,
+  "maxThreshold": 94
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae8c"
+  },
+  "itemId": "000009",
+  "locationId": "01513",
+  "minThreshold": 78,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae8d"
+  },
+  "itemId": "000009",
+  "locationId": "01514",
+  "minThreshold": 59,
+  "maxThreshold": 67
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae8e"
+  },
+  "itemId": "000009",
+  "locationId": "01515",
+  "minThreshold": 99,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae8f"
+  },
+  "itemId": "000009",
+  "locationId": "01516",
+  "minThreshold": 72,
+  "maxThreshold": 92
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae90"
+  },
+  "itemId": "000009",
+  "locationId": "01517",
+  "minThreshold": 62,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae91"
+  },
+  "itemId": "000009",
+  "locationId": "01519",
+  "minThreshold": 42,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae92"
+  },
+  "itemId": "000009",
+  "locationId": "01520",
+  "minThreshold": 47,
+  "maxThreshold": 48
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae93"
+  },
+  "itemId": "000009",
+  "locationId": "474747",
+  "minThreshold": 90,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae94"
+  },
+  "itemId": "000009",
+  "locationId": "wqefet",
+  "minThreshold": 15,
+  "maxThreshold": 63
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae95"
+  },
+  "itemId": "000009",
+  "locationId": "wew",
+  "minThreshold": 99,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae96"
+  },
+  "itemId": "000009",
+  "locationId": "we",
+  "minThreshold": 12,
+  "maxThreshold": 79
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae97"
+  },
+  "itemId": "000010",
+  "locationId": "01501",
+  "minThreshold": 28,
+  "maxThreshold": 41
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae98"
+  },
+  "itemId": "000010",
+  "locationId": "01502",
+  "minThreshold": 69,
+  "maxThreshold": 90
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae99"
+  },
+  "itemId": "000010",
+  "locationId": "01503",
+  "minThreshold": 34,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae9a"
+  },
+  "itemId": "000010",
+  "locationId": "01504",
+  "minThreshold": 55,
+  "maxThreshold": 60
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae9b"
+  },
+  "itemId": "000010",
+  "locationId": "01505",
+  "minThreshold": 26,
+  "maxThreshold": 48
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae9c"
+  },
+  "itemId": "000010",
+  "locationId": "01506",
+  "minThreshold": 45,
+  "maxThreshold": 57
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae9d"
+  },
+  "itemId": "000010",
+  "locationId": "01507",
+  "minThreshold": 21,
+  "maxThreshold": 54
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae9e"
+  },
+  "itemId": "000010",
+  "locationId": "01509",
+  "minThreshold": 39,
+  "maxThreshold": 55
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857ae9f"
+  },
+  "itemId": "000010",
+  "locationId": "01510",
+  "minThreshold": 62,
+  "maxThreshold": 67
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea0"
+  },
+  "itemId": "000010",
+  "locationId": "01511",
+  "minThreshold": 52,
+  "maxThreshold": 65
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea1"
+  },
+  "itemId": "000010",
+  "locationId": "01512",
+  "minThreshold": 78,
+  "maxThreshold": 82
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea2"
+  },
+  "itemId": "000010",
+  "locationId": "01513",
+  "minThreshold": 67,
+  "maxThreshold": 77
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea3"
+  },
+  "itemId": "000010",
+  "locationId": "01514",
+  "minThreshold": 92,
+  "maxThreshold": 94
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea4"
+  },
+  "itemId": "000010",
+  "locationId": "01515",
+  "minThreshold": 95,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea5"
+  },
+  "itemId": "000010",
+  "locationId": "01516",
+  "minThreshold": 86,
+  "maxThreshold": 94
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea6"
+  },
+  "itemId": "000010",
+  "locationId": "01517",
+  "minThreshold": 75,
+  "maxThreshold": 82
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea7"
+  },
+  "itemId": "000010",
+  "locationId": "01519",
+  "minThreshold": 66,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea8"
+  },
+  "itemId": "000010",
+  "locationId": "01520",
+  "minThreshold": 8,
+  "maxThreshold": 63
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aea9"
+  },
+  "itemId": "000010",
+  "locationId": "474747",
+  "minThreshold": 71,
+  "maxThreshold": 73
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeaa"
+  },
+  "itemId": "000010",
+  "locationId": "wqefet",
+  "minThreshold": 99,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeab"
+  },
+  "itemId": "000010",
+  "locationId": "wew",
+  "minThreshold": 76,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeac"
+  },
+  "itemId": "000010",
+  "locationId": "we",
+  "minThreshold": 82,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aead"
+  },
+  "itemId": "000011",
+  "locationId": "01501",
+  "minThreshold": 29,
+  "maxThreshold": 72
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeae"
+  },
+  "itemId": "000011",
+  "locationId": "01502",
+  "minThreshold": 29,
+  "maxThreshold": 43
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeaf"
+  },
+  "itemId": "000011",
+  "locationId": "01503",
+  "minThreshold": 98,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb0"
+  },
+  "itemId": "000011",
+  "locationId": "01504",
+  "minThreshold": 33,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb1"
+  },
+  "itemId": "000011",
+  "locationId": "01505",
+  "minThreshold": 17,
+  "maxThreshold": 58
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb2"
+  },
+  "itemId": "000011",
+  "locationId": "01506",
+  "minThreshold": 72,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb3"
+  },
+  "itemId": "000011",
+  "locationId": "01507",
+  "minThreshold": 6,
+  "maxThreshold": 53
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb4"
+  },
+  "itemId": "000011",
+  "locationId": "01509",
+  "minThreshold": 88,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb5"
+  },
+  "itemId": "000011",
+  "locationId": "01510",
+  "minThreshold": 74,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb6"
+  },
+  "itemId": "000011",
+  "locationId": "01511",
+  "minThreshold": 45,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb7"
+  },
+  "itemId": "000011",
+  "locationId": "01512",
+  "minThreshold": 14,
+  "maxThreshold": 50
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb8"
+  },
+  "itemId": "000011",
+  "locationId": "01513",
+  "minThreshold": 45,
+  "maxThreshold": 56
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeb9"
+  },
+  "itemId": "000011",
+  "locationId": "01514",
+  "minThreshold": 15,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeba"
+  },
+  "itemId": "000011",
+  "locationId": "01515",
+  "minThreshold": 77,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aebb"
+  },
+  "itemId": "000011",
+  "locationId": "01516",
+  "minThreshold": 39,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aebc"
+  },
+  "itemId": "000011",
+  "locationId": "01517",
+  "minThreshold": 64,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aebd"
+  },
+  "itemId": "000011",
+  "locationId": "01519",
+  "minThreshold": 71,
+  "maxThreshold": 87
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aebe"
+  },
+  "itemId": "000011",
+  "locationId": "01520",
+  "minThreshold": 6,
+  "maxThreshold": 68
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aebf"
+  },
+  "itemId": "000011",
+  "locationId": "474747",
+  "minThreshold": 57,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec0"
+  },
+  "itemId": "000011",
+  "locationId": "wqefet",
+  "minThreshold": 74,
+  "maxThreshold": 87
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec1"
+  },
+  "itemId": "000011",
+  "locationId": "wew",
+  "minThreshold": 22,
+  "maxThreshold": 42
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec2"
+  },
+  "itemId": "000011",
+  "locationId": "we",
+  "minThreshold": 69,
+  "maxThreshold": 74
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec3"
+  },
+  "itemId": "000012",
+  "locationId": "01501",
+  "minThreshold": 63,
+  "maxThreshold": 65
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec4"
+  },
+  "itemId": "000012",
+  "locationId": "01502",
+  "minThreshold": 51,
+  "maxThreshold": 54
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec5"
+  },
+  "itemId": "000012",
+  "locationId": "01503",
+  "minThreshold": 55,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec6"
+  },
+  "itemId": "000012",
+  "locationId": "01504",
+  "minThreshold": 78,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec7"
+  },
+  "itemId": "000012",
+  "locationId": "01505",
+  "minThreshold": 55,
+  "maxThreshold": 77
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec8"
+  },
+  "itemId": "000012",
+  "locationId": "01506",
+  "minThreshold": 70,
+  "maxThreshold": 75
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aec9"
+  },
+  "itemId": "000012",
+  "locationId": "01507",
+  "minThreshold": 40,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeca"
+  },
+  "itemId": "000012",
+  "locationId": "01509",
+  "minThreshold": 21,
+  "maxThreshold": 91
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aecb"
+  },
+  "itemId": "000012",
+  "locationId": "01510",
+  "minThreshold": 27,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aecc"
+  },
+  "itemId": "000012",
+  "locationId": "01511",
+  "minThreshold": 22,
+  "maxThreshold": 87
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aecd"
+  },
+  "itemId": "000012",
+  "locationId": "01512",
+  "minThreshold": 97,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aece"
+  },
+  "itemId": "000012",
+  "locationId": "01513",
+  "minThreshold": 38,
+  "maxThreshold": 49
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aecf"
+  },
+  "itemId": "000012",
+  "locationId": "01514",
+  "minThreshold": 20,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed0"
+  },
+  "itemId": "000012",
+  "locationId": "01515",
+  "minThreshold": 6,
+  "maxThreshold": 44
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed1"
+  },
+  "itemId": "000012",
+  "locationId": "01516",
+  "minThreshold": 26,
+  "maxThreshold": 43
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed2"
+  },
+  "itemId": "000012",
+  "locationId": "01517",
+  "minThreshold": 17,
+  "maxThreshold": 61
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed3"
+  },
+  "itemId": "000012",
+  "locationId": "01519",
+  "minThreshold": 46,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed4"
+  },
+  "itemId": "000012",
+  "locationId": "01520",
+  "minThreshold": 42,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed5"
+  },
+  "itemId": "000012",
+  "locationId": "474747",
+  "minThreshold": 58,
+  "maxThreshold": 60
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed6"
+  },
+  "itemId": "000012",
+  "locationId": "wqefet",
+  "minThreshold": 91,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed7"
+  },
+  "itemId": "000012",
+  "locationId": "wew",
+  "minThreshold": 28,
+  "maxThreshold": 74
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed8"
+  },
+  "itemId": "000012",
+  "locationId": "we",
+  "minThreshold": 59,
+  "maxThreshold": 66
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aed9"
+  },
+  "itemId": "000013",
+  "locationId": "01501",
+  "minThreshold": 88,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeda"
+  },
+  "itemId": "000013",
+  "locationId": "01502",
+  "minThreshold": 35,
+  "maxThreshold": 70
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aedb"
+  },
+  "itemId": "000013",
+  "locationId": "01503",
+  "minThreshold": 20,
+  "maxThreshold": 52
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aedc"
+  },
+  "itemId": "000013",
+  "locationId": "01504",
+  "minThreshold": 65,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aedd"
+  },
+  "itemId": "000013",
+  "locationId": "01505",
+  "minThreshold": 42,
+  "maxThreshold": 67
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aede"
+  },
+  "itemId": "000013",
+  "locationId": "01506",
+  "minThreshold": 26,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aedf"
+  },
+  "itemId": "000013",
+  "locationId": "01507",
+  "minThreshold": 97,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee0"
+  },
+  "itemId": "000013",
+  "locationId": "01509",
+  "minThreshold": 90,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee1"
+  },
+  "itemId": "000013",
+  "locationId": "01510",
+  "minThreshold": 25,
+  "maxThreshold": 67
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee2"
+  },
+  "itemId": "000013",
+  "locationId": "01511",
+  "minThreshold": 86,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee3"
+  },
+  "itemId": "000013",
+  "locationId": "01512",
+  "minThreshold": 62,
+  "maxThreshold": 84
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee4"
+  },
+  "itemId": "000013",
+  "locationId": "01513",
+  "minThreshold": 98,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee5"
+  },
+  "itemId": "000013",
+  "locationId": "01514",
+  "minThreshold": 58,
+  "maxThreshold": 74
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee6"
+  },
+  "itemId": "000013",
+  "locationId": "01515",
+  "minThreshold": 88,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee7"
+  },
+  "itemId": "000013",
+  "locationId": "01516",
+  "minThreshold": 95,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee8"
+  },
+  "itemId": "000013",
+  "locationId": "01517",
+  "minThreshold": 13,
+  "maxThreshold": 81
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aee9"
+  },
+  "itemId": "000013",
+  "locationId": "01519",
+  "minThreshold": 84,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeea"
+  },
+  "itemId": "000013",
+  "locationId": "01520",
+  "minThreshold": 67,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeeb"
+  },
+  "itemId": "000013",
+  "locationId": "474747",
+  "minThreshold": 21,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeec"
+  },
+  "itemId": "000013",
+  "locationId": "wqefet",
+  "minThreshold": 31,
+  "maxThreshold": 77
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeed"
+  },
+  "itemId": "000013",
+  "locationId": "wew",
+  "minThreshold": 40,
+  "maxThreshold": 42
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeee"
+  },
+  "itemId": "000013",
+  "locationId": "we",
+  "minThreshold": 93,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeef"
+  },
+  "itemId": "000014",
+  "locationId": "01501",
+  "minThreshold": 35,
+  "maxThreshold": 87
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef0"
+  },
+  "itemId": "000014",
+  "locationId": "01502",
+  "minThreshold": 66,
+  "maxThreshold": 94
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef1"
+  },
+  "itemId": "000014",
+  "locationId": "01503",
+  "minThreshold": 48,
+  "maxThreshold": 82
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef2"
+  },
+  "itemId": "000014",
+  "locationId": "01504",
+  "minThreshold": 66,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef3"
+  },
+  "itemId": "000014",
+  "locationId": "01505",
+  "minThreshold": 57,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef4"
+  },
+  "itemId": "000014",
+  "locationId": "01506",
+  "minThreshold": 78,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef5"
+  },
+  "itemId": "000014",
+  "locationId": "01507",
+  "minThreshold": 13,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef6"
+  },
+  "itemId": "000014",
+  "locationId": "01509",
+  "minThreshold": 7,
+  "maxThreshold": 68
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef7"
+  },
+  "itemId": "000014",
+  "locationId": "01510",
+  "minThreshold": 87,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef8"
+  },
+  "itemId": "000014",
+  "locationId": "01511",
+  "minThreshold": 32,
+  "maxThreshold": 45
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aef9"
+  },
+  "itemId": "000014",
+  "locationId": "01512",
+  "minThreshold": 9,
+  "maxThreshold": 67
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aefa"
+  },
+  "itemId": "000014",
+  "locationId": "01513",
+  "minThreshold": 32,
+  "maxThreshold": 90
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aefb"
+  },
+  "itemId": "000014",
+  "locationId": "01514",
+  "minThreshold": 52,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aefc"
+  },
+  "itemId": "000014",
+  "locationId": "01515",
+  "minThreshold": 39,
+  "maxThreshold": 57
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aefd"
+  },
+  "itemId": "000014",
+  "locationId": "01516",
+  "minThreshold": 88,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aefe"
+  },
+  "itemId": "000014",
+  "locationId": "01517",
+  "minThreshold": 99,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857aeff"
+  },
+  "itemId": "000014",
+  "locationId": "01519",
+  "minThreshold": 12,
+  "maxThreshold": 46
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af00"
+  },
+  "itemId": "000014",
+  "locationId": "01520",
+  "minThreshold": 76,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af01"
+  },
+  "itemId": "000014",
+  "locationId": "474747",
+  "minThreshold": 76,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af02"
+  },
+  "itemId": "000014",
+  "locationId": "wqefet",
+  "minThreshold": 7,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af03"
+  },
+  "itemId": "000014",
+  "locationId": "wew",
+  "minThreshold": 11,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af04"
+  },
+  "itemId": "000014",
+  "locationId": "we",
+  "minThreshold": 68,
+  "maxThreshold": 90
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af05"
+  },
+  "itemId": "000015",
+  "locationId": "01501",
+  "minThreshold": 30,
+  "maxThreshold": 78
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af06"
+  },
+  "itemId": "000015",
+  "locationId": "01502",
+  "minThreshold": 19,
+  "maxThreshold": 44
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af07"
+  },
+  "itemId": "000015",
+  "locationId": "01503",
+  "minThreshold": 87,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af08"
+  },
+  "itemId": "000015",
+  "locationId": "01504",
+  "minThreshold": 42,
+  "maxThreshold": 75
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af09"
+  },
+  "itemId": "000015",
+  "locationId": "01505",
+  "minThreshold": 67,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af0a"
+  },
+  "itemId": "000015",
+  "locationId": "01506",
+  "minThreshold": 9,
+  "maxThreshold": 59
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af0b"
+  },
+  "itemId": "000015",
+  "locationId": "01507",
+  "minThreshold": 25,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af0c"
+  },
+  "itemId": "000015",
+  "locationId": "01509",
+  "minThreshold": 36,
+  "maxThreshold": 55
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af0d"
+  },
+  "itemId": "000015",
+  "locationId": "01510",
+  "minThreshold": 38,
+  "maxThreshold": 65
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af0e"
+  },
+  "itemId": "000015",
+  "locationId": "01511",
+  "minThreshold": 97,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af0f"
+  },
+  "itemId": "000015",
+  "locationId": "01512",
+  "minThreshold": 84,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af10"
+  },
+  "itemId": "000015",
+  "locationId": "01513",
+  "minThreshold": 86,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af11"
+  },
+  "itemId": "000015",
+  "locationId": "01514",
+  "minThreshold": 48,
+  "maxThreshold": 79
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af12"
+  },
+  "itemId": "000015",
+  "locationId": "01515",
+  "minThreshold": 80,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af13"
+  },
+  "itemId": "000015",
+  "locationId": "01516",
+  "minThreshold": 21,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af14"
+  },
+  "itemId": "000015",
+  "locationId": "01517",
+  "minThreshold": 69,
+  "maxThreshold": 80
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af15"
+  },
+  "itemId": "000015",
+  "locationId": "01519",
+  "minThreshold": 76,
+  "maxThreshold": 82
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af16"
+  },
+  "itemId": "000015",
+  "locationId": "01520",
+  "minThreshold": 46,
+  "maxThreshold": 53
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af17"
+  },
+  "itemId": "000015",
+  "locationId": "474747",
+  "minThreshold": 20,
+  "maxThreshold": 53
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af18"
+  },
+  "itemId": "000015",
+  "locationId": "wqefet",
+  "minThreshold": 46,
+  "maxThreshold": 94
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af19"
+  },
+  "itemId": "000015",
+  "locationId": "wew",
+  "minThreshold": 57,
+  "maxThreshold": 81
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af1a"
+  },
+  "itemId": "000015",
+  "locationId": "we",
+  "minThreshold": 79,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af1b"
+  },
+  "itemId": "000016",
+  "locationId": "01501",
+  "minThreshold": 73,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af1c"
+  },
+  "itemId": "000016",
+  "locationId": "01502",
+  "minThreshold": 92,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af1d"
+  },
+  "itemId": "000016",
+  "locationId": "01503",
+  "minThreshold": 67,
+  "maxThreshold": 78
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af1e"
+  },
+  "itemId": "000016",
+  "locationId": "01504",
+  "minThreshold": 89,
+  "maxThreshold": 94
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af1f"
+  },
+  "itemId": "000016",
+  "locationId": "01505",
+  "minThreshold": 75,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af20"
+  },
+  "itemId": "000016",
+  "locationId": "01506",
+  "minThreshold": 28,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af21"
+  },
+  "itemId": "000016",
+  "locationId": "01507",
+  "minThreshold": 59,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af22"
+  },
+  "itemId": "000016",
+  "locationId": "01509",
+  "minThreshold": 75,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af23"
+  },
+  "itemId": "000016",
+  "locationId": "01510",
+  "minThreshold": 30,
+  "maxThreshold": 71
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af24"
+  },
+  "itemId": "000016",
+  "locationId": "01511",
+  "minThreshold": 38,
+  "maxThreshold": 57
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af25"
+  },
+  "itemId": "000016",
+  "locationId": "01512",
+  "minThreshold": 9,
+  "maxThreshold": 76
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af26"
+  },
+  "itemId": "000016",
+  "locationId": "01513",
+  "minThreshold": 9,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af27"
+  },
+  "itemId": "000016",
+  "locationId": "01514",
+  "minThreshold": 76,
+  "maxThreshold": 84
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af28"
+  },
+  "itemId": "000016",
+  "locationId": "01515",
+  "minThreshold": 90,
+  "maxThreshold": 96
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af29"
+  },
+  "itemId": "000016",
+  "locationId": "01516",
+  "minThreshold": 79,
+  "maxThreshold": 81
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af2a"
+  },
+  "itemId": "000016",
+  "locationId": "01517",
+  "minThreshold": 36,
+  "maxThreshold": 55
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af2b"
+  },
+  "itemId": "000016",
+  "locationId": "01519",
+  "minThreshold": 53,
+  "maxThreshold": 58
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af2c"
+  },
+  "itemId": "000016",
+  "locationId": "01520",
+  "minThreshold": 89,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af2d"
+  },
+  "itemId": "000016",
+  "locationId": "474747",
+  "minThreshold": 26,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af2e"
+  },
+  "itemId": "000016",
+  "locationId": "wqefet",
+  "minThreshold": 72,
+  "maxThreshold": 78
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af2f"
+  },
+  "itemId": "000016",
+  "locationId": "wew",
+  "minThreshold": 21,
+  "maxThreshold": 82
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af30"
+  },
+  "itemId": "000016",
+  "locationId": "we",
+  "minThreshold": 36,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af31"
+  },
+  "itemId": "000017",
+  "locationId": "01501",
+  "minThreshold": 82,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af32"
+  },
+  "itemId": "000017",
+  "locationId": "01502",
+  "minThreshold": 45,
+  "maxThreshold": 79
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af33"
+  },
+  "itemId": "000017",
+  "locationId": "01503",
+  "minThreshold": 85,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af34"
+  },
+  "itemId": "000017",
+  "locationId": "01504",
+  "minThreshold": 53,
+  "maxThreshold": 61
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af35"
+  },
+  "itemId": "000017",
+  "locationId": "01505",
+  "minThreshold": 27,
+  "maxThreshold": 77
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af36"
+  },
+  "itemId": "000017",
+  "locationId": "01506",
+  "minThreshold": 26,
+  "maxThreshold": 92
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af37"
+  },
+  "itemId": "000017",
+  "locationId": "01507",
+  "minThreshold": 26,
+  "maxThreshold": 69
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af38"
+  },
+  "itemId": "000017",
+  "locationId": "01509",
+  "minThreshold": 93,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af39"
+  },
+  "itemId": "000017",
+  "locationId": "01510",
+  "minThreshold": 6,
+  "maxThreshold": 60
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af3a"
+  },
+  "itemId": "000017",
+  "locationId": "01511",
+  "minThreshold": 85,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af3b"
+  },
+  "itemId": "000017",
+  "locationId": "01512",
+  "minThreshold": 75,
+  "maxThreshold": 82
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af3c"
+  },
+  "itemId": "000017",
+  "locationId": "01513",
+  "minThreshold": 17,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af3d"
+  },
+  "itemId": "000017",
+  "locationId": "01514",
+  "minThreshold": 81,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af3e"
+  },
+  "itemId": "000017",
+  "locationId": "01515",
+  "minThreshold": 67,
+  "maxThreshold": 91
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af3f"
+  },
+  "itemId": "000017",
+  "locationId": "01516",
+  "minThreshold": 57,
+  "maxThreshold": 59
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af40"
+  },
+  "itemId": "000017",
+  "locationId": "01517",
+  "minThreshold": 15,
+  "maxThreshold": 47
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af41"
+  },
+  "itemId": "000017",
+  "locationId": "01519",
+  "minThreshold": 96,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af42"
+  },
+  "itemId": "000017",
+  "locationId": "01520",
+  "minThreshold": 39,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af43"
+  },
+  "itemId": "000017",
+  "locationId": "474747",
+  "minThreshold": 19,
+  "maxThreshold": 91
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af44"
+  },
+  "itemId": "000017",
+  "locationId": "wqefet",
+  "minThreshold": 14,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af45"
+  },
+  "itemId": "000017",
+  "locationId": "wew",
+  "minThreshold": 66,
+  "maxThreshold": 67
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af46"
+  },
+  "itemId": "000017",
+  "locationId": "we",
+  "minThreshold": 74,
+  "maxThreshold": 87
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af47"
+  },
+  "itemId": "000018",
+  "locationId": "01501",
+  "minThreshold": 27,
+  "maxThreshold": 50
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af48"
+  },
+  "itemId": "000018",
+  "locationId": "01502",
+  "minThreshold": 92,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af49"
+  },
+  "itemId": "000018",
+  "locationId": "01503",
+  "minThreshold": 79,
+  "maxThreshold": 84
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af4a"
+  },
+  "itemId": "000018",
+  "locationId": "01504",
+  "minThreshold": 26,
+  "maxThreshold": 68
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af4b"
+  },
+  "itemId": "000018",
+  "locationId": "01505",
+  "minThreshold": 42,
+  "maxThreshold": 52
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af4c"
+  },
+  "itemId": "000018",
+  "locationId": "01506",
+  "minThreshold": 50,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af4d"
+  },
+  "itemId": "000018",
+  "locationId": "01507",
+  "minThreshold": 30,
+  "maxThreshold": 78
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af4e"
+  },
+  "itemId": "000018",
+  "locationId": "01509",
+  "minThreshold": 93,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af4f"
+  },
+  "itemId": "000018",
+  "locationId": "01510",
+  "minThreshold": 6,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af50"
+  },
+  "itemId": "000018",
+  "locationId": "01511",
+  "minThreshold": 85,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af51"
+  },
+  "itemId": "000018",
+  "locationId": "01512",
+  "minThreshold": 30,
+  "maxThreshold": 86
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af52"
+  },
+  "itemId": "000018",
+  "locationId": "01513",
+  "minThreshold": 25,
+  "maxThreshold": 91
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af53"
+  },
+  "itemId": "000018",
+  "locationId": "01514",
+  "minThreshold": 39,
+  "maxThreshold": 57
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af54"
+  },
+  "itemId": "000018",
+  "locationId": "01515",
+  "minThreshold": 89,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af55"
+  },
+  "itemId": "000018",
+  "locationId": "01516",
+  "minThreshold": 11,
+  "maxThreshold": 59
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af56"
+  },
+  "itemId": "000018",
+  "locationId": "01517",
+  "minThreshold": 10,
+  "maxThreshold": 72
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af57"
+  },
+  "itemId": "000018",
+  "locationId": "01519",
+  "minThreshold": 88,
+  "maxThreshold": 100
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af58"
+  },
+  "itemId": "000018",
+  "locationId": "01520",
+  "minThreshold": 48,
+  "maxThreshold": 69
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af59"
+  },
+  "itemId": "000018",
+  "locationId": "474747",
+  "minThreshold": 93,
+  "maxThreshold": 97
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af5a"
+  },
+  "itemId": "000018",
+  "locationId": "wqefet",
+  "minThreshold": 8,
+  "maxThreshold": 66
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af5b"
+  },
+  "itemId": "000018",
+  "locationId": "wew",
+  "minThreshold": 72,
+  "maxThreshold": 75
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af5c"
+  },
+  "itemId": "000018",
+  "locationId": "we",
+  "minThreshold": 62,
+  "maxThreshold": 89
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af5d"
+  },
+  "itemId": "000019",
+  "locationId": "01501",
+  "minThreshold": 66,
+  "maxThreshold": 84
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af5e"
+  },
+  "itemId": "000019",
+  "locationId": "01502",
+  "minThreshold": 96,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af5f"
+  },
+  "itemId": "000019",
+  "locationId": "01503",
+  "minThreshold": 94,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af60"
+  },
+  "itemId": "000019",
+  "locationId": "01504",
+  "minThreshold": 60,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af61"
+  },
+  "itemId": "000019",
+  "locationId": "01505",
+  "minThreshold": 47,
+  "maxThreshold": 52
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af62"
+  },
+  "itemId": "000019",
+  "locationId": "01506",
+  "minThreshold": 65,
+  "maxThreshold": 99
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af63"
+  },
+  "itemId": "000019",
+  "locationId": "01507",
+  "minThreshold": 75,
+  "maxThreshold": 95
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af64"
+  },
+  "itemId": "000019",
+  "locationId": "01509",
+  "minThreshold": 94,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af65"
+  },
+  "itemId": "000019",
+  "locationId": "01510",
+  "minThreshold": 71,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af66"
+  },
+  "itemId": "000019",
+  "locationId": "01511",
+  "minThreshold": 59,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af67"
+  },
+  "itemId": "000019",
+  "locationId": "01512",
+  "minThreshold": 38,
+  "maxThreshold": 62
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af68"
+  },
+  "itemId": "000019",
+  "locationId": "01513",
+  "minThreshold": 50,
+  "maxThreshold": 52
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af69"
+  },
+  "itemId": "000019",
+  "locationId": "01514",
+  "minThreshold": 59,
+  "maxThreshold": 85
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af6a"
+  },
+  "itemId": "000019",
+  "locationId": "01515",
+  "minThreshold": 25,
+  "maxThreshold": 53
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af6b"
+  },
+  "itemId": "000019",
+  "locationId": "01516",
+  "minThreshold": 92,
+  "maxThreshold": 93
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af6c"
+  },
+  "itemId": "000019",
+  "locationId": "01517",
+  "minThreshold": 62,
+  "maxThreshold": 88
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af6d"
+  },
+  "itemId": "000019",
+  "locationId": "01519",
+  "minThreshold": 49,
+  "maxThreshold": 70
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af6e"
+  },
+  "itemId": "000019",
+  "locationId": "01520",
+  "minThreshold": 17,
+  "maxThreshold": 54
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af6f"
+  },
+  "itemId": "000019",
+  "locationId": "474747",
+  "minThreshold": 75,
+  "maxThreshold": 83
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af70"
+  },
+  "itemId": "000019",
+  "locationId": "wqefet",
+  "minThreshold": 31,
+  "maxThreshold": 53
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af71"
+  },
+  "itemId": "000019",
+  "locationId": "wew",
+  "minThreshold": 80,
+  "maxThreshold": 98
+},
+{
+  "_id": {
+    "$oid": "66e7ca5cece8a914a857af72"
+  },
+  "itemId": "000019",
+  "locationId": "we",
+  "minThreshold": 30,
+  "maxThreshold": 59
+}]

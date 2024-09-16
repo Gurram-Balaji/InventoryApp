@@ -76,9 +76,11 @@ public class ItemController {
 
     // Get all item IDs
     @GetMapping("/ids")
-    public ResponseEntity<ApiResponse<List<String>>> getAllItemIds() {
-        List<String> itemIds = itemService.getAllItemIds();
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(new ApiResponse<>(true, ITEM_IDS_FOUND, itemIds));
+    public ResponseEntity<ApiResponse<Page<String>>> getAllItemIds( @RequestParam(defaultValue = DEFAULT_PAGE) int page,
+                                                                    @RequestParam(defaultValue = DEFAULT_SIZE) int size,
+                                                                    @RequestParam(required = false) String search) {
+
+        Page<String> itemIds = itemService.getAllItemIds(page, size, search);
+        return APIResponseForFoundOrNot.generateResponse(itemIds, ITEMS_FOUND, ITEMS_NOT_FOUND);
     }
 }

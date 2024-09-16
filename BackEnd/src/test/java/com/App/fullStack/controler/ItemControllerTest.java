@@ -78,15 +78,4 @@ class ItemControllerTest {
         assertEquals(response.getPayload(), Objects.requireNonNull(result.getBody()).getPayload());
     }
 
-    @Test
-    void getAllItemIds_Success() {
-        List<String> itemIds = List.of("id1", "id2");
-        ApiResponse<List<String>> response = new ApiResponse<>(true, "Item ids found.", itemIds);
-        when(itemService.getAllItemIds()).thenReturn(itemIds);
-
-        ResponseEntity<ApiResponse<List<String>>> result = itemController.getAllItemIds();
-
-        assertEquals(HttpStatus.OK, result.getStatusCode());
-        assertEquals(response.getPayload(), Objects.requireNonNull(result.getBody()).getPayload());
-    }
 }

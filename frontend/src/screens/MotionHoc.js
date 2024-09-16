@@ -5,15 +5,8 @@ const MotionHoc = (Component) => {
   return function HOC() {
     return (
       <motion.div
-        initial={{ y: 500 }}
-        animate={{
-          y: 0,
-          transition: { duration: 0, type: "spring" },
-        }}
-        exit={{
-          y: 500,
-          transition: { duration: 0.5, type: "spring", ease: "easeInOut" },
-        }}
+        initial={{ x: "-100vw", opacity: 0 }}
+        animate={{ x: 0, scale: 1, opacity: 1, transition: { duration: 1.2, type: "spring" } }}
       >
         <Component />
       </motion.div>

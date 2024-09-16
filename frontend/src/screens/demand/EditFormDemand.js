@@ -34,18 +34,21 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
   };
 
   return (
-    <Dialog open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
-      <DialogTitle>Edit Demand...</DialogTitle>
+     <Dialog PaperProps={{className: 'dialog-custom',  }}open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
+      <DialogTitle className="dialog-title-custom" >Edit Demand...</DialogTitle>
       <DialogContent style={{ padding: '30px 50px 10px' }}>
 
         <TextField
           label="Item"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.itemId || ''}
           InputProps={{
             readOnly: true,
+            style: {
+              pointerEvents: 'none', // Prevent any interaction
+            },
           }}
         />
 
@@ -53,10 +56,13 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
           label="Location"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.locationId || ''}
           InputProps={{
             readOnly: true,
+            style: {
+              pointerEvents: 'none', // Prevent any interaction
+            },
           }}
         />
 
@@ -64,10 +70,13 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
           label="Demand Type"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.demandType || ''}
           InputProps={{
             readOnly: true,
+            style: {
+              pointerEvents: 'none', // Prevent any interaction
+            },
           }}
         />
 
@@ -77,7 +86,7 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
           type="number"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.quantity || ''}
           onChange={(e) => setEditData({ ...editData, quantity: e.target.value })}
         />

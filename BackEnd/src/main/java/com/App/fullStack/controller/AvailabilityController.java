@@ -1,5 +1,8 @@
 package com.App.fullStack.controller;
 
+import com.App.fullStack.dto.ScatterDataDTO;
+import com.App.fullStack.dto.ScatterLocationDataDTO;
+import com.App.fullStack.pojos.Location;
 import com.App.fullStack.service.AvailabilityService;
 import com.App.fullStack.dto.AvailabilityResponse;
 import com.App.fullStack.dto.AvailabilityResponseV2V3;
@@ -7,6 +10,10 @@ import com.App.fullStack.responseHandler.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/availability")
@@ -70,4 +77,12 @@ public class AvailabilityController {
         
         return ResponseEntity.ok(new ApiResponse<>(true, SUCCESS_MESSAGE, response));
     }
+
+    @GetMapping("/getAvailabilityScatterData")
+    public ResponseEntity<ApiResponse<ScatterLocationDataDTO>> getAvailabilityScatterData(@RequestParam String locationId) {
+        ScatterLocationDataDTO scatterData = availabilityService.getAvailabilityScatterData(locationId);
+        return ResponseEntity.ok(new ApiResponse<>(true, "Scatter Data Retrieved", scatterData));
+    }
+
+
 }

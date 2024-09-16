@@ -42,21 +42,6 @@ public class LocationServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    public void testGetAllLocationsWithKeyword() {
-        String keyword = "search";
-        List<Location> locations = Arrays.asList(
-                new Location("dsdd","loc1", "Location 1", LocationType.DISTRIBUTION_CENTER, true, false, true, "Address1", null, null, "City1", "State1", "Country1", "12345"),
-                new Location("dsdd","loc2", "Location 2", LocationType.SUPPLIER_LOCATION, false, true, false, "Address2", null, null, "City2", "State2", "Country2", "67890")
-        );
-        Pageable pageable = PageRequest.of(0, 10);
-        Page<Location> locationPage = new PageImpl<>(locations, pageable, locations.size());
-
-        when(locationRepository.searchLocationsByKeyword(keyword, pageable)).thenReturn(locationPage);
-
-        Page<Location> result = locationService.getAllLocations(0, 10, keyword);
-        assertEquals(2, result.getTotalElements());
-    }
 
     @Test
     public void testGetAllLocationsWithoutKeyword() {

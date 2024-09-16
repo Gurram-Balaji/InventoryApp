@@ -4,13 +4,15 @@ import MotionHoc from "../MotionHoc";
 import apiClient from '../../components/baseUrl';
 import { errorToast } from '../../components/Toast';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
-import Delivery from './assets/delivery.png';
-import Shipping from './assets/shipping.png';
-import Pickup from './assets/pickup.png';
+import Delivery from '../assets/delivery.png';
+import Shipping from '../assets/shipping.png';
+import Pickup from '../assets/pickup.png';
 import NewItemForm from './AddNewItem';
 import EditFormItem from './EditFormItem';
 import DeleteItem from './DeleteItem';
 import TableItem from './TableItem';
+import FulfillmentInfo from '../../components/FulfillmentInfo';
+
 
 
 // Fetch paginated data
@@ -47,12 +49,9 @@ function createData(id, itemid, itemDescription, category, type, price, pickupAl
 }
 
 const statusOptions = [
-  'AVAILABLE',
-  'OUT_OF_STOCK',
-  'BACKORDERED',
+  'ACTIVE',
+  'INACTIVE',
   'DISCONTINUED',
-  'ON_HOLD',
-  'PRE_ORDER'
 ];
 
 // The main component
@@ -145,7 +144,7 @@ const ReactVirtualizedTable = () => {
 
       {/* Delete Confirmation Dialog */}
       <DeleteItem openDeleteDialog={openDeleteDialog} selectedItem={selectedItem} fetchItems={fetchItems} page={page} setOpenDeleteDialog={setOpenDeleteDialog} />
-
+      <FulfillmentInfo />
     </>
   );
 };

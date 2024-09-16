@@ -1,5 +1,6 @@
 package com.App.fullStack.service;
 
+import com.App.fullStack.dto.LocationData;
 import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.Location;
 import com.App.fullStack.repositories.LocationRepository;
@@ -12,8 +13,11 @@ import org.springframework.stereotype.Service;
 import com.App.fullStack.repositories.DemandRepository;
 import com.App.fullStack.repositories.SupplyRepository;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class LocationService {
@@ -126,8 +130,15 @@ public class LocationService {
         throw new FoundException("Location with locationId " + locationId + " not exist.");
     }
 
-    public List<String> getAllLocationIds() {
-        return locationRepository.findDistinctLocationIds();
+    public Page<String> getAllLocationIds(int page,int size,String search) {
+        Pageable pageable = PageRequest.of(page, size);
+
+        if (search != null && !search.isEmpty()) {
+            return locationRepository.searchLocationIdsByKeyword(search, pageable);
+        } else {
+            return locationRepository.findDistinctLocationIds(pageable);
+        }
+
     }
 
     public Location getLocationByIdWithoutException(String locationId) {
@@ -140,4 +151,32 @@ public class LocationService {
             return null;
     }
 
+    public List<LocationData> getStackedBarData() {
+        // Fetch all locations
+        List<Location> locations = locationRepository.findAll();
+
+        // Map each location to LocationData DTO
+        return locations.stream().map(location -> {
+            // Fetch supply and demand data for each location
+            Map<String, Integer> supplyDetails = new HashMap<>();
+            Map<String, Integer> demandDetails = new HashMap<>();
+
+            // Supply: Assuming supplyRepository provides methods to get supply counts by type
+            int onHand = supplyRepository.getTotalSupplyByLocationAndType(location.getLocationId(), "ONHAND");
+            int inTransit = supplyRepository.getTotalSupplyByLocationAndType(location.getLocationId(), "INTRANSIT");
+
+            supplyDetails.put("ONHAND", onHand);
+            supplyDetails.put("INTRANSIT", inTransit);
+
+            // Demand: Assuming demandRepository provides methods to get demand counts by type
+            int hardPromised = demandRepository.getTotalDemandByLocationAndType(location.getLocationId(), "HARD_PROMISED");
+            int planned = demandRepository.getTotalDemandByLocationAndType(location.getLocationId(), "PLANNED");
+
+            demandDetails.put("HARD_PROMISED", hardPromised);
+            demandDetails.put("PLANNED", planned);
+
+            // Create and return the LocationData object
+            return new LocationData(location.getLocationId(), location.getLocationDesc(), supplyDetails, demandDetails);
+        }).collect(Collectors.toList());
+    }
 }

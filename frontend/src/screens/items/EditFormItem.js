@@ -31,18 +31,21 @@ export default function EditFormItem({ openEditDialog, editData, statusOptions, 
   };
 
   return (
-    <Dialog open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
-      <DialogTitle>Edit Item...</DialogTitle>
+     <Dialog PaperProps={{className: 'dialog-custom',  }}open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
+      <DialogTitle className="dialog-title-custom" >Edit Item...</DialogTitle>
       <DialogContent style={{ padding: '30px 50px 10px' }}>
         {editData && (
           <TextField
             label="Item ID"
             fullWidth
             margin="normal"
-            variant="standard"
+            
             value={editData.itemid || ''}
             InputProps={{
               readOnly: true,
+            style: {
+              pointerEvents: 'none', // Prevent any interaction
+            },
             }}
           />
         )}
@@ -50,7 +53,7 @@ export default function EditFormItem({ openEditDialog, editData, statusOptions, 
           label="Description"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.itemDescription || ''}
           onChange={(e) => setEditData({ ...editData, itemDescription: e.target.value })}
         />
@@ -58,24 +61,23 @@ export default function EditFormItem({ openEditDialog, editData, statusOptions, 
           label="Category"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.category || ''}
           onChange={(e) => setEditData({ ...editData, category: e.target.value })}
         />
         <TextField
-          label="Type"
+          label="HSN Code"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           value={editData.type || ''}
           onChange={(e) => setEditData({ ...editData, type: e.target.value })}
         />
         <FormControl fullWidth margin="dense">
           <InputLabel>Status</InputLabel>
-          <Select
+          <Select label='Status'
             value={editData.status || ''}
             onChange={(e) => setEditData({ ...editData, status: e.target.value })}
-            variant="standard"
           >
             {statusOptions.map((status) => (
               <MenuItem key={status} value={status}>
@@ -88,7 +90,7 @@ export default function EditFormItem({ openEditDialog, editData, statusOptions, 
           label="Price"
           fullWidth
           margin="normal"
-          variant="standard"
+          
           type="number"
           value={editData.price || ''}
           onChange={(e) => setEditData({ ...editData, price: e.target.value })}

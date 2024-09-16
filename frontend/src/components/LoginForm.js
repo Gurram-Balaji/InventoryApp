@@ -74,7 +74,6 @@ const LoginForm = ({ mode }) => {
 				<div className="form-group form-group--login">
 					<Input type="text" id="Email" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} disabled={mode === 'signup'} />
 					<Input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} label="password" disabled={mode === 'signup'} />
-
 				</div>
 				<div className="form-group form-group--signup">
 					<Input type="text" id="fullname" label="Full name" disabled={mode === 'login'} value={SignUpfullName} onChange={(e) => setSignUpFullName(e.target.value)} />

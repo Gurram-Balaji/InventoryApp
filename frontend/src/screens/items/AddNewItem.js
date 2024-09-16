@@ -10,7 +10,7 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
         itemDescription: '',
         category: '',
         type: '',
-        status: 'PRE_ORDER',
+        status: 'ACTIVE',
         price: '',
         pickupAllowed: true,
         shippingAllowed: true,
@@ -49,7 +49,7 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
             itemDescription: '',
             category: '',
             type: '',
-            status: 'PRE_ORDER',
+            status: 'ACTIVE',
             price: '',
             pickupAllowed: true,
             shippingAllowed: true,
@@ -58,8 +58,8 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
     };
 
     return (
-        <Dialog open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
-            <DialogTitle>Add New Item...</DialogTitle>
+         <Dialog PaperProps={{className: 'dialog-custom',  }}open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
+            <DialogTitle className="dialog-title-custom" >Add New Item...</DialogTitle>
             <DialogContent style={{ padding: '30px 50px 10px' }}>
                 <TextField
                     autoFocus
@@ -67,7 +67,7 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
                     label="Item ID"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newItemData.itemId}
                     onChange={(e) => setNewItemData({ ...newItemData, itemId: e.target.value })}
                 />
@@ -76,7 +76,7 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
                     label="Description"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newItemData.itemDescription}
                     onChange={(e) => setNewItemData({ ...newItemData, itemDescription: e.target.value })}
                 />
@@ -85,7 +85,7 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
                     label="Category"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newItemData.category}
                     onChange={(e) => setNewItemData({ ...newItemData, category: e.target.value })}
                 />
@@ -94,16 +94,15 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
                     label="Type"
                     type="text"
                     fullWidth
-                    variant="standard"
+                    
                     value={newItemData.type}
                     onChange={(e) => setNewItemData({ ...newItemData, type: e.target.value })}
                 />
                 <FormControl fullWidth margin="dense">
                     <InputLabel>Status</InputLabel>
-                    <Select
+                    <Select label="Status"
                         value={newItemData.status}
                         onChange={(e) => setNewItemData({ ...newItemData, status: e.target.value })}
-                        variant="standard"
                     >
                         {statusOptions.map((status) => (
                             <MenuItem key={status} value={status}>{status}</MenuItem>
@@ -115,7 +114,7 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
                     label="Price"
                     type="number"
                     fullWidth
-                    variant="standard"
+                    
                     value={newItemData.price}
                     onChange={(e) => setNewItemData({ ...newItemData, price: e.target.value })}
                 />

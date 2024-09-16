@@ -4,7 +4,7 @@ import { logout } from '../store/authSlice';
 import { useNavigate } from 'react-router-dom';
 import apiClient from '../components/baseUrl';
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import InventoryIcon from '@mui/icons-material/Inventory';
@@ -14,10 +14,11 @@ import CategoryIcon from '@mui/icons-material/Category';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import VerticalAlignCenterIcon from '@mui/icons-material/VerticalAlignCenter';
 import logo from '../logo.svg';
+import StackedBarChartIcon from '@mui/icons-material/StackedBarChart';
 
 const Container = styled.div`
   position: fixed;
-
+z-index:999;
   .active {
     border-right: 4px solid var(--white);
 
@@ -296,6 +297,11 @@ const Sidebar = () => {
             <InventoryIcon />
             <Text $clicked={click}>Availability</Text>
           </Item>
+          <Item onClick={() => setClick(false)} to="/stackedBarchat">
+            <StackedBarChartIcon />
+            <Text $clicked={click}>BarChat</Text>
+          </Item>
+
         </SlickBar>
 
         <Profile $clicked={profileClick}>
@@ -303,7 +309,7 @@ const Sidebar = () => {
           <Details $clicked={profileClick}>
             <Name>
               <h4>{UserName}</h4>
-              <a href="/dashboard">view&nbsp;profile</a>
+              <Link to="/profile">view&nbsp;profile</Link>
             </Name>
 
             <Logout>

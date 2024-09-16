@@ -6,14 +6,17 @@ import Supply from "./screens/supply";
 import Location from "./screens/location";
 import Threshold from "./screens/threshold";
 import Demand from "./screens/demand";
-import Available from "./screens/Availability";
+import Available from "./screens/availability";
+import Profile from "./screens/profile";
+
 
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
-import LoginComponent from './screens/LoginPage';
+import LoginComponent from './screens/login/LoginPage';
 import PrivateRoute from "./components/PrivateRoute";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import StackedBarChart from "./screens/stackedBarChat";
 
 const Pages = styled.div`
   width: 100vw;
@@ -37,7 +40,7 @@ function App() {
     <>
      <PrivateRoute><Sidebar /></PrivateRoute> 
       <Pages>
-        <AnimatePresence>
+        <AnimatePresence> 
           <Routes location={location} key={location.pathname}>
             <Route exact path="/" element={<LoginComponent mode={"login"} />} />
             <Route path="/dashboard" element={<PrivateRoute><Home /></PrivateRoute>}/>
@@ -47,6 +50,10 @@ function App() {
             <Route path="/demand" element={<PrivateRoute><Demand /></PrivateRoute>} />
             <Route path="/threshold" element={<PrivateRoute><Threshold /></PrivateRoute>} />
             <Route path="/available" element={<PrivateRoute><Available /></PrivateRoute>} />
+            <Route path="/stackedBarchat" element={<PrivateRoute><StackedBarChart/></PrivateRoute>} />
+            <Route path="/profile" element={<PrivateRoute><Profile/></PrivateRoute>} />
+
+
           </Routes>
           <ToastContainer />
         </AnimatePresence>

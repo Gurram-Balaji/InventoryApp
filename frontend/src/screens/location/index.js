@@ -4,28 +4,29 @@ import MotionHoc from "../MotionHoc";
 import apiClient from '../../components/baseUrl';
 import { errorToast } from '../../components/Toast';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
-import Delivery from './assets/delivery.png';
-import Shipping from './assets/shipping.png';
-import Pickup from './assets/pickup.png';
+import Delivery from '../assets/delivery.png';
+import Shipping from '../assets/shipping.png';
+import Pickup from '../assets/pickup.png';
 import NewForm from './AddNewLocation';
 import EditForm from './EditFormLocation';
 import Delete from './DeleteLocation';
 import TableLocation from './TableLocation';
+import FulfillmentInfo from '../../components/FulfillmentInfo';
 
 
 // Fetch paginated data
 async function getData(page = 0, search = '') {
   try {
     const response = await apiClient.get(`/locations?page=${page}&search=${search}`);
-    if (response.data.status === 404){
+    if (response.data.status === 404) {
       errorToast(response.data.message);
       return { content: [], page: { totalElements: 0 } }; // Return default on final failure
     }
     else if (response.data.success === true)
       return response.data.payload;
   } catch (error) {
-      errorToast(error);
-      return { content: [], page: { totalElements: 0 } }; // Return default on final failure
+    errorToast(error);
+    return { content: [], page: { totalElements: 0 } }; // Return default on final failure
   }
 }
 
@@ -153,6 +154,8 @@ const ReactVirtualizedTable = () => {
 
       {/* Delete Confirmation Dialog */}
       <Delete openDeleteDialog={openDeleteDialog} selectedRow={selectedRow} fetchRow={fetchRow} page={page} setOpenDeleteDialog={setOpenDeleteDialog} />
+
+     <FulfillmentInfo/>
 
     </>
   );

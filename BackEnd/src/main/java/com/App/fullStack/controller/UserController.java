@@ -33,9 +33,25 @@ public class UserController {
 
     // Get the username based on the authorization token (assuming JWT or similar)
     @GetMapping("/name")
-    public ResponseEntity<ApiResponse<String>> getName(@RequestHeader("Authorization") String authorizationHeader) {
+    public ResponseEntity<ApiResponse<String>> getName() {
         String username = userService.GetUsername();
         ApiResponse<String> response = new ApiResponse<>(true, "User Found.", username);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+    @GetMapping("/profile")
+    public ResponseEntity<ApiResponse<User>> getProfile() {
+        User profile = userService.GetProfile();
+        ApiResponse<User> response = new ApiResponse<>(true, "User Found.", profile);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+
+    @PutMapping("/profile")
+    public ResponseEntity<ApiResponse<User>> putProfile(@RequestBody User user) {
+        User updatedProfile = userService.updateProfile(user);
+        ApiResponse<User> response = new ApiResponse<>(true, "User profile updated.", updatedProfile);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
 }

@@ -87,4 +87,50 @@ public class UserService {
         }
         return null;
     }
+
+    public User GetProfile() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null && authentication.isAuthenticated()) {
+            String email = (String) authentication.getPrincipal();
+            return userRepository.findByEmail(email);
+        }
+        throw new FoundException("Invalid email user token. ");
+    }
+
+    // New method for updating user profile
+    public User updateProfile(User updatedUser) {
+        // Get current authenticated user's profile
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null && authentication.isAuthenticated()) {
+            String email = (String) authentication.getPrincipal();
+            User currentUser = userRepository.findByEmail(email);
+
+            if (currentUser == null) {
+                throw new FoundException("User not found.");
+            }
+
+            // Update user details
+            if (updatedUser.getFullName() != null) {
+                currentUser.setFullName(updatedUser.getFullName());
+            }
+            if (updatedUser.getEmail() != null && !updatedUser.getEmail().equals(currentUser.getEmail())) {
+                if (userRepository.existsByEmail(updatedUser.getEmail())) {
+                    throw new FoundException("Email is already in use.");
+                }
+                currentUser.setEmail(updatedUser.getEmail());
+            }
+            if (updatedUser.getPassword() != null && !updatedUser.getPassword().isEmpty()) {
+                currentUser.setPassword(passwordEncoder.encode(updatedUser.getPassword()));
+            }
+
+            // Save the updated user profile
+            userRepository.save(currentUser);
+
+            return currentUser;
+        }
+
+        throw new FoundException("Invalid user token.");
+    }
+
+
 }

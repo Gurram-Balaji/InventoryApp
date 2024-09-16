@@ -1,0 +1,418 @@
+[{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd8f"
+  },
+  "locationId": "01501",
+  "locationDesc": "Central Warehouse - Bangalore",
+  "locationType": "WAREHOUSE",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "123 Warehouse Road",
+  "addressLine2": "Industrial Area",
+  "addressLine3": "",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "country": "India",
+  "pincode": "560001"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd90"
+  },
+  "locationId": "01502",
+  "locationDesc": "Distribution Center - Mumbai",
+  "locationType": "DISTRIBUTION_CENTER",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "456 DC Lane",
+  "addressLine2": "Near Mumbai Port",
+  "addressLine3": "",
+  "city": "Mumbai",
+  "state": "Maharashtra",
+  "country": "India",
+  "pincode": "400001"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd91"
+  },
+  "locationId": "01503",
+  "locationDesc": "Retail Store - Delhi",
+  "locationType": "RETAIL_STORE",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": true,
+  "addressLine1": "789 Retail Street",
+  "addressLine2": "Connaught Place",
+  "addressLine3": "",
+  "city": "Delhi",
+  "state": "Delhi",
+  "country": "India",
+  "pincode": "110001"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd92"
+  },
+  "locationId": "01504",
+  "locationDesc": "Big Bazar - Koramangala",
+  "locationType": "RETAIL_STORE",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": true,
+  "addressLine1": "10 Big Bazar Road",
+  "addressLine2": "Koramangala",
+  "addressLine3": "",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "country": "India",
+  "pincode": "560034"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd93"
+  },
+  "locationId": "01505",
+  "locationDesc": "Manufacturing Plant - Chennai",
+  "locationType": "MANUFACTURING_PLANT",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": true,
+  "addressLine1": "101 Plant Avenue",
+  "addressLine2": "Industrial Estate",
+  "addressLine3": "",
+  "city": "Chennai",
+  "state": "Tamil Nadu",
+  "country": "India",
+  "pincode": "600001"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd94"
+  },
+  "locationId": "01506",
+  "locationDesc": "Fulfillment Center - Hyderabad",
+  "locationType": "FULFILLMENT_CENTER",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "202 Fulfillment Road",
+  "addressLine2": "Gachibowli",
+  "addressLine3": "",
+  "city": "Hyderabad",
+  "state": "Telangana",
+  "country": "India",
+  "pincode": "500032"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd95"
+  },
+  "locationId": "01507",
+  "locationDesc": "Cold Storage - Pune",
+  "locationType": "COLD_STORAGE",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": false,
+  "addressLine1": "303 Cold Storage Lane",
+  "addressLine2": "Shivajinagar",
+  "addressLine3": "",
+  "city": "Pune",
+  "state": "Maharashtra",
+  "country": "India",
+  "pincode": "411005"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd96"
+  },
+  "locationId": "01508",
+  "locationDesc": "Hub - Kolkata",
+  "locationType": "HUB",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "404 Hub Street",
+  "addressLine2": "Esplanade",
+  "addressLine3": "",
+  "city": "Kolkata",
+  "state": "West Bengal",
+  "country": "India",
+  "pincode": "700001"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd97"
+  },
+  "locationId": "01509",
+  "locationDesc": "Showroom - Jaipur",
+  "locationType": "SHOWROOM",
+  "pickupAllowed": false,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "505 Showroom Boulevard",
+  "addressLine2": "Raja Park",
+  "addressLine3": "",
+  "city": "Jaipur",
+  "state": "Rajasthan",
+  "country": "India",
+  "pincode": "302004"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd98"
+  },
+  "locationId": "01510",
+  "locationDesc": "Supplier Location - Ahmedabad",
+  "locationType": "SUPPLIER_LOCATION",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": true,
+  "addressLine1": "606 Supplier Street",
+  "addressLine2": "Gota",
+  "addressLine3": "",
+  "city": "Ahmedabad",
+  "state": "Gujarat",
+  "country": "India",
+  "pincode": "382481"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd99"
+  },
+  "locationId": "01511",
+  "locationDesc": "Central Warehouse - Mumbai",
+  "locationType": "WAREHOUSE",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": false,
+  "addressLine1": "707 Warehouse Avenue",
+  "addressLine2": "Bandra",
+  "addressLine3": "",
+  "city": "Mumbai",
+  "state": "Maharashtra",
+  "country": "India",
+  "pincode": "400050"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd9a"
+  },
+  "locationId": "01512",
+  "locationDesc": "Distribution Center - Bangalore",
+  "locationType": "DISTRIBUTION_CENTER",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "808 DC Road",
+  "addressLine2": "Whitefield",
+  "addressLine3": "",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "country": "India",
+  "pincode": "560066"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd9b"
+  },
+  "locationId": "01513",
+  "locationDesc": "Retail Store - Hyderabad",
+  "locationType": "RETAIL_STORE",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": true,
+  "addressLine1": "909 Retail Place",
+  "addressLine2": "Madhapur",
+  "addressLine3": "",
+  "city": "Hyderabad",
+  "state": "Telangana",
+  "country": "India",
+  "pincode": "500081"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd9c"
+  },
+  "locationId": "01514",
+  "locationDesc": "Manufacturing Plant - Delhi",
+  "locationType": "MANUFACTURING_PLANT",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": true,
+  "addressLine1": "1010 Plant Road",
+  "addressLine2": "Faridabad",
+  "addressLine3": "",
+  "city": "Delhi",
+  "state": "Delhi",
+  "country": "India",
+  "pincode": "110040"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd9d"
+  },
+  "locationId": "01515",
+  "locationDesc": "Fulfillment Center - Chennai",
+  "locationType": "FULFILLMENT_CENTER",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "1111 Fulfillment Avenue",
+  "addressLine2": "Tidel Park",
+  "addressLine3": "",
+  "city": "Chennai",
+  "state": "Tamil Nadu",
+  "country": "India",
+  "pincode": "600100"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd9e"
+  },
+  "locationId": "01516",
+  "locationDesc": "Cold Storage - Kolkata",
+  "locationType": "COLD_STORAGE",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": false,
+  "addressLine1": "1212 Cold Storage Lane",
+  "addressLine2": "Salt Lake",
+  "addressLine3": "",
+  "city": "Kolkata",
+  "state": "West Bengal",
+  "country": "India",
+  "pincode": "700135"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffd9f"
+  },
+  "locationId": "01517",
+  "locationDesc": "Hub - Pune",
+  "locationType": "HUB",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "1313 Hub Street",
+  "addressLine2": "Koregaon Park",
+  "addressLine3": "",
+  "city": "Pune",
+  "state": "Maharashtra",
+  "country": "India",
+  "pincode": "411001"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffda1"
+  },
+  "locationId": "01519",
+  "locationDesc": "Supplier Location - Ahmedabad",
+  "locationType": "SUPPLIER_LOCATION",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": true,
+  "addressLine1": "1515 Supplier Lane",
+  "addressLine2": "Navrangpura",
+  "addressLine3": "",
+  "city": "Ahmedabad",
+  "state": "Gujarat",
+  "country": "India",
+  "pincode": "380009"
+},
+{
+  "_id": {
+    "$oid": "66dfe5ca7bdda9a3c30ffda2"
+  },
+  "locationId": "01520",
+  "locationDesc": "Central Warehouse - Pune",
+  "locationType": "WAREHOUSE",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "1616 Warehouse Road",
+  "addressLine2": "Camp",
+  "addressLine3": "",
+  "city": "Pune",
+  "state": "Maharashtra",
+  "country": "India",
+  "pincode": "411007"
+},
+{
+  "_id": {
+    "$oid": "66e15e2b9d44e040d1452c16"
+  },
+  "locationId": "474747",
+  "locationDesc": "Balaji",
+  "locationType": "WAREHOUSE",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": false,
+  "addressLine1": "near konnapna agrahara bus stop",
+  "addressLine2": "shanker narayana pg",
+  "addressLine3": "",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "country": "India",
+  "pinCode": "560100",
+  "_class": "com.App.fullStack.pojos.Location"
+},
+{
+  "_id": {
+    "$oid": "66e15e609d44e040d1452c17"
+  },
+  "locationId": "wqefet",
+  "locationDesc": "3ead",
+  "locationType": "WAREHOUSE",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": false,
+  "addressLine1": "fsfsff",
+  "addressLine2": "rs",
+  "addressLine3": "efs",
+  "city": "efc",
+  "state": "fes",
+  "country": "India",
+  "pinCode": "560100",
+  "_class": "com.App.fullStack.pojos.Location"
+},
+{
+  "_id": {
+    "$oid": "66e15e809d44e040d1452c18"
+  },
+  "locationId": "wew",
+  "locationDesc": "wfdw",
+  "locationType": "WAREHOUSE",
+  "pickupAllowed": true,
+  "shippingAllowed": true,
+  "deliveryAllowed": true,
+  "addressLine1": "we",
+  "addressLine2": "shanker narayana pg",
+  "addressLine3": "",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "country": "India",
+  "pinCode": "560100",
+  "_class": "com.App.fullStack.pojos.Location"
+},
+{
+  "_id": {
+    "$oid": "66e15ea49d44e040d1452c19"
+  },
+  "locationId": "we",
+  "locationDesc": "ewew323",
+  "locationType": "WAREHOUSE",
+  "pickupAllowed": true,
+  "shippingAllowed": false,
+  "deliveryAllowed": false,
+  "addressLine1": "near konnapna agrahara bus stop",
+  "addressLine2": "shanker narayana pg",
+  "addressLine3": "",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "country": "India",
+  "pinCode": "560100",
+  "_class": "com.App.fullStack.pojos.Location"
+}]

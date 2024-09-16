@@ -1,27 +1,29 @@
 :root {
-  /* Colors */
-  --black: #09090c;
-  --grey: #a4b2bc;
-  --white: #fff;
-  --background: rgba(137, 171, 245, 0.37);
-}
+    /* Colors */
+    --black: #09090c;
+    --grey: #a4b2bc;
+    --white: #fff;
+    --background: rgba(137, 171, 245, 0.37);
+  }
+  
+  html {
+    overflow: hidden;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--background);
+    font-family: "Poppins", sans-serif;
+  }
 
-html {
-  overflow: hidden;
-}
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--background);
-  font-family: "Poppins", sans-serif;
-}
 
 .form-block-wrapper {
   position: fixed;
@@ -278,4 +280,60 @@ input[type=checkbox]:checked+label:after {
 }
 
 
+/* For the Dialog border */
+.dialog-custom {
+  border: 10px solid white;
+}
 
+/* For the DialogTitle styling */
+.dialog-title-custom {
+  background-color: rgba(49, 42, 42, 0.87);
+  color: white;
+  font-weight: bold;
+}
+
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+
+
+
+/* FulfillmentInfo css  */
+.fulfillment-container {
+  position: relative;
+}
+
+.fulfillment-info {
+  margin-top: -40px;
+  margin-left: 40px;
+  right: 20px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between items */
+  font-size: 14px; /* Adjust font size as needed */
+  color: #333; /* Text color */
+}
+
+.fulfillment-info img {
+  margin-right: 5px; /* Space between image and text */
+}

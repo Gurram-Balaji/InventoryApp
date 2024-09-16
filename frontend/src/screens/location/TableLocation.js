@@ -20,7 +20,7 @@ export default function TableLocation({ handleEditOpen, handleDeleteOpen, loadin
         { width: 30, label: 'Description', dataKey: 'locationDesc' },
         { width: 50, label: 'Type', dataKey: 'locationType' },
         { width: 80, label: 'Address', dataKey: 'AddressLines' },
-        { width: 40, label: 'Fulfillment', dataKey: 'fulfillment', numeric: true },
+        { width: 40, label: 'Fulfillment', dataKey: 'fulfillment'},
         { width: 20, label: 'Action', dataKey: 'action', numeric: true },
     ];
     const rowContent = (_index, row) => (

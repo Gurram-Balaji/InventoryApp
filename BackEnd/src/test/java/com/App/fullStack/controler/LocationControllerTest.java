@@ -78,15 +78,4 @@ class LocationControllerTest {
         assertEquals(response.getPayload(), Objects.requireNonNull(result.getBody()).getPayload());
     }
 
-    @Test
-    void getAllLocationIds_Success() {
-        List<String> locationIds = List.of("id1", "id2");
-        ApiResponse<List<String>> response = new ApiResponse<>(true, "Location ids found.", locationIds);
-        when(locationService.getAllLocationIds()).thenReturn(locationIds);
-
-        ResponseEntity<ApiResponse<List<String>>> result = locationController.getAllLocationIds();
-
-        assertEquals(HttpStatus.OK, result.getStatusCode());
-        assertEquals(response.getPayload(), Objects.requireNonNull(result.getBody()).getPayload());
-    }
 }

@@ -20,10 +20,10 @@ export default function TableItem({ handleEditOpen, handleDeleteOpen, loading, i
         { width: 20, label: 'Item Id', dataKey: 'itemid', numeric: true },
         { width: 50, label: 'Description', dataKey: 'itemDescription' },
         { width: 50, label: 'Category', dataKey: 'category' },
-        { width: 30, label: 'Type', dataKey: 'type' },
+        { width: 30, label: 'HSN Code', dataKey: 'type' },
         { width: 30, label: 'Status', dataKey: 'status' },
         { width: 20, label: 'Price', dataKey: 'price', numeric: true },
-        { width: 50, label: 'Fulfillment', dataKey: 'fulfillment', numeric: true },
+        { width: 50, label: 'Fulfillment', dataKey: 'fulfillment'},
         { width: 20, label: 'Action', dataKey: 'action', numeric: true },
     ];
 

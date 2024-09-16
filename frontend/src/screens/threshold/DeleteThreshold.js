@@ -20,9 +20,9 @@ export default function Delete({ openDeleteDialog, selectedRow, fetchRow, page, 
     setOpenDeleteDialog(false);
   };
 
-  return (<Dialog open={openDeleteDialog} onClose={() => setOpenDeleteDialog(false)} maxWidth="sm" fullWidth>
-    <DialogTitle>Confirm Delete...</DialogTitle>
-    <DialogContent>
+  return ( <Dialog PaperProps={{className: 'dialog-custom',  }}open={openDeleteDialog} onClose={() => setOpenDeleteDialog(false)} maxWidth="sm" fullWidth>
+    <DialogTitle className="dialog-title-custom" >Confirm Delete...</DialogTitle>
+    <DialogContent style={{marginTop:'30px'}}>
       {selectedRow && (
         <div style={{
           textAlign: 'center',
