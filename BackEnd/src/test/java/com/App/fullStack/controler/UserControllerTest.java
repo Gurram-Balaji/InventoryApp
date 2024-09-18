@@ -43,12 +43,12 @@ class UserControllerTest {
     }
 
     @Test
-    void signin_Success() {
+    void signIn_Success() {
         User loginRequest = new User();
         ApiResponse<User> response = new ApiResponse<>(true, "Login successful.", loginRequest);
         when(userService.loginUser(loginRequest)).thenReturn(response);
 
-        ResponseEntity<ApiResponse<User>> result = userController.signin(loginRequest);
+        ResponseEntity<ApiResponse<User>> result = userController.signIn(loginRequest);
 
         assertEquals(HttpStatus.OK, result.getStatusCode());
         assertEquals(response.getPayload(), Objects.requireNonNull(result.getBody()).getPayload());

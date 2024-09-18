@@ -25,7 +25,7 @@ public class UserController {
 
     // User signin (login)
     @PostMapping("/signin")
-    public ResponseEntity<ApiResponse<User>> signin(@RequestBody User loginRequest) {
+    public ResponseEntity<ApiResponse<User>> signIn(@RequestBody User loginRequest) {
         @SuppressWarnings("unchecked")
         ApiResponse<User> response = userService.loginUser(loginRequest);
         return new ResponseEntity<>(response, HttpStatus.OK);

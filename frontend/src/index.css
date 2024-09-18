@@ -319,15 +319,17 @@ input[type=checkbox]:checked+label:after {
 /* FulfillmentInfo css  */
 .fulfillment-container {
   position: relative;
+  width: fit-content;
 }
 
 .fulfillment-info {
-  margin-top: -40px;
+  margin-top: -25px;
   margin-left: 40px;
   right: 20px; /* Adjust as needed */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
+  width: fit-content;
   align-items: center;
   gap: 10px; /* Space between items */
   font-size: 14px; /* Adjust font size as needed */

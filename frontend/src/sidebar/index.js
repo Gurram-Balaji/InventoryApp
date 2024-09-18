@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { logout } from '../store/authSlice';
 import { useNavigate } from 'react-router-dom';
 import apiClient from '../components/baseUrl';
@@ -15,6 +15,8 @@ import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import VerticalAlignCenterIcon from '@mui/icons-material/VerticalAlignCenter';
 import logo from '../logo.svg';
 import StackedBarChartIcon from '@mui/icons-material/StackedBarChart';
+import { setUsername, clearUsername, selectUsername } from '../store/usernameSlice';
+import SsidChartIcon from '@mui/icons-material/SsidChart';
 
 const Container = styled.div`
   position: fixed;
@@ -101,7 +103,7 @@ const SlickBar = styled.ul`
   padding: 2rem 0;
 
   position: absolute;
-  top: 6rem;
+  top: 4rem;
   left: 0;
 
   width: ${(props) => (props.$clicked ? "12rem" : "3.5rem")};
@@ -227,35 +229,40 @@ const Logout = styled.button`
 const Sidebar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
-  const [UserName, setUserName] = useState();
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const username = useSelector(selectUsername);
   const [profileClick, setProfileClick] = useState(false);
   const handleProfileClick = () => setProfileClick(!profileClick);
 
   const handleLogout = () => {
     dispatch(logout());
+    dispatch(clearUsername());
     navigate('/');
   };
 
   useEffect(() => {
-    apiClient.get('/auth/name')
-      .then(response => {
-        setUserName(response.data.payload.match(/\b(\w)/g).join(''));
-        // You can set the response data to your state here if needed
-      })
-      .catch(error => {
-        if (error.response && error.response.status === 403) {
-          dispatch(logout());
-          navigate('/');
-        } else {
-          // Handle other errors if needed
-          console.error('An error occurred:', error);
-        }
-      });
-  }, [dispatch, navigate]);
+    // Only call the API if the username is not already set
+    if (!username) {
+      apiClient.get('/auth/name')
+        .then(response => {
+          // Extract initials from the response data and dispatch setUsername
+          const initials = response.data.payload.match(/\b(\w)/g).join('');
+          dispatch(setUsername(initials)); // Set the initials as the username
+        })
+        .catch(error => {
+          if (error.response && error.response.status === 403) {
+            // If unauthorized, clear the token and username, then navigate to login page
+            dispatch(clearUsername());
+            dispatch(logout());
+            navigate('/');
+          } else {
+            console.error('An error occurred:', error);
+          }
+        });
+    }
+  }, [dispatch, navigate, username]);
 
   return (
     <Container>
@@ -301,6 +308,10 @@ const Sidebar = () => {
             <StackedBarChartIcon />
             <Text $clicked={click}>BarChat</Text>
           </Item>
+          <Item onClick={() => setClick(false)} to="/stockChart">
+            <SsidChartIcon />
+            <Text $clicked={click}>StockChat</Text>
+          </Item>
 
         </SlickBar>
 
@@ -308,7 +319,7 @@ const Sidebar = () => {
           <img onClick={handleProfileClick} src="https://picsum.photos/100" alt="Profile" />
           <Details $clicked={profileClick}>
             <Name>
-              <h4>{UserName}</h4>
+              <h4>{username}</h4>
               <Link to="/profile">view&nbsp;profile</Link>
             </Name>
 

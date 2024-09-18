@@ -97,7 +97,7 @@ public class UserService {
         throw new FoundException("Invalid email user token. ");
     }
 
-    // New method for updating user profile
+    // Method for updating user profile
     public User updateProfile(User updatedUser) {
         // Get current authenticated user's profile
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import apiClient from '../../components/baseUrl';
 import { errorToast, successToast } from '../../components/Toast';
+import { useDispatch} from 'react-redux';
+import { setUsername} from '../../store/usernameSlice';
+
 
 const ProfileForm = () => {
   // Initialize state for form fields
@@ -12,6 +15,8 @@ const ProfileForm = () => {
   });
 
   const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const [showPasswordFields, setShowPasswordFields] = useState(false);
 
   // Fetch profile data on component mount
   useEffect(() => {
@@ -65,6 +70,8 @@ const ProfileForm = () => {
       } else if (response.data.success) {
         successToast('Profile updated successfully!');
         const { fullName, email } = response.data.payload;
+        const username = fullName.match(/\b(\w)/g).join('');
+        dispatch(setUsername(username)); // Set the initials as the username
         setFormData({
           fullName,
           email,
@@ -75,6 +82,10 @@ const ProfileForm = () => {
     } catch (error) {
       errorToast('Error updating profile.');
     }
+  };
+
+  const handleCheckboxChange = (e) => {
+    setShowPasswordFields(e.target.checked);
   };
 
   return (
@@ -151,56 +162,74 @@ const ProfileForm = () => {
           <p>Loading...</p>
         ) : (
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="fullName">Full Name</label>
-              <input
-                type="text"
-                id="fullName"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleChange}
-                required
-              />
-            </div>
+      <div className="form-group">
+        <label htmlFor="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          value={formData.fullName}
+          onChange={handleChange}
+          required
+        />
+      </div>
 
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
+      <div className="form-group">
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </div>
 
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                
-              />
-            </div>
+      <div style={{marginLeft:'20%'}}>
+      <label htmlFor="showPassword">
+      <input style={{display:'inline-block',marginRight:'5px'}}
+          type="checkbox"
+          id="showPassword"
+          name="showPassword"
+          checked={showPasswordFields}
+          onChange={handleCheckboxChange}
+        />  Change Password?</label>
+        
+      </div>
 
-            <div className="form-group">
-              <label htmlFor="confirmPassword">Confirm Password</label>
-              <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                
-              />
-            </div>
+      {showPasswordFields && (
+        <>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              required={showPasswordFields}
+            />
+          </div>
 
-            <button className='Update-button' type="submit">Update Profile</button>
-          </form>
+          <div className="form-group">
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required={showPasswordFields}
+            />
+          </div>
+        </>
+      )}
+
+      <button className="Update-button" type="submit">
+        Update Profile
+      </button>
+    </form>
         )}
       </div>
     </div>

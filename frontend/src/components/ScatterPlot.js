@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ScatterChart, Scatter, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from 'recharts';
 import apiClient from './baseUrl';
-import {  TextField, FormControl} from '@mui/material';
+import { TextField, FormControl } from '@mui/material';
 import { errorToast } from './Toast';
 import Autocomplete from '@mui/material/Autocomplete';
 
@@ -18,14 +18,20 @@ const ScatterPlot = () => {
         const fetchData = async () => {
             try {
                 const response = await apiClient.get(`availability/getAvailabilityScatterData?locationId=${newData.locationId}`);
-                const transformedData = response.data.payload.scatterDataDTO.map(item => ({
-                    itemPrice: item.itemPrice,
-                    availableQuantity: item.availableQuantity,
-                    Name: item.itemName
-                }));
+                if (response.data.status === 404) {
+                    errorToast(response.data.message);
+                } else if (response.data.success) {
 
-                setLocationName(response.data.payload.locationName);
-                setData(transformedData);
+
+                    const transformedData = response.data.payload.scatterDataDTO.map(item => ({
+                        itemPrice: item.itemPrice,
+                        availableQuantity: item.availableQuantity,
+                        Name: item.itemName
+                    }));
+
+                    setLocationName(response.data.payload.locationName);
+                    setData(transformedData);
+                }
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -79,10 +85,10 @@ const ScatterPlot = () => {
     };
 
     useEffect(() => {
-        fetchLocations(); 
+        fetchLocations();
     }, [newData]);
 
-    
+
     return (
         <div style={{
             backgroundColor: '#f0f0f0',  // Background color for the chart area
@@ -106,13 +112,27 @@ const ScatterPlot = () => {
             <h2>Item Price vs. Availability - {locationName}</h2>
             <ScatterChart width={1000} height={400}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis type="number" dataKey="itemPrice" name="Item Price" tickFormatter={formatXAxis} />
-                <YAxis type="number" dataKey="availableQuantity" name="Available Quantity" />
+                <XAxis
+                    type="number"
+                    dataKey="itemPrice"
+                    name="Item Price"
+                    tickFormatter={formatXAxis}
+                />
+                <YAxis
+                    type="number"
+                    dataKey="availableQuantity"
+                    name="Available Quantity"
+                />
                 <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: '3 3' }} />
                 <Legend />
-                <Scatter name="Items" data={data} fill="#8884d8" animationBegin={0}
+                <Scatter
+                    name="Items"
+                    data={data}
+                    fill="#8884d8"
+                    animationBegin={0}
                     animationDuration={3000}
-                    animationEasing="cubic-bezier(0.42, 0, 0.58, 1)" />
+                    animationEasing="cubic-bezier(0.42, 0, 0.58, 1)"
+                />
             </ScatterChart>
         </div>
     );

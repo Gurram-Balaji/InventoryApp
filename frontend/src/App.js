@@ -8,6 +8,8 @@ import Threshold from "./screens/threshold";
 import Demand from "./screens/demand";
 import Available from "./screens/availability";
 import Profile from "./screens/profile";
+import StockChart from "./screens/stockChat";
+
 
 
 import styled from "styled-components";
@@ -52,7 +54,7 @@ function App() {
             <Route path="/available" element={<PrivateRoute><Available /></PrivateRoute>} />
             <Route path="/stackedBarchat" element={<PrivateRoute><StackedBarChart/></PrivateRoute>} />
             <Route path="/profile" element={<PrivateRoute><Profile/></PrivateRoute>} />
-
+            <Route path="/stockChart" element={<PrivateRoute><StockChart/></PrivateRoute>} />
 
           </Routes>
           <ToastContainer />
