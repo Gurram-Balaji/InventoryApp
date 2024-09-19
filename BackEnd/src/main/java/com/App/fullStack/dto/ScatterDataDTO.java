@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
 
 @Getter
 @Setter
@@ -14,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 public class ScatterDataDTO {
     private double itemPrice;
-    private int availableQuantity;
+    private int supplyQuantity;
+    private int demandQuantity;
     private String itemName;
 }

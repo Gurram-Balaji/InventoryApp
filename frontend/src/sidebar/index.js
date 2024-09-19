@@ -6,17 +6,17 @@ import apiClient from '../components/baseUrl';
 import styled from "styled-components";
 import { NavLink,Link } from "react-router-dom";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
-import InventoryIcon from '@mui/icons-material/Inventory';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import LogoutIcon from '@mui/icons-material/Logout';
-import CategoryIcon from '@mui/icons-material/Category';
-import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
+import Items_icon from '../assets/items.png';
+import Supply_icon from '../assets/supply.png';
+import Demand_icon from '../assets/demand.png';
+
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import VerticalAlignCenterIcon from '@mui/icons-material/VerticalAlignCenter';
 import logo from '../logo.svg';
 import StackedBarChartIcon from '@mui/icons-material/StackedBarChart';
 import { setUsername, clearUsername, selectUsername } from '../store/usernameSlice';
-import SsidChartIcon from '@mui/icons-material/SsidChart';
 
 const Container = styled.div`
   position: fixed;
@@ -37,7 +37,7 @@ const Button = styled.button`
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  margin: 0.5rem 0 0 0.5rem;
+  margin:1rem 0 0 0.5rem;
   cursor: pointer;
 
   display: flex;
@@ -71,10 +71,9 @@ const SidebarContainer = styled.div`
   background-color: var(--black);
   width: 3.5rem;
   height: 80vh;
-  margin-top: 1rem;
+  margin-top: 2rem;
   border-radius: 0 30px 30px 0;
   padding: 1rem 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,7 +102,7 @@ const SlickBar = styled.ul`
   padding: 2rem 0;
 
   position: absolute;
-  top: 4rem;
+  top: 7rem;
   left: 0;
 
   width: ${(props) => (props.$clicked ? "12rem" : "3.5rem")};
@@ -135,8 +134,8 @@ const Item = styled(NavLink).attrs({
   img {
     width: 1.2rem;
     height: auto;
-    filter: invert(92%) sepia(4%) saturate(1033%) hue-rotate(169deg)
-      brightness(78%) contrast(85%);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
+        brightness(103%) contrast(103%);
   }
 `;
 
@@ -279,21 +278,20 @@ const Sidebar = () => {
             <Text $clicked={click}>Home</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/items">
-            <CategoryIcon />
+            <img src={Items_icon} alt="Item Icon"/>
             <Text $clicked={click}>Items</Text>
           </Item>
-
-
           <Item onClick={() => setClick(false)} to="/location">
             <LocationOnIcon />
             <Text $clicked={click}>Locations</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/supply">
-            <PrecisionManufacturingIcon />
+          <img src={Supply_icon} alt="Supply Icon"/>
             <Text $clicked={click}>Supply</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/demand">
-            <EmojiPeopleIcon />
+          <img src={Demand_icon} alt="Demand Icon"/>
+
             <Text $clicked={click}>Demand</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/threshold">
@@ -301,16 +299,12 @@ const Sidebar = () => {
             <Text $clicked={click}>Threshold</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/available">
-            <InventoryIcon />
+            <QueryStatsIcon />
             <Text $clicked={click}>Availability</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/stackedBarchat">
             <StackedBarChartIcon />
             <Text $clicked={click}>BarChat</Text>
-          </Item>
-          <Item onClick={() => setClick(false)} to="/stockChart">
-            <SsidChartIcon />
-            <Text $clicked={click}>StockChat</Text>
           </Item>
 
         </SlickBar>

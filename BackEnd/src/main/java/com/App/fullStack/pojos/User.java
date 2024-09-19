@@ -15,7 +15,9 @@ public class User {
 	@Id
 	private String id; 
 	private String fullName; 
-	private String email; 
+	private String email;
+	private String verificationToken;
+	private boolean isVerified;
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY) 
 	private String password;
 } 

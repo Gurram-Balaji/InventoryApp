@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router";
+import { Route, Routes } from "react-router";
 import Sidebar from "./sidebar";
 import Home from "./screens/Home";
 import Items from "./screens/items";
@@ -8,10 +8,6 @@ import Threshold from "./screens/threshold";
 import Demand from "./screens/demand";
 import Available from "./screens/availability";
 import Profile from "./screens/profile";
-import StockChart from "./screens/stockChat";
-
-
-
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
 import LoginComponent from './screens/login/LoginPage';
@@ -19,6 +15,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import StackedBarChart from "./screens/stackedBarChat";
+import VerifyEmail from "./screens/email/VerifyEmail";
 
 const Pages = styled.div`
   width: 100vw;
@@ -36,15 +33,14 @@ const Pages = styled.div`
 `;
 
 function App() {
-  const location = useLocation();
-  
   return (
     <>
      <PrivateRoute><Sidebar /></PrivateRoute> 
       <Pages>
         <AnimatePresence> 
-          <Routes location={location} key={location.pathname}>
-            <Route exact path="/" element={<LoginComponent mode={"login"} />} />
+          <Routes>
+            <Route path="/" element={<LoginComponent mode={"login"} />} />
+            <Route path="/verify-email" element={<VerifyEmail />} />
             <Route path="/dashboard" element={<PrivateRoute><Home /></PrivateRoute>}/>
             <Route path="/items" element={<PrivateRoute><Items /></PrivateRoute>} />
             <Route path="/location" element={<PrivateRoute><Location /></PrivateRoute>} />
@@ -54,7 +50,6 @@ function App() {
             <Route path="/available" element={<PrivateRoute><Available /></PrivateRoute>} />
             <Route path="/stackedBarchat" element={<PrivateRoute><StackedBarChart/></PrivateRoute>} />
             <Route path="/profile" element={<PrivateRoute><Profile/></PrivateRoute>} />
-            <Route path="/stockChart" element={<PrivateRoute><StockChart/></PrivateRoute>} />
 
           </Routes>
           <ToastContainer />
@@ -63,5 +58,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

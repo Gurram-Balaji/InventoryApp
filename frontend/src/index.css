@@ -279,7 +279,6 @@ input[type=checkbox]:checked+label:after {
   right: 0;
 }
 
-
 /* For the Dialog border */
 .dialog-custom {
   border: 10px solid white;
@@ -291,30 +290,6 @@ input[type=checkbox]:checked+label:after {
   color: white;
   font-weight: bold;
 }
-
-
-.dot {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.red {
-  background-color: red;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-.green {
-  background-color: green;
-}
-
-
-
 
 /* FulfillmentInfo css  */
 .fulfillment-container {

@@ -22,7 +22,7 @@ public class ApplicationConfig {
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 				.authorizeHttpRequests(authorize -> authorize
-						.requestMatchers("/auth/signin", "/auth/signup").permitAll() 
+						.requestMatchers("/auth/signin", "/auth/signup", "/auth/verify-email").permitAll()
 						.anyRequest().authenticated()) 
 				.addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class)
 				.csrf(AbstractHttpConfigurer::disable)

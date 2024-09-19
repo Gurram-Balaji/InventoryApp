@@ -117,34 +117,12 @@ public class DemandService {
     public Page<DemandDTO> getAllDemandWithDetails(int page, int size, String search) {
         Pageable pageable = PageRequest.of(page, size);
 
-        // Fetch all demands (or add a better way of filtering directly from DB using
-        // pageable)
-        List<Demand> demands = demandRepository.findAll();
-
-        if (demands.isEmpty()) {
-            throw new FoundException("Demands not found.");
-        }
-
-        // Convert Demand to DemandDTO
-        List<DemandDTO> demandDTOs = new ArrayList<>();
-        for (Demand demand : demands) {
-            Item item = itemService.getItemByItemIdWithOutException(demand.getItemId());
-            Location location = locationService.getLocationByIdWithoutException(demand.getLocationId());
-
-            DemandDTO demandDTO = new DemandDTO(
-                    demand.getDemandId(),
-                    demand.getItemId(),
-                    item != null ? item.getItemDescription() : null,
-                    demand.getLocationId(),
-                    location != null ? location.getLocationDesc() : null,
-                    demand.getDemandType(),
-                    demand.getQuantity());
-
-            demandDTOs.add(demandDTO);
-        }
-
-        // Perform the search only if the search string is not null and not empty
         if (search != null && !search.trim().isEmpty()) {
+            List<Demand> demands = demandRepository.findAll();
+            if (demands.isEmpty())
+                throw new FoundException("Demands not found.");
+            List<DemandDTO> demandDTOs = addAlldemandDetails(demands);
+            // Perform the search only if the search string is not null and not empty
             demandDTOs = demandDTOs.stream()
                     .filter(dto -> (dto.getDemandId() != null
                             && dto.getDemandId().toLowerCase().contains(search.toLowerCase())) ||
@@ -163,16 +141,43 @@ public class DemandService {
                             ||
                             String.valueOf(dto.getQuantity()).contains(search))
                     .collect(Collectors.toList());
+
+            // Manually handle pagination
+            int start = (int) pageable.getOffset();
+            int end = Math.min((start + pageable.getPageSize()), demandDTOs.size());
+            List<DemandDTO> paginatedList = demandDTOs.subList(start, end);
+            return new PageImpl<>(paginatedList, pageable, demandDTOs.size());
+        } else {
+            Page<Demand> demands = demandRepository.findAll(pageable);
+            if (demands.isEmpty())
+                throw new FoundException("Demands not found.");
+
+            // Convert Demand to DemandDTO
+           List<DemandDTO> demandDTOs =addAlldemandDetails(demands.getContent());
+
+            return new PageImpl<>(demandDTOs, pageable, demands.getTotalElements());
         }
-
-        // Manually handle pagination
-        int start = (int) pageable.getOffset();
-        int end = Math.min((start + pageable.getPageSize()), demandDTOs.size());
-        List<DemandDTO> paginatedList = demandDTOs.subList(start, end);
-
-        // Return the PageImpl with the paginated results and total count of the
-        // original list
-        return new PageImpl<>(paginatedList, pageable, demandDTOs.size());
     }
 
+    public List<DemandDTO> addAlldemandDetails(List<Demand> demands) {
+        // Convert Demand to DemandDTO
+        List<DemandDTO> demandDTOs = new ArrayList<>();
+        for (Demand demand : demands) {
+            Item item = itemService.getItemByItemIdWithOutException(demand.getItemId());
+            Location location = locationService.getLocationByIdWithoutException(demand.getLocationId());
+
+            DemandDTO demandDTO = new DemandDTO(
+                    demand.getDemandId(),
+                    demand.getItemId(),
+                    item != null ? item.getItemDescription() : null,
+                    demand.getLocationId(),
+                    location != null ? location.getLocationDesc() : null,
+                    demand.getDemandType(),
+                    demand.getQuantity()
+            );
+            demandDTOs.add(demandDTO);
+        }
+        return demandDTOs;
+    }
 }
+

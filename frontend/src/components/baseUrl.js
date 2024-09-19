@@ -3,7 +3,7 @@ import store from '../store/store'; // assuming you have access to the Redux sto
 import { selectToken } from '../store/authSlice'; // assuming you have this selector
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8081/',
+  baseURL: 'http://localhost:8080/',
 });
 
 // Add a request interceptor to dynamically set the Authorization header

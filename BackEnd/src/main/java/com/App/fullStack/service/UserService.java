@@ -6,6 +6,8 @@ import com.App.fullStack.pojos.User;
 import com.App.fullStack.repositories.UserRepository;
 import com.App.fullStack.responseHandler.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -17,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class UserService {
@@ -25,20 +28,21 @@ public class UserService {
     private UserRepository userRepository;
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private JavaMailSender mailSender;
 
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    public ApiResponse AddUser(User user) {
-
+    public ApiResponse<String> AddUser(User user) {
         if (userRepository.existsByEmail(user.getEmail())) {
             throw new FoundException("Email Is Already Used With Another Account");
         }
+        String token = UUID.randomUUID().toString();
+        user.setVerificationToken(token);
+        user.setVerified(false);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        User savedUser = userRepository.save(user);
-        userRepository.save(savedUser);
-        Authentication authentication = new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword());
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        String token = JwtProvider.generateToken(authentication);
-        return new ApiResponse(true, "Register Success", token);
+        userRepository.save(user);
+        // Send verification email
+        sendVerificationEmail(user.getEmail(), token);
+        return new ApiResponse<>(true, "Email sent, Please verify your email.", "Registered successfully.");
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -70,6 +74,10 @@ public class UserService {
         if (user == null) {
             throw new FoundException("Invalid email and password. ");
         }
+        if(!user.isVerified()){
+            throw new FoundException("Email is not verified. ");
+
+        }
 
         List<GrantedAuthority> authorities = new ArrayList<>();
 
@@ -94,7 +102,7 @@ public class UserService {
             String email = (String) authentication.getPrincipal();
             return userRepository.findByEmail(email);
         }
-        throw new FoundException("Invalid email user token. ");
+        throw new FoundException("Invalid email user token.");
     }
 
     // Method for updating user profile
@@ -130,6 +138,28 @@ public class UserService {
         }
 
         throw new FoundException("Invalid user token.");
+    }
+
+    private void sendVerificationEmail(String email, String token) {
+        String url = "http://localhost:3000/verify-email?token=" + token;
+
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(email);
+        message.setSubject("Email Verification");
+        message.setText("Click the link to verify your email: " + url);
+        mailSender.send(message);
+    }
+
+    public boolean verifyEmail(String token) {
+        User user = userRepository.findByVerificationToken(token)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid token"));
+
+        if (user != null && !user.isVerified()) {
+            user.setVerified(true);
+            userRepository.save(user);
+            return true;
+        }
+        return false;
     }
 
 

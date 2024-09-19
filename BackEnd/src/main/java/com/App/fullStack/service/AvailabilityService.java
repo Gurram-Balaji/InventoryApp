@@ -151,15 +151,25 @@ public class AvailabilityService {
         // Calculate availability for each item
         for (Item item : items) {
             String itemId = item.getItemId();
-            int availableQuantity=0;
-            if(Objects.equals(locationName, "NETWORK"))
-                availableQuantity = calculateAvailabilityByItem(itemId); // Using existing method
-            else
-                availableQuantity = calculateAvailabilityByLocation(itemId, locationId); // Using existing method
+            int supplyQuantity,demandQuantity=0;
+            if(Objects.equals(locationName, "NETWORK")) {
+
+                List<Supply> supplies = supplyRepository.findByItemIdAndSupplyType(itemId, "ONHAND");
+                List<Demand> demands = demandRepository.findByItemIdAndDemandType(itemId, "HARD_PROMISED");
+                supplyQuantity= SupplyQTYSum(supplies);
+                demandQuantity=DemandsQTYSum(demands);
+            }
+            else {
+                List<Supply> supplies = supplyRepository.findByItemIdAndLocationIdAndSupplyType(itemId, locationId, "ONHAND");
+                List<Demand> demands = demandRepository.findByItemIdAndLocationIdAndDemandType(itemId, locationId,"HARD_PROMISED");
+                supplyQuantity= SupplyQTYSum(supplies);
+                demandQuantity=DemandsQTYSum(demands);
+            }
 
             scatterData.add(new ScatterDataDTO(
                     item.getPrice(), // Assuming price is stored as String
-                    availableQuantity,
+                    supplyQuantity,
+                    demandQuantity,
                     item.getItemDescription()
             ));
         }

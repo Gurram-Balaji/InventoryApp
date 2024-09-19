@@ -94,7 +94,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
                         onChange={(e) => setNewData({ ...newData, locationType: e.target.value })}
                     >
                         {locationTypeOptions.map((type) => (
-                            <MenuItem key={type} value={type}>{type}</MenuItem>
+                            <MenuItem key={type} value={type}>{type.toString().replace(/_/g, ' ') }</MenuItem>
                         ))}
                     </Select>
                 </FormControl>

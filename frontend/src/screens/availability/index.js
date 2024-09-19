@@ -162,16 +162,16 @@ useEffect(() => {
 
 
             </div>
-            <div style={{ color: '#757578', fontWeight: "bold", marginLeft: "100px" }}>
+            <div style={{ color: '#757578', fontWeight: "bold", marginLeft:"77px" }}>
                 <h4 style={{ color: '#535363' }}>Threshold Levels : </h4>
                 <p>
-                    <span className="dot red"></span>Lower than the threshold level.
+                    Red - Lower than the threshold level.
                 </p>
                 <p>
-                    <span className="dot yellow"></span>Within the threshold level.
+                    Yellow - Within the threshold level.
                 </p>
                 <p>
-                    <span className="dot green"></span>Above the max threshold level.
+                    Green- Above the max threshold level.
                 </p>
             </div>
         </>

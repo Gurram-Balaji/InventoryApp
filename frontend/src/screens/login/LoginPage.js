@@ -34,7 +34,7 @@ const LoginComponent = ({ mode: initialMode }) => {
 						<label htmlFor="form-toggler"></label>
 					</div>
 				</header>
-				<LoginForm mode={mode} />
+				<LoginForm mode={mode} toggleMode={toggleMode}/>
 			</section>
 		</div>
 	);

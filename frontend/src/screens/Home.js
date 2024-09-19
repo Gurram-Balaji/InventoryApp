@@ -38,9 +38,9 @@ const Dashboard = () => {
     return (
         <div className="dashboard-container">
             <h1 style={{marginBottom:'20px'}}>Dashboard</h1>
+
             <ScatterPlot />
            
-
             <div className="dashboard-grid">
                 <div className="dashboard-card" onClick={() => handleNavigation('/items')}>
                     <h3>Total Items</h3>

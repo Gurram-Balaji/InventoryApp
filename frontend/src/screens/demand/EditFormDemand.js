@@ -71,7 +71,7 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
           fullWidth
           margin="normal"
           
-          value={editData.demandType || ''}
+          value={String(editData.demandType).replace(/_/g, ' ')  || ''}
           InputProps={{
             readOnly: true,
             style: {

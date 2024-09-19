@@ -55,12 +55,7 @@ const locationTypeOptions = [
   'WAREHOUSE',            // A storage facility for goods before they are distributed.
   'DISTRIBUTION_CENTER',  // A facility designed to receive, store, and ship products efficiently.
   'RETAIL_STORE',         // A physical store where goods are sold directly to consumers.
-  'MANUFACTURING_PLANT',  // A location where raw materials are turned into finished products.
-  'FULFILLMENT_CENTER',   // A facility focused on processing and fulfilling customer orders.
-  'COLD_STORAGE',         // A temperature-controlled facility for storing perishable goods.
-  'HUB',                  // A central location in a distribution or logistics network.
   'SHOWROOM',             // A location where products are displayed for viewing.
-  'SUPPLIER_LOCATION'     // A location where raw materials or components are sourced from.
 ];
 
 

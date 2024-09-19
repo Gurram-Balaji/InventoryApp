@@ -133,7 +133,7 @@ useEffect(() => {
                         onChange={(e) => setNewData({ ...newData, demandType: e.target.value })}
                     >
                         {Array.isArray(demandOptions) && demandOptions.map((type) => (
-                            <MenuItem key={type} value={type}>{type}</MenuItem>
+                            <MenuItem key={type} value={type}>{type.toString().replace(/_/g, ' ') }</MenuItem>
                         ))}
                     </Select>
                 </FormControl>

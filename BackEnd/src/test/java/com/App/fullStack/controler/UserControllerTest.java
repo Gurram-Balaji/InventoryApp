@@ -33,10 +33,10 @@ class UserControllerTest {
     @Test
     void createUserHandler_Success() {
         User user = new User();
-        ApiResponse<User> response = new ApiResponse<>(true, "User created.", user);
+        ApiResponse<String> response = new ApiResponse<>(true, "User created.", "Registered successfully.");
         when(userService.AddUser(user)).thenReturn(response);
 
-        ResponseEntity<ApiResponse<User>> result = userController.createUserHandler(user);
+        ResponseEntity<ApiResponse<String>> result = userController.createUserHandler(user);
 
         assertEquals(HttpStatus.OK, result.getStatusCode());
         assertEquals(response.getPayload(), Objects.requireNonNull(result.getBody()).getPayload());

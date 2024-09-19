@@ -135,57 +135,70 @@ public class SupplyService {
 
     public Page<SupplyDTO> getAllSuppliesWithDetails(int page, int size, String search) {
         Pageable pageable = PageRequest.of(page, size);
-        
-        // Fetch all supplies (or add a better way of filtering directly from DB using pageable)
-        List<Supply> supplies = supplyRepository.findAll();
-        
-        if (supplies.isEmpty()) {
-            throw new FoundException("Supplies not found.");
+        if (search != null && !search.trim().isEmpty()) {
+            // Fetch all supplies (or add a better way of filtering directly from DB using pageable)
+            List<Supply> supplies = supplyRepository.findAll();
+
+            if (supplies.isEmpty()) {
+                throw new FoundException("Supplies not found.");
+            }
+
+            List<SupplyDTO> supplyDTOs = addAllSuppliesWithDetails(supplies);
+
+            // Perform the search only if the search string is not null and not empty
+            supplyDTOs = supplyDTOs.stream()
+                    .filter(dto ->
+                            (dto.getSupplyId() != null && dto.getSupplyId().toLowerCase().contains(search.toLowerCase())) ||
+                                    (dto.getItemId() != null && dto.getItemId().toLowerCase().contains(search.toLowerCase())) ||
+                                    (dto.getItemDescription() != null && dto.getItemDescription().toLowerCase().contains(search.toLowerCase())) ||
+                                    (dto.getLocationId() != null && dto.getLocationId().toLowerCase().contains(search.toLowerCase())) ||
+                                    (dto.getLocationDescription() != null && dto.getLocationDescription().toLowerCase().contains(search.toLowerCase())) ||
+                                    (dto.getSupplyType() != null && dto.getSupplyType().toString().toLowerCase().contains(search.toLowerCase())) ||
+                                    String.valueOf(dto.getQuantity()).contains(search)
+                    )
+                    .collect(Collectors.toList());
+            // Manually handle pagination
+            int start = (int) pageable.getOffset();
+            int end = Math.min((start + pageable.getPageSize()), supplyDTOs.size());
+            List<SupplyDTO> paginatedList = supplyDTOs.subList(start, end);
+            // Return the PageImpl with the paginated results and total count of the original list
+            return new PageImpl<>(paginatedList, pageable, supplyDTOs.size());
+        } else {
+            // Fetch supplies with pagination directly from the DB
+            Page<Supply> supplyPage = supplyRepository.findAll(pageable);
+
+            if (supplyPage.isEmpty()) {
+                throw new FoundException("Supplies not found.");
+            }
+            List<SupplyDTO> supplyDTOs = addAllSuppliesWithDetails(supplyPage.getContent());
+            // Return a new PageImpl containing the SupplyDTOs, with the original pagination details
+            return new PageImpl<>(supplyDTOs, pageable, supplyPage.getTotalElements());
+
         }
-    
+
+
+    }
+
+    public List<SupplyDTO> addAllSuppliesWithDetails(List<Supply> supplies) {
         // Convert Supply to SupplyDTO
         List<SupplyDTO> supplyDTOs = new ArrayList<>();
         for (Supply supply : supplies) {
             Item item = itemService.getItemByItemIdWithOutException(supply.getItemId());
             Location location = locationService.getLocationByIdWithoutException(supply.getLocationId());
-    
+
             SupplyDTO supplyDTO = new SupplyDTO(
-                supply.getSupplyId(),
-                supply.getItemId(),
-                item != null ? item.getItemDescription() : null,
-                supply.getLocationId(),
-                location != null ? location.getLocationDesc() : null,
-                supply.getSupplyType(),
-                supply.getQuantity()
+                    supply.getSupplyId(),
+                    supply.getItemId(),
+                    item != null ? item.getItemDescription() : null,
+                    supply.getLocationId(),
+                    location != null ? location.getLocationDesc() : null,
+                    supply.getSupplyType(),
+                    supply.getQuantity()
             );
-    
             supplyDTOs.add(supplyDTO);
         }
-    
-        // Perform the search only if the search string is not null and not empty
-        if (search != null && !search.trim().isEmpty()) {
-            supplyDTOs = supplyDTOs.stream()
-                .filter(dto -> 
-                    (dto.getSupplyId() != null && dto.getSupplyId().toLowerCase().contains(search.toLowerCase())) ||
-                    (dto.getItemId() != null && dto.getItemId().toLowerCase().contains(search.toLowerCase())) ||
-                    (dto.getItemDescription() != null && dto.getItemDescription().toLowerCase().contains(search.toLowerCase())) ||
-                    (dto.getLocationId() != null && dto.getLocationId().toLowerCase().contains(search.toLowerCase())) ||
-                    (dto.getLocationDescription() != null && dto.getLocationDescription().toLowerCase().contains(search.toLowerCase())) ||
-                    (dto.getSupplyType() != null && dto.getSupplyType().toString().toLowerCase().contains(search.toLowerCase())) ||
-                    String.valueOf(dto.getQuantity()).contains(search)
-                )
-                .collect(Collectors.toList());
-        }
-    
-        // Manually handle pagination
-        int start = (int) pageable.getOffset();
-        int end = Math.min((start + pageable.getPageSize()), supplyDTOs.size());
-        List<SupplyDTO> paginatedList = supplyDTOs.subList(start, end);
-    
-        // Return the PageImpl with the paginated results and total count of the original list
-        return new PageImpl<>(paginatedList, pageable, supplyDTOs.size());
+        return supplyDTOs;
     }
-    
-    
+
 
 }

@@ -64,7 +64,7 @@ export default function EditForm({ openEditDialog, setOpenEditDialog, locationTy
           >
             {locationTypeOptions.map((type) => (
               <MenuItem key={type} value={type}>
-                {type}
+                {type.toString().replace(/_/g, ' ') }
               </MenuItem>
             ))}
           </Select>

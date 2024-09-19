@@ -115,14 +115,51 @@ public class AtpThresholdService {
 
     public Page<ThresholdDTO> getAllDemandWithDetails(int page, int size, String search) {
         Pageable pageable = PageRequest.of(page, size);
+        if (search != null && !search.trim().isEmpty()) {
+            // Fetch all demands (or better filter directly from DB using pageable)
+            List<AtpThreshold> thresholds = atpThresholdRepository.findAll();
 
-        // Fetch all demands (or better filter directly from DB using pageable)
-        List<AtpThreshold> thresholds = atpThresholdRepository.findAll();
+            if (thresholds.isEmpty())
+                throw new FoundException("Threshold not found.");
 
-        if (thresholds.isEmpty()) {
-            throw new FoundException("Threshold not found.");
+            List<ThresholdDTO> thresholdDTOs =AddThresholdDetails(thresholds);
+
+            // Perform the search only if the search string is not null and not empty
+            thresholdDTOs = thresholdDTOs.stream()
+                    .filter(dto -> (dto.getItemId() != null
+                            && dto.getItemId().toLowerCase().contains(search.toLowerCase())) ||
+                            (dto.getItemDescription() != null
+                                    && dto.getItemDescription().toLowerCase().contains(search.toLowerCase()))
+                            ||
+                            (dto.getLocationId() != null
+                                    && dto.getLocationId().toLowerCase().contains(search.toLowerCase()))
+                            ||
+                            (dto.getLocationDescription() != null
+                                    && dto.getLocationDescription().toLowerCase().contains(search.toLowerCase()))
+                            ||String.valueOf(dto.getMinThreshold()).contains(search)
+                    || String.valueOf(dto.getMaxThreshold()).contains(search)
+                    )
+                    .collect(Collectors.toList());
+
+
+            int start = (int) pageable.getOffset();
+            int end = Math.min((start + pageable.getPageSize()), thresholdDTOs.size());
+            List<ThresholdDTO> paginatedList = thresholdDTOs.subList(start, end);
+            return new PageImpl<>(paginatedList, pageable, thresholdDTOs.size());
+        }else{
+            // Fetch all demands (or better filter directly from DB using pageable)
+            Page<AtpThreshold> thresholds = atpThresholdRepository.findAll(pageable);
+
+            if (thresholds.isEmpty()) {
+                throw new FoundException("Threshold not found.");
+            }
+
+          List<ThresholdDTO> thresholdDTOs =AddThresholdDetails(thresholds.getContent());
+            return new PageImpl<>(thresholdDTOs, pageable, thresholds.getTotalElements());
         }
+    }
 
+    public List<ThresholdDTO> AddThresholdDetails(List<AtpThreshold> thresholds) {
         // Convert AtpThreshold to ThresholdDTO
         List<ThresholdDTO> thresholdDTOs = new ArrayList<>();
         for (AtpThreshold threshold : thresholds) {
@@ -140,34 +177,8 @@ public class AtpThresholdService {
 
             thresholdDTOs.add(thresholdDTO);
         }
-
-        // Perform the search only if the search string is not null and not empty
-        if (search != null && !search.trim().isEmpty()) {
-            thresholdDTOs = thresholdDTOs.stream()
-                    .filter(dto -> (dto.getItemId() != null
-                            && dto.getItemId().toLowerCase().contains(search.toLowerCase())) ||
-                            (dto.getItemDescription() != null
-                                    && dto.getItemDescription().toLowerCase().contains(search.toLowerCase()))
-                            ||
-                            (dto.getLocationId() != null
-                                    && dto.getLocationId().toLowerCase().contains(search.toLowerCase()))
-                            ||
-                            (dto.getLocationDescription() != null
-                                    && dto.getLocationDescription().toLowerCase().contains(search.toLowerCase()))
-                            ||
-                            (dto.getMinThreshold() == Integer.parseInt(search)) || // Compare with integer search value
-                            (dto.getMaxThreshold() == Integer.parseInt(search)) // Compare with integer search value
-                    )
-                    .collect(Collectors.toList());
-        }
-
-        int start = (int) pageable.getOffset();
-        int end = Math.min((start + pageable.getPageSize()), thresholdDTOs.size());
-        List<ThresholdDTO> paginatedList = thresholdDTOs.subList(start, end);
-
-        // Return the PageImpl with the paginated results and total count of the
-        // original list
-        return new PageImpl<>(paginatedList, pageable, thresholdDTOs.size());
+        return thresholdDTOs;
     }
+
 
 }

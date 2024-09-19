@@ -1,5 +1,6 @@
 package com.App.fullStack.controller;
 
+import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.User;
 import com.App.fullStack.responseHandler.ApiResponse;
 import com.App.fullStack.service.UserService;
@@ -17,9 +18,8 @@ public class UserController {
 
     // User signup (registration)
     @PostMapping("/signup")
-    public ResponseEntity<ApiResponse<User>> createUserHandler(@RequestBody User user) {
-        @SuppressWarnings("unchecked")
-        ApiResponse<User> response = userService.AddUser(user);
+    public ResponseEntity<ApiResponse<String>> createUserHandler(@RequestBody User user) {
+        ApiResponse<String> response = userService.AddUser(user);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -52,6 +52,17 @@ public class UserController {
         User updatedProfile = userService.updateProfile(user);
         ApiResponse<User> response = new ApiResponse<>(true, "User profile updated.", updatedProfile);
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @GetMapping("/verify-email")
+    public ResponseEntity<ApiResponse<String>> verifyEmail(@RequestParam("token") String token) {
+        boolean verified = userService.verifyEmail(token);
+        if (verified) {
+            ApiResponse<String> response = new ApiResponse<>(true, "User profile updated.", "Email verified successfully.");
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } else {
+            throw new FoundException("Invalid or expired token.");
+        }
     }
 
 }

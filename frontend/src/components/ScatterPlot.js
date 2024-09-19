@@ -5,32 +5,39 @@ import { TextField, FormControl } from '@mui/material';
 import { errorToast } from './Toast';
 import Autocomplete from '@mui/material/Autocomplete';
 
-
 const ScatterPlot = () => {
-    const [data, setData] = useState([]);
+    const [supply, setSupply] = useState([]);
+    const [demand, setDemand] = useState([]);
+    const [highlightedItem, setHighlightedItem] = useState(null); // State to track hovered item
+
     const [locationOptions, setLocationOptions] = useState([]);
     const [locationName, setLocationName] = useState([]);
     const [newData, setNewData] = useState({
-        "locationId": '',
+        locationId: '',
     });
+
     useEffect(() => {
-        // Fetch data from your API or source
         const fetchData = async () => {
             try {
                 const response = await apiClient.get(`availability/getAvailabilityScatterData?locationId=${newData.locationId}`);
                 if (response.data.status === 404) {
                     errorToast(response.data.message);
                 } else if (response.data.success) {
-
-
-                    const transformedData = response.data.payload.scatterDataDTO.map(item => ({
+                    const transformedSupplyData = response.data.payload.scatterDataDTO.map(item => ({
                         itemPrice: item.itemPrice,
-                        availableQuantity: item.availableQuantity,
+                        Quantity: item.supplyQuantity,
+                        Name: item.itemName
+                    }));
+
+                    const transformedDemandData = response.data.payload.scatterDataDTO.map(item => ({
+                        itemPrice: item.itemPrice,
+                        Quantity: item.demandQuantity,
                         Name: item.itemName
                     }));
 
                     setLocationName(response.data.payload.locationName);
-                    setData(transformedData);
+                    setSupply(transformedSupplyData);
+                    setDemand(transformedDemandData);
                 }
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -59,42 +66,62 @@ const ScatterPlot = () => {
         }
     };
 
-
     const formatXAxis = (value) => {
         return `₹${value}`; // Unit symbol ₹ to the left of the value
     };
-
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
-            const { Name, itemPrice, availableQuantity } = payload[0].payload;
+            const { Name: hoveredName } = payload[0].payload;
+    
+            // Find the matching supply and demand data by name
+            const supplyData = supply.find(s => s.Name === hoveredName);
+            const demandData = demand.find(d => d.Name === hoveredName);
+    
             return (
                 <div style={{
-                    backgroundColor: '#ffffff',
                     border: '1px solid #cccccc',
                     borderRadius: '4px',
                     padding: '10px',
-                    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2)'
+                    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2)',
+                    backgroundColor: supplyData.Quantity<demandData.Quantity ? "red" : "#ffff"
                 }}>
-                    <p>{<b>{Name}</b>}</p>
-                    <p>{`Price: ₹${itemPrice}`}</p>
-                    <p>{`Available Quantity: ${availableQuantity} units`}</p>
+                    <b><p>{hoveredName}</p>
+                    <p>{`Price: ₹${supplyData.itemPrice}`}</p></b>
+                    {supplyData && (
+                        <div>
+                            <p>{`Supply: ${supplyData.Quantity} units`}</p>
+                        </div>
+                    )}
+                    {demandData && (
+                        <div>
+                            <p>{`Demand: ${demandData.Quantity} units`}</p>
+                        </div>
+                    )}
                 </div>
             );
         }
         return null;
     };
-
+    
     useEffect(() => {
         fetchLocations();
     }, [newData]);
 
+    // Handle hover and click events to highlight related dots
+    const handleMouseEnter = (data) => {
+        setHighlightedItem(data.Name); // Track the hovered item by its name
+    };
+
+    const handleMouseLeave = () => {
+        setHighlightedItem(null); // Reset highlighted item when mouse leaves
+    };
 
     return (
         <div style={{
-            backgroundColor: '#f0f0f0',  // Background color for the chart area
-            padding: '20px',  // Padding around the chart
-            borderRadius: '8px',  // Rounded corners
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'  // Shadow effect
+            backgroundColor: '#f0f0f0',
+            padding: '20px',
+            borderRadius: '8px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'
         }}>
             {/* Location Autocomplete */}
             <FormControl fullWidth margin="dense">
@@ -109,9 +136,9 @@ const ScatterPlot = () => {
                 />
             </FormControl>
 
-            <h2>Item Price vs. Availability - {locationName}</h2>
+            <h2>Items Supply vs. Demand - {locationName}</h2>
             <ScatterChart width={1000} height={400}>
-                <CartesianGrid strokeDasharray="3 3" />
+                <CartesianGrid strokeDasharray="2 2" />
                 <XAxis
                     type="number"
                     dataKey="itemPrice"
@@ -120,18 +147,38 @@ const ScatterPlot = () => {
                 />
                 <YAxis
                     type="number"
-                    dataKey="availableQuantity"
-                    name="Available Quantity"
+                    dataKey="Quantity"
+                    name="Quantity"
                 />
-                <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: '3 3' }} />
+                <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: 'none' }} />
                 <Legend />
                 <Scatter
-                    name="Items"
-                    data={data}
+                    name="Supply"
+                    data={supply}
                     fill="#8884d8"
-                    animationBegin={0}
-                    animationDuration={3000}
-                    animationEasing="cubic-bezier(0.42, 0, 0.58, 1)"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    shape={(props) => (
+                        <circle
+                            {...props}
+                            r={highlightedItem === props.payload.Name ? 8 : 4} 
+                            fill={"#8884d8"} 
+                        />
+                    )}
+                />
+                <Scatter
+                    name="Demand"
+                    data={demand}
+                    fill="#0c00fa"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    shape={(props) => (
+                        <circle
+                            {...props}
+                            r={highlightedItem === props.payload.Name ? 8 : 4} 
+                            fill={"#0c00fa"} 
+                        />
+                    )}
                 />
             </ScatterChart>
         </div>
