@@ -23,8 +23,6 @@ const LoginForm = ({ mode, toggleMode }) => {
 		setLoading(true);
 
 		try {
-
-
 			if (!email || !password) {
 				errorToast('Please enter both email and password.');
 				return;
@@ -91,7 +89,6 @@ const LoginForm = ({ mode, toggleMode }) => {
 			else if (response.data.success === true) {
 				successToast(response.data.payload);
 				successToast(response.data.message);
-
 				toggleMode();
 				setSignUpEmail("");
 				setSignUpFullName("");
@@ -104,7 +101,6 @@ const LoginForm = ({ mode, toggleMode }) => {
 			setLoading(false);
 		  }
 	};
-
 
 	return (
 		<form onSubmit={mode === 'login' ? handleLogin : handleSignup}>
@@ -125,7 +121,6 @@ const LoginForm = ({ mode, toggleMode }) => {
 			{loading ? 'Loading...' : (mode === 'login' ? 'Log In' : 'Sign Up')}
 			</button>
 		</form>
-
 	);
 };
 

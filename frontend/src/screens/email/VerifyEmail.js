@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import './VerifyEmail.css';  // Import your custom styles
+import { useLocation, useNavigate } from 'react-router-dom';
 import apiClient from '../../components/baseUrl';
 import { errorToast, successToast } from '../../components/Toast';
+import './VerifyEmail.css'; // Import the CSS file
 
 const VerifyEmail = () => {
   const [message, setMessage] = useState('');
-  const [isVerified, setIsVerified] = useState(false); // New state to track verification status
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const verifyEmail = async () => {
@@ -22,7 +22,6 @@ const VerifyEmail = () => {
         } else {
           successToast('Email successfully verified!');
           setMessage('Your email has been successfully verified.');
-          setIsVerified(true); // Set verification status
         }
       } catch (error) {
         setMessage('Email verification failed. Please try again.');
@@ -31,20 +30,22 @@ const VerifyEmail = () => {
     };
 
     verifyEmail();
-  }, [location.search]); // Dependency array
+  }, [location.search]);
+
+  const handleLoginRedirect = () => {
+    navigate('/login');
+  };
 
   return (
     <div className="verify-email-container">
       <div className="verify-email-box">
-        <h2 className="verify-email-heading">Email Verification</h2>
+        <h1 className="verify-email-heading">Email Verification</h1>
         <p className={`verify-email-message ${message.includes('failed') ? 'error' : 'success'}`}>
           {message}
         </p>
-        {isVerified && (
-          <p className="verification-success-message">
-            Your email has been successfully verified. You can now <a href="/login">log in</a>.
-          </p>
-        )}
+          <button className="button button--primary" onClick={handleLoginRedirect}>
+            Go to Login
+          </button>
       </div>
     </div>
   );

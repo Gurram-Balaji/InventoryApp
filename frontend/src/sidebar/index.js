@@ -302,7 +302,7 @@ const Sidebar = () => {
             <QueryStatsIcon />
             <Text $clicked={click}>Availability</Text>
           </Item>
-          <Item onClick={() => setClick(false)} to="/stackedBarchat">
+          <Item onClick={() => setClick(false)} to="/stackedBarchart">
             <StackedBarChartIcon />
             <Text $clicked={click}>BarChat</Text>
           </Item>

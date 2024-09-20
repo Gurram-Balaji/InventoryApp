@@ -153,7 +153,6 @@ public class UserService {
     public boolean verifyEmail(String token) {
         User user = userRepository.findByVerificationToken(token)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid token"));
-
         if (user != null && !user.isVerified()) {
             user.setVerified(true);
             userRepository.save(user);
@@ -161,6 +160,4 @@ public class UserService {
         }
         return false;
     }
-
-
 }

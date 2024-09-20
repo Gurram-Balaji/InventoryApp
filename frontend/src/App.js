@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import Sidebar from "./sidebar";
 import Home from "./screens/Home";
 import Items from "./screens/items";
@@ -33,31 +33,36 @@ const Pages = styled.div`
 `;
 
 function App() {
+  const location = useLocation();
+ // Conditionally render Sidebar based on the current path
+ const hideSidebar = location.pathname === '/' || location.pathname === '/verify-email';
+
   return (
     <>
-     <PrivateRoute><Sidebar /></PrivateRoute> 
-      <Pages>
-        <AnimatePresence> 
-          <Routes>
+      {!hideSidebar && <PrivateRoute><Sidebar /></PrivateRoute>} 
+      <Pages>      
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            {/* Public Routes */}
             <Route path="/" element={<LoginComponent mode={"login"} />} />
             <Route path="/verify-email" element={<VerifyEmail />} />
-            <Route path="/dashboard" element={<PrivateRoute><Home /></PrivateRoute>}/>
+
+            {/* Private Routes */}
+            <Route path="/dashboard" element={<PrivateRoute><Home /></PrivateRoute>} />
             <Route path="/items" element={<PrivateRoute><Items /></PrivateRoute>} />
             <Route path="/location" element={<PrivateRoute><Location /></PrivateRoute>} />
             <Route path="/supply" element={<PrivateRoute><Supply /></PrivateRoute>} />
             <Route path="/demand" element={<PrivateRoute><Demand /></PrivateRoute>} />
             <Route path="/threshold" element={<PrivateRoute><Threshold /></PrivateRoute>} />
             <Route path="/available" element={<PrivateRoute><Available /></PrivateRoute>} />
-            <Route path="/stackedBarchat" element={<PrivateRoute><StackedBarChart/></PrivateRoute>} />
-            <Route path="/profile" element={<PrivateRoute><Profile/></PrivateRoute>} />
-
+            <Route path="/stackedBarchart" element={<PrivateRoute><StackedBarChart /></PrivateRoute>} />
+            <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
           </Routes>
-          <ToastContainer />
         </AnimatePresence>
+        <ToastContainer />
       </Pages>
     </>
   );
 }
-
 
 export default App;
