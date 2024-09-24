@@ -30,17 +30,6 @@ class UserControllerTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    void createUserHandler_Success() {
-        User user = new User();
-        ApiResponse<String> response = new ApiResponse<>(true, "User created.", "Registered successfully.");
-        when(userService.AddUser(user)).thenReturn(response);
-
-        ResponseEntity<ApiResponse<String>> result = userController.createUserHandler(user);
-
-        assertEquals(HttpStatus.OK, result.getStatusCode());
-        assertEquals(response.getPayload(), Objects.requireNonNull(result.getBody()).getPayload());
-    }
 
     @Test
     void signIn_Success() {

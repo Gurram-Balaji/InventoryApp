@@ -9,11 +9,14 @@ import com.App.fullStack.responseHandler.ApiResponse;
 import com.App.fullStack.service.SupplyService;
 import com.App.fullStack.utility.APIResponseForFoundOrNot;
 
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/supply")
@@ -50,9 +53,9 @@ public class SupplyController {
     public ResponseEntity<ApiResponse<Page<SupplyDTO>>> getAllSuppliesWithDetails(
             @RequestParam(defaultValue = DEFAULT_PAGE) int page,
             @RequestParam(defaultValue = DEFAULT_SIZE) int size,
-            @RequestParam(required = false) String search) {
-
-        Page<SupplyDTO> suppliesWithDetails = supplyService.getAllSuppliesWithDetails(page, size, search);
+            @RequestParam(required = false) String search,
+            @RequestParam(required = false) String searchBy)  {
+        Page<SupplyDTO> suppliesWithDetails = supplyService.getAllSuppliesWithDetails(page, size, search, searchBy);
         return APIResponseForFoundOrNot.generateResponse(suppliesWithDetails, SUPPLIES_FOUND, SUPPLIES_NOT_FOUND);
     }
 

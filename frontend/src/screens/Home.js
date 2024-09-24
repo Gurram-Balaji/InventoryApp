@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate from react
 import '../form.css'; // Adjust based on your styles
 import apiClient from '../components/baseUrl'; // Adjust based on your actual base URL setup
 import MotionHoc from "./MotionHoc";
-import ScatterPlot from '../components/ScatterPlot';
+import SupplyDemandBarChart from '../components/SupplyDemandBarChart';
 
 
 const Dashboard = () => {
@@ -39,7 +39,7 @@ const Dashboard = () => {
         <div className="dashboard-container">
             <h1 style={{marginBottom:'20px'}}>Dashboard</h1>
 
-            <ScatterPlot />
+            <SupplyDemandBarChart />
            
             <div className="dashboard-grid">
                 <div className="dashboard-card" onClick={() => handleNavigation('/items')}>

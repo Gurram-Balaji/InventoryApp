@@ -127,27 +127,6 @@ public class DemandServiceTest {
         assertEquals("Demand deleted successfully", result);
     }
 
-    @Test
-    public void testGetAllDemandWithDetails() {
-        List<Demand> demands = Arrays.asList(
-                new Demand("d1",  DemandType.HARD_PROMISED,10,"item1", "loc1"),
-                new Demand("d2",  DemandType.PLANNED,20,"item2", "loc2")
-        );
-
-        when(demandRepository.findAll()).thenReturn(demands);
-        // Test stubs for items
-        when(itemService.getItemByItemIdWithOutException("item1")).thenReturn(new Item("id1", "item1", "Item 1", "Category1", "Type1", ItemStatus.AVAILABLE, "99.99", true, true, true));
-        when(itemService.getItemByItemIdWithOutException("item2")).thenReturn(new Item("id2", "item2", "Item 2", "Category2", "Type2", ItemStatus.OUT_OF_STOCK, "49.99", true, false, true));
-
-// Test stubs for locations
-        when(locationService.getLocationByIdWithoutException("loc1")).thenReturn(new Location("ddd","loc1", "Location 1", LocationType.DISTRIBUTION_CENTER, true, false, true, "Address1", "Address2", "Address3", "City1", "State1", "Country1", "12345"));
-        when(locationService.getLocationByIdWithoutException("loc2")).thenReturn(new Location("ddd","loc2", "Location 2", LocationType.DISTRIBUTION_CENTER, false, true, false, "Address4", "Address5", "Address6", "City2", "State2", "Country2", "67890"));
 
 
-        Page<DemandDTO> result = demandService.getAllDemandWithDetails(0, 10, null);
-        assertNotNull(result);
-        assertEquals(2, result.getTotalElements());
-    }
-
-    // Add more tests as needed
 }

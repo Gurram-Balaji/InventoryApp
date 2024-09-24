@@ -31,8 +31,9 @@ public class AtpThresholdController {
     public ResponseEntity<ApiResponse<Page<ThresholdDTO>>> getAllThresholdWithDetails(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "8") int size,
-            @RequestParam(required = false) String search) {
-        Page<ThresholdDTO> ThresholdFullDetails = atpThresholdService.getAllDemandWithDetails(page, size, search);
+            @RequestParam(required = false) String search,
+            @RequestParam(required = false) String searchBy) {
+        Page<ThresholdDTO> ThresholdFullDetails = atpThresholdService.getAllDemandWithDetails(page, size, search, searchBy);
         return APIResponseForFoundOrNot.generateResponse(ThresholdFullDetails,
                 "Threshold Found",
                 "Threshold Not Found");

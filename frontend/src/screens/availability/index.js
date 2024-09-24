@@ -3,7 +3,7 @@ import '../../form.css';
 import apiClient from '../../components/baseUrl';
 import { errorToast } from '../../components/Toast';
 import MotionHoc from "../MotionHoc";
-import {  TextField, FormControl } from '@mui/material';
+import { TextField, FormControl } from '@mui/material';
 import Autocomplete from '@mui/material/Autocomplete';
 
 
@@ -15,79 +15,66 @@ const Available = () => {
     const [version, setVersion] = useState('v1');  // Default to 'v1'
     const [responseData, setResponseData] = useState(null);
 
-      // Fetch locations
-  const fetchLocations = async (searchTerm = '') => {
-    try {
-        const locationResponse = await apiClient.get(`/locations/ids?search=${searchTerm}`);
-        const locationData = locationResponse.data.payload.content || [];
-        const locations = locationData.map(item => {
-            const parsedItem = JSON.parse(item);
-            return {
-                id: parsedItem.locationId || null,
-                name: parsedItem.locationDesc || ''
-            };
-        });
-        setLocationOptions(locations);
-    } catch (error) {
-        console.error("Error fetching locations:", error);
-        errorToast("Failed to fetch locations");
-    }
-};
+    // Fetch locations
+    const fetchLocations = async (searchTerm = '') => {
+        try {
+            const locationResponse = await apiClient.get(`/locations/ids?search=${searchTerm}`);
+            const locationData = locationResponse.data.payload.content || [];
+            const locations = locationData.map(item => {
+                const parsedItem = JSON.parse(item);
+                return {
+                    id: parsedItem.locationId || null,
+                    name: parsedItem.locationDesc || ''
+                };
+            });
+            setLocationOptions(locations);
+        } catch (error) {
+            console.error("Error fetching locations:", error);
+            errorToast("Failed to fetch locations");
+        }
+    };
 
-// Fetch items
-const fetchItems = async (searchTerm = '') => {
-    try {
-        const itemResponse = await apiClient.get(`/items/ids?search=${searchTerm}`);
-        const itemData = itemResponse.data.payload.content || [];
-        const items = itemData.map(item => {
-            const parsedItem = JSON.parse(item);
-            return {
-                id: parsedItem.itemId || null,
-                name: parsedItem.itemDescription || ''
-            };
-        });
-        setItemOptions(items);
-    } catch (error) {
-        console.error("Error fetching items:", error);
-        errorToast("Failed to fetch items");
-    }
-};
+    // Fetch items
+    const fetchItems = async (searchTerm = '') => {
+        try {
+            const itemResponse = await apiClient.get(`/items/ids?search=${searchTerm}`);
+            const itemData = itemResponse.data.payload.content || [];
+            const items = itemData.map(item => {
+                const parsedItem = JSON.parse(item);
+                return {
+                    id: parsedItem.itemId || null,
+                    name: parsedItem.itemDescription || ''
+                };
+            });
+            setItemOptions(items);
+        } catch (error) {
+            console.error("Error fetching items:", error);
+            errorToast("Failed to fetch items");
+        }
+    };
 
-useEffect(() => {
-    fetchLocations(); 
-    fetchItems(); 
-}, []);
-
-
-
+    useEffect(() => {
+        fetchLocations();
+        fetchItems();
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         let url = '';
-        if (selectedItem === undefined) {
+        if (!selectedItem) {
             errorToast("Select the item.");
             return;
         }
         if (version === 'v1') {
-            if (selectedLocation) {
-                url = `/availability/v1/${selectedItem.id}/${selectedLocation.id}`;
-            } else {
-                url = `/availability/v1/${selectedItem.id}`;
-            }
+            url = selectedLocation ? `/availability/v1/${selectedItem.id}/${selectedLocation.id}` : `/availability/v1/${selectedItem.id}`;
         } else if (version === 'v2') {
-            if (selectedLocation) {
-                url = `/availability/v2/${selectedItem.id}/${selectedLocation.id}`;
-            } else {
-                url = `/availability/v2/${selectedItem.id}`;
-            }
+            url = selectedLocation ? `/availability/v2/${selectedItem.id}/${selectedLocation.id}` : `/availability/v2/${selectedItem.id}`;
         }
 
         try {
             const response = await apiClient.get(url);
-            if (response.data.status === 404)
-                errorToast(response.data.message);
-            else
-                setResponseData(response.data);
+            if (response.data.status === 404) errorToast(response.data.message);
+            else setResponseData(response.data);
         } catch (error) {
             console.error("Error fetching availability data:", error);
         }
@@ -95,52 +82,47 @@ useEffect(() => {
 
     const getColorIndicator = (stockLevel) => {
         switch (stockLevel) {
-            case 'Yellow':
-                return 'yellow';
-            case 'Red':
-                return 'red';
-            case 'Green':
-                return 'green';
-            default:
-                return 'white';
+            case 'Yellow': return 'yellow';
+            case 'Red': return 'red';
+            case 'Green': return 'green';
+            default: return 'white';
         }
     };
 
     return (
         <>
-       
+            <h1 style={{ margin: '0 32%' }}>Availability</h1>
             <div className="container">
-                <h1>Availability</h1>
-                <form onSubmit={handleSubmit} className="form">
-                   
+                {/* Flexbox container for form */}
+                <form onSubmit={handleSubmit} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px' }}>
+                    {/* Location Autocomplete */}
+                    <FormControl style={{ flex: '2' }}>
+                        <Autocomplete
+                            options={locationOptions}
+                            getOptionLabel={(option) => option.name || ''}
+                            onInputChange={(event, newInputValue) => fetchLocations(newInputValue)}
+                            onChange={(event, newValue) => setSelectedLocation(newValue)}
+                            renderInput={(params) => (
+                                <TextField {...params} label="Search Location" variant="outlined" fullWidth />
+                            )}
+                        />
+                    </FormControl>
 
-         {/* Location Autocomplete */}
-         <FormControl fullWidth margin="dense">
-                    <Autocomplete
-                        options={locationOptions}
-                        getOptionLabel={(option) => option.name || ''}
-                        onInputChange={(event, newInputValue) => fetchLocations(newInputValue)} // Search locations as user types
-                        onChange={(event, newValue) =>{setSelectedLocation(newValue); console.log(newValue);}}
-                        renderInput={(params) => (
-                            <TextField {...params} label="Search Location" variant="outlined" fullWidth margin="dense" />
-                        )}
-                    />
-                </FormControl>
+                    {/* Item Autocomplete */}
+                    <FormControl style={{ flex: '2' }}>
+                        <Autocomplete
+                            options={itemOptions}
+                            getOptionLabel={(option) => option.name || ''}
+                            onInputChange={(event, newInputValue) => fetchItems(newInputValue)}
+                            onChange={(event, newValue) => setSelectedItem(newValue)}
+                            renderInput={(params) => (
+                                <TextField {...params} label="Search Item" variant="outlined" fullWidth />
+                            )}
+                        />
+                    </FormControl>
 
-                {/* Item Autocomplete */}
-                <FormControl fullWidth margin="dense">
-                    <Autocomplete
-                        options={itemOptions}
-                        getOptionLabel={(option) => option.name || ''}
-                        onInputChange={(event, newInputValue) => fetchItems(newInputValue)} // Search items as user types
-                        onChange={(event, newValue) => setSelectedItem(newValue)}
-                        renderInput={(params) => (
-                            <TextField {...params} label="Search Item" variant="outlined" fullWidth margin="dense" />
-                        )}
-                    />
-                </FormControl>
-
-                    <div className="form-group">
+                    {/* Threshold Checkbox */}
+                    <div className="form-group" style={{ flex: '1', padding: '10px' }}>
                         <label>
                             <input style={{ display: 'inline-block' }}
                                 type="checkbox"
@@ -150,29 +132,22 @@ useEffect(() => {
                         </label>
                     </div>
 
-                    <button type="submit">Submit</button>
+                    {/* Submit Button */}
+                    <button type="submit" style={{ flex: '1', padding: '10px' }}>Submit</button>
                 </form>
-
-                {responseData && (
-                    <div className="response" style={{ backgroundColor: getColorIndicator(responseData.payload.stockLevel) }} >
-                        <h3>Available Quantity</h3>
-                        <h1>{responseData.payload.availableQty}</h1>
-                    </div>
-                )}
-
-
             </div>
-            <div style={{ color: '#757578', fontWeight: "bold", marginLeft:"77px" }}>
-                <h4 style={{ color: '#535363' }}>Threshold Levels : </h4>
-                <p>
-                    Red - Lower than the threshold level.
-                </p>
-                <p>
-                    Yellow - Within the threshold level.
-                </p>
-                <p>
-                    Green- Above the max threshold level.
-                </p>
+
+            {/* Response Display */}
+            <div className="response" style={{ backgroundColor: getColorIndicator(responseData?.payload.stockLevel || '') }}>
+                <h3>{responseData ? 'Available Quantity' : 'Select location and item.'}</h3>
+                <h1>{responseData ? responseData.payload.availableQty : '?'}</h1>
+            </div>
+
+            {/* Stock Levels Explanation */}
+            <div style={{ color: '#757578', fontWeight: "bold", display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                <span style={{ marginRight: '20px' }}>Red - Lower than the threshold level.</span>
+                <span style={{ marginRight: '20px' }}>Yellow - Within the threshold level.</span>
+                <span>Green - Above the max threshold level.</span>
             </div>
         </>
     );

@@ -162,7 +162,7 @@ class AtpThresholdServiceTest {
         thresholds.add(new AtpThreshold("thresholdId", "itemId", "locationId", 10, 20));
 
         when(atpThresholdRepository.findAll()).thenReturn(thresholds);
-        when(itemService.getItemByItemIdWithOutException(any())).thenReturn(new Item("id", "itemId", "itemDescription", null, null, null, null, true, true, true));
+        when(itemService.getItemByItemIdWithOutException(any())).thenReturn(new Item("id", "itemId", "itemDescription", null, null, null, 0.00, true, true, true));
         when(locationService.getLocationByIdWithoutException(any())).thenReturn(new Location());
 
         Page<ThresholdDTO> result = atpThresholdService.getAllDemandWithDetails(0, 10, "itemId");

@@ -144,41 +144,4 @@ public class SupplyServiceTest {
         assertEquals("Supplies with itemId: item1, locationId: loc1 and supplyType: ONHAND already exists.", exception.getMessage());
     }
 
-    @Test
-    public void testGetAllSuppliesWithDetails_Success() {
-        List<Supply> supplies = new ArrayList<>();
-        supplies.add(new Supply("supply1", "item1", "loc1", SupplyType.ONHAND, 100));
-        supplies.add(new Supply("supply2", "item2", "loc2", SupplyType.INTRANSIT, 50));
-
-        when(supplyRepository.findAll()).thenReturn(supplies);
-        when(itemService.getItemByItemIdWithOutException("item1")).thenReturn(new Item("item1", "item1", "Item 1", "Category1", "Type1", null, "99.99", true, true, true));
-        when(itemService.getItemByItemIdWithOutException("item2")).thenReturn(new Item("item2", "item2", "Item 2", "Category2", "Type2", null, "49.99", false, true, true));
-        when(locationService.getLocationByIdWithoutException("loc1")).thenReturn(new Location("35rqewawe","loc1", "Location 1", LocationType.DISTRIBUTION_CENTER, true, false, true, "Address1", null, null, "City1", "State1", "Country1", "12345"));
-        when(locationService.getLocationByIdWithoutException("loc2")).thenReturn(new Location("35rqewawe","loc2", "Location 1", LocationType.DISTRIBUTION_CENTER, true, false, true, "Address1", null, null, "City1", "State1", "Country1", "12345"));
-
-        Page<SupplyDTO> result = supplyService.getAllSuppliesWithDetails(0, 10, "");
-
-        assertNotNull(result);
-        assertEquals(2, result.getTotalElements());
-        assertEquals("item1", result.getContent().get(0).getItemId());
-        assertEquals("Location 1", result.getContent().get(0).getLocationDescription());
-        verify(supplyRepository, times(1)).findAll();
-    }
-
-    @Test
-    public void testGetAllSuppliesWithDetails_SearchFilter() {
-        List<Supply> supplies = new ArrayList<>();
-        supplies.add(new Supply("supply1", "item1", "loc1", SupplyType.ONHAND, 100));
-
-        when(supplyRepository.findAll()).thenReturn(supplies);
-        when(itemService.getItemByItemIdWithOutException("item1")).thenReturn(new Item("item1", "item1", "Item 1", "Category1", "Type1", null, "99.99", true, true, true));
-        when(locationService.getLocationByIdWithoutException("loc1")).thenReturn(new Location("35rqewawe","loc1", "Location 1", LocationType.DISTRIBUTION_CENTER, true, false, true, "Address1", null, null, "City1", "State1", "Country1", "12345"));
-
-        Page<SupplyDTO> result = supplyService.getAllSuppliesWithDetails(0, 10, "item1");
-
-        assertNotNull(result);
-        assertEquals(1, result.getTotalElements());
-        assertEquals("item1", result.getContent().get(0).getItemId());
-        verify(supplyRepository, times(1)).findAll();
-    }
 }

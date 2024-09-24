@@ -103,6 +103,16 @@ const ReactVirtualizedTable = () => {
   };
 
   const handleSearchChange = (e) => {
+    const value = e.target.value;
+  
+    // Regular expression to allow only numbers and alphabets
+    const regex = /^[a-zA-Z0-9\s]*$/;
+  
+    // Check if the value contains any special characters
+    if (!regex.test(value)) {
+      errorToast("Error: Search query contains special characters!");
+      return;
+    }
     setSearchQuery(e.target.value);
   };
 

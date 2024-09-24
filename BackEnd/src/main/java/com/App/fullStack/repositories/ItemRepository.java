@@ -8,8 +8,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ItemRepository extends MongoRepository<Item, String> {
@@ -41,5 +41,10 @@ public interface ItemRepository extends MongoRepository<Item, String> {
     @Query(value = "{}", fields = "{ 'itemId' : 1, 'itemDescription':1 , '_id': 0}")
     Page<String> findDistinctItemIds(Pageable pageable);
 
+    @Query(value="{ $or: [ " +
+            "{ 'itemId': { $regex: ?0, $options: 'i' } }, " +
+            "{ 'itemDescription': { $regex: ?0, $options: 'i' } }, " +
+            "] }",  fields = "{ 'itemId' : 1,'_id': 0}")
+    List<Item> searchItemIdsByKeywordGetIds(String search);
 }
 

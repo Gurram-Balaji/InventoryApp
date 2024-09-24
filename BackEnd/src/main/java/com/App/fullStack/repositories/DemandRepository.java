@@ -2,6 +2,8 @@ package com.App.fullStack.repositories;
 
 import com.App.fullStack.pojos.Demand;
 import com.App.fullStack.pojos.DemandType;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.Query;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
@@ -40,4 +42,10 @@ public interface DemandRepository extends MongoRepository<Demand, String> {
         return demands.stream().mapToInt(Demand::getQuantity).sum();
     }
 
+    Page<Demand> findByItemIdIn(List<String> itemIds, Pageable pageable);
+
+    Page<Demand> findByLocationIdIn(List<String> locationsIds, Pageable pageable);
+
+    @Query(value="{ 'demandType': { $regex: ?0, $options: 'i' }  }")
+    Page<Demand> findByDemandType(String search, Pageable pageable);
 }

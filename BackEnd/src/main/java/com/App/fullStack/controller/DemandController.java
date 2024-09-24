@@ -42,8 +42,9 @@ public class DemandController {
     public ResponseEntity<ApiResponse<Page<DemandDTO>>> getAllDemandWithDetails(
             @RequestParam(defaultValue = DEFAULT_PAGE) int page,
             @RequestParam(defaultValue = DEFAULT_SIZE) int size,
-            @RequestParam(required = false) String search) {
-        Page<DemandDTO> demandDetails = demandService.getAllDemandWithDetails(page, size, search);
+            @RequestParam(required = false) String search,
+            @RequestParam(required = false) String searchBy) {
+        Page<DemandDTO> demandDetails = demandService.getAllDemandWithDetails(page, size, search, searchBy);
         return APIResponseForFoundOrNot.generateResponse(demandDetails, DEMANDS_FOUND, DEMANDS_NOT_FOUND);
     }
 

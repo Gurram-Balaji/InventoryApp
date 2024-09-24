@@ -47,13 +47,13 @@ class AtpThresholdControllerTest {
     @Test
     void getAllThresholdWithDetails_Success() {
         Page<ThresholdDTO> mockPage = mock(Page.class);
-        when(atpThresholdService.getAllDemandWithDetails(0, 8, null)).thenReturn(mockPage);
+        when(atpThresholdService.getAllDemandWithDetails(0, 8, null,null)).thenReturn(mockPage);
 
-        ResponseEntity<ApiResponse<Page<ThresholdDTO>>> response = atpThresholdController.getAllThresholdWithDetails(0, 8, null);
+        ResponseEntity<ApiResponse<Page<ThresholdDTO>>> response = atpThresholdController.getAllThresholdWithDetails(0, 8, null,null);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertTrue(Objects.requireNonNull(response.getBody()).isSuccess());
-        verify(atpThresholdService, times(1)).getAllDemandWithDetails(0, 8, null);
+        verify(atpThresholdService, times(1)).getAllDemandWithDetails(0, 8, null,null);
     }
 
     @Test

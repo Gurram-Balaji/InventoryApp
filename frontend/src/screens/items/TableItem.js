@@ -22,7 +22,7 @@ export default function TableItem({ handleEditOpen, handleDeleteOpen, loading, i
         { width: 50, label: 'Category', dataKey: 'category' },
         { width: 30, label: 'HSN Code', dataKey: 'type' },
         { width: 30, label: 'Status', dataKey: 'status' },
-        { width: 20, label: 'Price', dataKey: 'price', numeric: true },
+        { width: 20, label: 'Price', dataKey: 'price' },
         { width: 50, label: 'Fulfillment', dataKey: 'fulfillment'},
         { width: 20, label: 'Action', dataKey: 'action', numeric: true },
     ];
@@ -36,7 +36,7 @@ export default function TableItem({ handleEditOpen, handleDeleteOpen, loading, i
                             <IconButton onClick={() => handleEditOpen(row)}><EditIcon /></IconButton>
                             <IconButton onClick={() => handleDeleteOpen(row)}><DeleteIcon /></IconButton>
                         </>
-                    ) : column.dataKey === 'status' ? (row[column.dataKey] || '').toString().replace(/_/g, ' ') :row[column.dataKey] }
+                    ) : column.dataKey === 'status' ? (row[column.dataKey] || '').toString().replace(/_/g, ' ') : column.dataKey === 'price' ? '\u20B9'+ row[column.dataKey] : row[column.dataKey] }
                 </TableCell>
             ))}
         </Fragment>

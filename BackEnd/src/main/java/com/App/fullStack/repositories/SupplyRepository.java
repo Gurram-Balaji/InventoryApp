@@ -2,6 +2,8 @@ package com.App.fullStack.repositories;
 
 import com.App.fullStack.pojos.Supply;
 import com.App.fullStack.pojos.SupplyType;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -36,4 +38,11 @@ public interface SupplyRepository extends MongoRepository<Supply, String> {
         List<Supply> supplies = findSuppliesByLocationIdAndSupplyType(locationId, supplyType);
         return supplies.stream().mapToInt(Supply::getQuantity).sum();
     }
+
+    Page<Supply> findByItemIdIn(List<String> itemIds, Pageable pageable);
+
+    Page<Supply> findByLocationIdIn(List<String> locationsIds, Pageable pageable);
+
+    @Query(value="{ 'supplyType': { $regex: ?0, $options: 'i' }  }")
+    Page<Supply> findBySupplyType(String search, Pageable pageable);
 }

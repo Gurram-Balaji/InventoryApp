@@ -1,6 +1,6 @@
 .container {
-    max-width: 800px;
-    margin: 40px auto;
+    width: 1200px;
+    margin: 15px auto;
     padding: 30px;
     background-color: #fff;
     border-radius: 10px;
@@ -11,11 +11,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
   }
   
   .form-group {
-    margin-bottom: 20px;
+    margin: 20px;
   }
   
   label {
@@ -31,6 +31,7 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    
   }
   
   select:focus {
@@ -39,7 +40,6 @@
   }
   
   button[type="submit"] {
-    width: 100%;
     height: 40px;
     padding: 10px;
     font-size: 16px;
@@ -54,7 +54,7 @@
     background-color: #610ee7;
   }
   .response {
-    margin-top: 20px;
+    margin: 2% 0;
     padding: 20px;
     background-color: #f7f7f7;
     border: 1px solid #ddd;
@@ -63,6 +63,7 @@
     justify-content: center; /* Add this */
     align-items: center; /* Add this */
     flex-direction: column; /* Add this */
+  
   }
   
   .response h3 {

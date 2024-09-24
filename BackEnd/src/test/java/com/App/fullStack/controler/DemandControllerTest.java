@@ -57,16 +57,16 @@ class DemandControllerTest {
     void getAllDemandWithDetails_Success() {
         Page<DemandDTO> mockDemandDetails = new PageImpl<>(Collections.singletonList(new DemandDTO()));
 
-        when(demandService.getAllDemandWithDetails(0, 8, null)).thenReturn(mockDemandDetails);
+        when(demandService.getAllDemandWithDetails(0, 8, null,null)).thenReturn(mockDemandDetails);
 
-        ResponseEntity<ApiResponse<Page<DemandDTO>>> response = demandController.getAllDemandWithDetails(0, 8, null);
+        ResponseEntity<ApiResponse<Page<DemandDTO>>> response = demandController.getAllDemandWithDetails(0, 8, null,null);
 
         assertEquals(200, response.getStatusCode().value());
         assertTrue(Objects.requireNonNull(response.getBody()).isSuccess());
         assertEquals("Demands Found.", response.getBody().getMessage());
         assertEquals(mockDemandDetails, response.getBody().getPayload());
 
-        verify(demandService, times(1)).getAllDemandWithDetails(0, 8, null);
+        verify(demandService, times(1)).getAllDemandWithDetails(0, 8, null, null);
     }
 
     @Test

@@ -4,6 +4,7 @@ import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.User;
 import com.App.fullStack.responseHandler.ApiResponse;
 import com.App.fullStack.service.UserService;
+import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ public class UserController {
 
     // User signup (registration)
     @PostMapping("/signup")
-    public ResponseEntity<ApiResponse<String>> createUserHandler(@RequestBody User user) {
+    public ResponseEntity<ApiResponse<String>> createUserHandler(@RequestBody User user) throws MessagingException {
         ApiResponse<String> response = userService.AddUser(user);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

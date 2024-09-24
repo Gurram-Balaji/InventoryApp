@@ -3,12 +3,12 @@ package com.App.fullStack.service;
 import com.App.fullStack.dto.DemandDetailsResponse;
 import com.App.fullStack.dto.DemandSummaryResponse;
 import com.App.fullStack.dto.DemandDTO;
+import com.App.fullStack.dto.SupplyDTO;
 import com.App.fullStack.exception.FoundException;
-import com.App.fullStack.pojos.Demand;
-import com.App.fullStack.pojos.DemandType;
-import com.App.fullStack.pojos.Item;
-import com.App.fullStack.pojos.Location;
+import com.App.fullStack.pojos.*;
 import com.App.fullStack.repositories.DemandRepository;
+import com.App.fullStack.repositories.ItemRepository;
+import com.App.fullStack.repositories.LocationRepository;
 import com.App.fullStack.utility.ItemAndLocationIDChecker;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +18,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,6 +26,10 @@ public class DemandService {
 
     @Autowired
     public DemandRepository demandRepository;
+    @Autowired
+    public ItemRepository itemRepository;
+    @Autowired
+    public LocationRepository locationRepository;
     @Autowired
     public ItemAndLocationIDChecker itemAndLocationIDChecker;
     @Autowired
@@ -114,39 +115,52 @@ public class DemandService {
         throw new FoundException("Demand with demandId " + demandId + " not found.");
     }
 
-    public Page<DemandDTO> getAllDemandWithDetails(int page, int size, String search) {
+    public Page<DemandDTO> getAllDemandWithDetails(int page, int size, String search, String searchBy) {
         Pageable pageable = PageRequest.of(page, size);
 
         if (search != null && !search.trim().isEmpty()) {
-            List<Demand> demands = demandRepository.findAll();
-            if (demands.isEmpty())
-                throw new FoundException("Demands not found.");
-            List<DemandDTO> demandDTOs = addAlldemandDetails(demands);
-            // Perform the search only if the search string is not null and not empty
-            demandDTOs = demandDTOs.stream()
-                    .filter(dto -> (dto.getDemandId() != null
-                            && dto.getDemandId().toLowerCase().contains(search.toLowerCase())) ||
-                            (dto.getItemId() != null && dto.getItemId().toLowerCase().contains(search.toLowerCase())) ||
-                            (dto.getItemDescription() != null
-                                    && dto.getItemDescription().toLowerCase().contains(search.toLowerCase()))
-                            ||
-                            (dto.getLocationId() != null
-                                    && dto.getLocationId().toLowerCase().contains(search.toLowerCase()))
-                            ||
-                            (dto.getLocationDescription() != null
-                                    && dto.getLocationDescription().toLowerCase().contains(search.toLowerCase()))
-                            ||
-                            (dto.getDemandType() != null
-                                    && dto.getDemandType().toString().toLowerCase().contains(search.toLowerCase()))
-                            ||
-                            String.valueOf(dto.getQuantity()).contains(search))
-                    .collect(Collectors.toList());
+            Page<Demand> Demands = null;
+            if(Objects.equals(searchBy, "item")) {
+                List<Item> itemIdList = itemRepository.searchItemIdsByKeywordGetIds(search);
+                if (itemIdList.isEmpty())
+                    throw new FoundException("Demands not found.");
+                List<String> itemIds = itemIdList.stream()
+                        .map(Item::getItemId)
+                        .collect(Collectors.toList());
 
-            // Manually handle pagination
-            int start = (int) pageable.getOffset();
-            int end = Math.min((start + pageable.getPageSize()), demandDTOs.size());
-            List<DemandDTO> paginatedList = demandDTOs.subList(start, end);
-            return new PageImpl<>(paginatedList, pageable, demandDTOs.size());
+                Demands = demandRepository.findByItemIdIn(itemIds, pageable);
+
+                if (Demands.getContent().isEmpty())
+                    throw new FoundException("Demands not found..");
+            }
+
+            if(Objects.equals(searchBy, "location")) {
+                List<Location> locationsIdList = locationRepository.searchLocationIdsByKeywordGetIds(search);
+                if (locationsIdList.isEmpty())
+                    throw new FoundException("Demands not found.");
+                List<String> locationsIds = locationsIdList.stream()
+                        .map(Location::getLocationId)
+                        .collect(Collectors.toList());
+
+                Demands = demandRepository.findByLocationIdIn(locationsIds, pageable);
+
+                if (Demands.getContent().isEmpty())
+                    throw new FoundException("Demands not found..");
+            }
+
+
+            if(Objects.equals(searchBy, "demandType")) {
+
+                Demands = demandRepository.findByDemandType(search, pageable);
+
+                if (Demands.getContent().isEmpty())
+                    throw new FoundException("Demands not found..");
+            }
+
+            assert Demands != null;
+            List<DemandDTO> demandDTO = addAlldemandDetails(Demands.getContent());
+            // Return the PageImpl with the paginated results and total count of the original list
+            return new PageImpl<>(demandDTO, pageable, Demands.getTotalElements());
         } else {
             Page<Demand> demands = demandRepository.findAll(pageable);
             if (demands.isEmpty())

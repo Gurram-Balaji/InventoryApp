@@ -5,9 +5,11 @@ import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.User;
 import com.App.fullStack.repositories.UserRepository;
 import com.App.fullStack.responseHandler.ApiResponse;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -31,7 +33,7 @@ public class UserService {
     @Autowired
     private JavaMailSender mailSender;
 
-    public ApiResponse<String> AddUser(User user) {
+    public ApiResponse<String> AddUser(User user) throws MessagingException {
         if (userRepository.existsByEmail(user.getEmail())) {
             throw new FoundException("Email Is Already Used With Another Account");
         }
@@ -140,14 +142,47 @@ public class UserService {
         throw new FoundException("Invalid user token.");
     }
 
-    private void sendVerificationEmail(String email, String token) {
+    private void sendVerificationEmail(String email, String token) throws MessagingException {
         String url = "http://localhost:3000/verify-email?token=" + token;
+        MimeMessage mimeMessage = mailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
 
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo(email);
-        message.setSubject("Email Verification");
-        message.setText("Click the link to verify your email: " + url);
-        mailSender.send(message);
+        String subject = "Email Verification";
+        String content = "<!DOCTYPE html>" +
+                "<html>" +
+                "<head>" +
+                "<style>" +
+                "    .email-container { width: 100%; padding: 20px; font-family: Arial, sans-serif; background-color: #f4f4f4; }" +
+                "    .email-content { max-width: 600px; background-color: #ffffff; padding: 30px; border-radius: 10px; margin: 0 auto; }" +
+                "    .email-header { font-size: 24px; color: #333333; text-align: center; margin-bottom: 20px; }" +
+                "    .email-body { font-size: 16px; color: #666666; text-align: center; margin-bottom: 30px; }" +
+                "    .button-container { text-align: center; }" +
+                "    .verify-button { padding: 10px 20px; font-size: 18px; background-color: #1d72b8; color: #ffffff; text-decoration: none; border-radius: 5px; }" +
+                "    .footer { font-size: 12px; color: #888888; text-align: center; margin-top: 20px; }" +
+                "</style>" +
+                "</head>" +
+                "<body>" +
+                "    <div class='email-container'>" +
+                "        <div class='email-content'>" +
+                "            <div class='email-header'>Verify Your Email</div>" +
+                "            <div class='email-body'>" +
+                "                Please click the button below to verify your email address." +
+                "            </div>" +
+                "            <div class='button-container'>" +
+                "                <a href='" + url + "' class='verify-button'>Verify Email</a>" +
+                "            </div>" +
+                "        </div>" +
+                "        <div class='footer'>" +
+                "            If you did not sign up for this account, you can ignore this email." +
+                "        </div>" +
+                "    </div>" +
+                "</body>" +
+                "</html>";
+
+        helper.setTo(email);
+        helper.setSubject(subject);
+        helper.setText(content, true);  // true indicates HTML content
+        mailSender.send(mimeMessage);
     }
 
     public boolean verifyEmail(String token) {

@@ -1,13 +1,18 @@
 package com.App.fullStack.service;
 
+import com.App.fullStack.dto.SupplyDTO;
 import com.App.fullStack.dto.ThresholdDTO;
 import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.AtpThreshold;
 import com.App.fullStack.pojos.Item;
 import com.App.fullStack.pojos.Location;
+import com.App.fullStack.pojos.Supply;
 import com.App.fullStack.repositories.AtpThresholdRepository;
+import com.App.fullStack.repositories.ItemRepository;
+import com.App.fullStack.repositories.LocationRepository;
 import com.App.fullStack.utility.ItemAndLocationIDChecker;
 
+import jdk.jfr.Threshold;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -15,6 +20,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import java.util.List;
@@ -33,6 +39,11 @@ public class AtpThresholdService {
     private ItemService itemService;
     @Autowired
     private LocationService locationService;
+    @Autowired
+    public ItemRepository itemRepository;
+
+    @Autowired
+    public LocationRepository locationRepository;
 
     public Page<AtpThreshold> getAllAtpThresholds(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
@@ -113,39 +124,41 @@ public class AtpThresholdService {
         return atpThresholdRepository.save(existingThreshold);
     }
 
-    public Page<ThresholdDTO> getAllDemandWithDetails(int page, int size, String search) {
+    public Page<ThresholdDTO> getAllDemandWithDetails(int page, int size, String search, String searchBy) {
         Pageable pageable = PageRequest.of(page, size);
         if (search != null && !search.trim().isEmpty()) {
-            // Fetch all demands (or better filter directly from DB using pageable)
-            List<AtpThreshold> thresholds = atpThresholdRepository.findAll();
+            Page<AtpThreshold> Thresholds = null;
+            if(Objects.equals(searchBy, "item")) {
+                List<Item> itemIdList = itemRepository.searchItemIdsByKeywordGetIds(search);
+                if (itemIdList.isEmpty())
+                    throw new FoundException("Thresholds not found.");
+                List<String> itemIds = itemIdList.stream()
+                        .map(Item::getItemId)
+                        .collect(Collectors.toList());
 
-            if (thresholds.isEmpty())
-                throw new FoundException("Threshold not found.");
+                Thresholds = atpThresholdRepository.findByItemIdIn(itemIds, pageable);
 
-            List<ThresholdDTO> thresholdDTOs =AddThresholdDetails(thresholds);
+                if (Thresholds.getContent().isEmpty())
+                    throw new FoundException("Thresholds not found..");
+            }
 
-            // Perform the search only if the search string is not null and not empty
-            thresholdDTOs = thresholdDTOs.stream()
-                    .filter(dto -> (dto.getItemId() != null
-                            && dto.getItemId().toLowerCase().contains(search.toLowerCase())) ||
-                            (dto.getItemDescription() != null
-                                    && dto.getItemDescription().toLowerCase().contains(search.toLowerCase()))
-                            ||
-                            (dto.getLocationId() != null
-                                    && dto.getLocationId().toLowerCase().contains(search.toLowerCase()))
-                            ||
-                            (dto.getLocationDescription() != null
-                                    && dto.getLocationDescription().toLowerCase().contains(search.toLowerCase()))
-                            ||String.valueOf(dto.getMinThreshold()).contains(search)
-                    || String.valueOf(dto.getMaxThreshold()).contains(search)
-                    )
-                    .collect(Collectors.toList());
+            if(Objects.equals(searchBy, "location")) {
+                List<Location> locationsIdList = locationRepository.searchLocationIdsByKeywordGetIds(search);
+                if (locationsIdList.isEmpty())
+                    throw new FoundException("Thresholds not found.");
+                List<String> locationsIds = locationsIdList.stream()
+                        .map(Location::getLocationId)
+                        .collect(Collectors.toList());
 
+                Thresholds = atpThresholdRepository.findByLocationIdIn(locationsIds, pageable);
 
-            int start = (int) pageable.getOffset();
-            int end = Math.min((start + pageable.getPageSize()), thresholdDTOs.size());
-            List<ThresholdDTO> paginatedList = thresholdDTOs.subList(start, end);
-            return new PageImpl<>(paginatedList, pageable, thresholdDTOs.size());
+                if (Thresholds.getContent().isEmpty())
+                    throw new FoundException("Thresholds not found..");
+            }
+            assert Thresholds != null;
+            List<ThresholdDTO> ThresholdDTOs = AddThresholdDetails(Thresholds.getContent());
+            // Return the PageImpl with the paginated results and total count of the original list
+            return new PageImpl<>(ThresholdDTOs, pageable, Thresholds.getTotalElements());
         }else{
             // Fetch all demands (or better filter directly from DB using pageable)
             Page<AtpThreshold> thresholds = atpThresholdRepository.findAll(pageable);
