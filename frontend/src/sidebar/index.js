@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../store/authSlice';
 import { useNavigate } from 'react-router-dom';
 import apiClient from '../components/baseUrl';
 import styled from "styled-components";
-import { NavLink,Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -20,7 +20,7 @@ import { setUsername, clearUsername, selectUsername } from '../store/usernameSli
 
 const Container = styled.div`
   position: fixed;
-z-index:999;
+  z-index:999;
   .active {
     border-right: 4px solid var(--white);
 
@@ -37,7 +37,7 @@ const Button = styled.button`
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  margin:1rem 0 0 0.5rem;
+  margin:1rem 0 0 0.7rem;
   cursor: pointer;
 
   display: flex;
@@ -83,8 +83,7 @@ const SidebarContainer = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 2rem;
-
+  width: 3rem;
   img {
     width: 100%;
     height: auto;
@@ -98,11 +97,9 @@ const SlickBar = styled.ul`
   flex-direction: column;
   align-items: center;
   background-color: var(--black);
-
   padding: 2rem 0;
-
   position: absolute;
-  top: 7rem;
+  top: 6.2rem;
   left: 0;
 
   width: ${(props) => (props.$clicked ? "12rem" : "3.5rem")};
@@ -133,7 +130,6 @@ const Item = styled(NavLink).attrs({
 
   img {
     width: 1.2rem;
-    height: auto;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
         brightness(103%) contrast(103%);
   }
@@ -278,7 +274,7 @@ const Sidebar = () => {
             <Text $clicked={click}>Home</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/items">
-            <img src={Items_icon} alt="Item Icon"/>
+            <img src={Items_icon} alt="Item Icon" />
             <Text $clicked={click}>Items</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/location">
@@ -286,12 +282,11 @@ const Sidebar = () => {
             <Text $clicked={click}>Locations</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/supply">
-          <img src={Supply_icon} alt="Supply Icon"/>
+            <img src={Supply_icon} alt="Supply Icon" />
             <Text $clicked={click}>Supply</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/demand">
-          <img src={Demand_icon} alt="Demand Icon"/>
-
+            <img src={Demand_icon} alt="Demand Icon" />
             <Text $clicked={click}>Demand</Text>
           </Item>
           <Item onClick={() => setClick(false)} to="/threshold">

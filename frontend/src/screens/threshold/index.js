@@ -105,7 +105,7 @@ const ReactVirtualizedTable = () => {
     <>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0px 15px' }}>
         <h1 style={{ margin: 0 }}>Threshold</h1>
-        <div style={{ display: 'flex', alignItems: 'center', width: "55%" }}>
+        <div style={{ display: 'flex', alignItems: 'center', width: "50%" }}>
           <TextField
             label="Search Threshold"
             value={searchQuery}

@@ -105,11 +105,11 @@ const LoginForm = ({ mode, toggleMode }) => {
 	return (
 		<form onSubmit={mode === 'login' ? handleLogin : handleSignup}>
 			<div className="form-block__input-wrapper">
-				<div className="form-group form-group--login">
+				<div className=" form-group--login">
 					<Input type="text" id="Email" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} disabled={mode === 'signup'} />
 					<Input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} label="password" disabled={mode === 'signup'} />
 				</div>
-				<div className="form-group form-group--signup">
+				<div className=" form-group--signup">
 					<Input type="text" id="fullname" label="Full name" disabled={mode === 'login'} value={SignUpfullName} onChange={(e) => setSignUpFullName(e.target.value)} />
 					<Input type="email" id="email" label="Email" disabled={mode === 'login'} value={SignUpemail} onChange={(e) => setSignUpEmail(e.target.value)} />
 					<Input type="password" id="createpassword" label="Password" disabled={mode === 'login'} value={SignUppassword} onChange={(e) => setSignUpPassword(e.target.value)} />
