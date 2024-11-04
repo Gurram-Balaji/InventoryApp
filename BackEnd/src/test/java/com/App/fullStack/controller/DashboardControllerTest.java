@@ -1,6 +1,5 @@
-package com.App.fullStack.controler;
+package com.App.fullStack.controller;
 
-import com.App.fullStack.controller.DashboardController;
 import com.App.fullStack.responseHandler.ApiResponse;
 import com.App.fullStack.service.DashboardService;
 import org.junit.jupiter.api.BeforeEach;

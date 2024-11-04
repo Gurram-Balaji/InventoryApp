@@ -35,7 +35,7 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
             const response = await apiClient.post('/items', newItemData);
             if (response.data.status === 404)
                 errorToast(response.data.message);
-            else if (response.data.success === true) {
+            else if (response.data.success ) {
                 successToast("Item added successfully!");
                 fetchItems(page); // Refresh items after delete
             }
@@ -58,7 +58,7 @@ export default function NewItemForm({ statusOptions, fetchItems, page, setOpenAd
     };
 
     return (
-         <Dialog PaperProps={{className: 'dialog-custom',  }}open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
+         <Dialog PaperProps={{className: 'dialog-custom',  }} open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
             <DialogTitle className="dialog-title-custom" >Add New Item...</DialogTitle>
             <DialogContent style={{ padding: '30px 50px 10px' }}>
                 <TextField

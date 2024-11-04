@@ -24,16 +24,14 @@ public class AvailabilityController {
 
     // Common messages and path versions
     private static final String SUCCESS_MESSAGE = "Available Quantity";
-    
+
     // API Version 1: Availability by Location
     @GetMapping("/v1/{itemId}/{locationId}")
     public ResponseEntity<ApiResponse<AvailabilityResponse>> getV1AvailabilityByLocation(
             @PathVariable String itemId, @PathVariable String locationId) {
-        
         // Calculate availability and return response
         int availableQuantity = availabilityService.calculateAvailabilityByLocation(itemId, locationId);
         AvailabilityResponse response = new AvailabilityResponse(itemId, locationId, availableQuantity);
-        
         return ResponseEntity.ok(new ApiResponse<>(true, SUCCESS_MESSAGE, response));
     }
 
@@ -41,10 +39,8 @@ public class AvailabilityController {
     @GetMapping("/v1/{itemId}")
     public ResponseEntity<ApiResponse<AvailabilityResponse>> getV1AvailabilityByItem(
             @PathVariable String itemId) {
-        
         int availableQuantity = availabilityService.calculateAvailabilityByItem(itemId);
         AvailabilityResponse response = new AvailabilityResponse(itemId, "NETWORK", availableQuantity);
-        
         return ResponseEntity.ok(new ApiResponse<>(true, SUCCESS_MESSAGE, response));
     }
 
@@ -52,19 +48,14 @@ public class AvailabilityController {
     @GetMapping("/v2/{itemId}/{locationId}")
     public ResponseEntity<ApiResponse<AvailabilityResponseV2V3>> getV2AvailabilityByLocation(
             @PathVariable String itemId, @PathVariable String locationId) {
-        
         AvailabilityResponseV2V3 response = availabilityService.calculateV2AvailabilityByLocation(itemId, locationId);
-        
         return ResponseEntity.ok(new ApiResponse<>(true, SUCCESS_MESSAGE, response));
     }
 
     // API Version 2: Availability by Item (All Locations)
     @GetMapping("/v2/{itemId}")
-    public ResponseEntity<ApiResponse<AvailabilityResponseV2V3>> getV2AvailabilityInAllLocation(
-            @PathVariable String itemId) {
-        
+    public ResponseEntity<ApiResponse<AvailabilityResponseV2V3>> getV2AvailabilityInAllLocation(@PathVariable String itemId) {
         AvailabilityResponseV2V3 response = availabilityService.calculateV2AvailabilityInAllLocation(itemId);
-        
         return ResponseEntity.ok(new ApiResponse<>(true, SUCCESS_MESSAGE, response));
     }
 
@@ -72,9 +63,7 @@ public class AvailabilityController {
     @GetMapping("/v3/{itemId}/{locationId}")
     public ResponseEntity<ApiResponse<AvailabilityResponseV2V3>> getV3AvailabilityByLocation(
             @PathVariable String itemId, @PathVariable String locationId) {
-        
         AvailabilityResponseV2V3 response = availabilityService.calculateV3AvailabilityByLocation(itemId, locationId);
-        
         return ResponseEntity.ok(new ApiResponse<>(true, SUCCESS_MESSAGE, response));
     }
 
@@ -83,6 +72,4 @@ public class AvailabilityController {
         ScatterLocationDataDTO scatterData = availabilityService.getAvailabilityScatterData(locationId);
         return ResponseEntity.ok(new ApiResponse<>(true, "Scatter Data Retrieved", scatterData));
     }
-
-
 }

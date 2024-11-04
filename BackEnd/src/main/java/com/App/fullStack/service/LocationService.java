@@ -51,7 +51,9 @@ public class LocationService {
     }
 
     public Location addLocation(Location location) {
-        // Check if an item with the same itemId already exists
+        if(location.getLocationDesc()==null || location.getLocationId()==null || location.getLocationType()==null || location.getAddressLine1()==null || location.getCity()==null || location.getPinCode()==null)
+            throw new FoundException("All required fields should be filled.");
+            // Check if an item with the same itemId already exists
         Optional<Location> existingLocation = locationRepository.findByLocationId(location.getLocationId());
 
         // Throw an exception or handle the case where the itemId already exists
@@ -130,7 +132,7 @@ public class LocationService {
         throw new FoundException("Location with locationId " + locationId + " not exist.");
     }
 
-    public Page<String> getAllLocationIds(int page,int size,String search) {
+    public Page<String> getAllLocationIds(int page, int size, String search) {
         Pageable pageable = PageRequest.of(page, size);
 
         if (search != null && !search.isEmpty()) {

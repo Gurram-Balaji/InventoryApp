@@ -1,6 +1,5 @@
-package com.App.fullStack.controler;
+package com.App.fullStack.controller;
 
-import com.App.fullStack.controller.AtpThresholdController;
 import com.App.fullStack.dto.ThresholdDTO;
 import com.App.fullStack.pojos.AtpThreshold;
 import com.App.fullStack.responseHandler.ApiResponse;

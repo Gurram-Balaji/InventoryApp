@@ -120,7 +120,7 @@ public class DemandService {
 
         if (search != null && !search.trim().isEmpty()) {
             Page<Demand> Demands = null;
-            if(Objects.equals(searchBy, "item")) {
+            if (Objects.equals(searchBy, "item")) {
                 List<Item> itemIdList = itemRepository.searchItemIdsByKeywordGetIds(search);
                 if (itemIdList.isEmpty())
                     throw new FoundException("Demands not found.");
@@ -134,7 +134,7 @@ public class DemandService {
                     throw new FoundException("Demands not found..");
             }
 
-            if(Objects.equals(searchBy, "location")) {
+            if (Objects.equals(searchBy, "location")) {
                 List<Location> locationsIdList = locationRepository.searchLocationIdsByKeywordGetIds(search);
                 if (locationsIdList.isEmpty())
                     throw new FoundException("Demands not found.");
@@ -149,7 +149,7 @@ public class DemandService {
             }
 
 
-            if(Objects.equals(searchBy, "demandType")) {
+            if (Objects.equals(searchBy, "demandType")) {
 
                 Demands = demandRepository.findByDemandType(search, pageable);
 
@@ -163,11 +163,11 @@ public class DemandService {
             return new PageImpl<>(demandDTO, pageable, Demands.getTotalElements());
         } else {
             Page<Demand> demands = demandRepository.findAll(pageable);
-            if (demands.isEmpty())
+            if (demands==null)
                 throw new FoundException("Demands not found.");
 
             // Convert Demand to DemandDTO
-           List<DemandDTO> demandDTOs =addAlldemandDetails(demands.getContent());
+            List<DemandDTO> demandDTOs = addAlldemandDetails(demands.getContent());
 
             return new PageImpl<>(demandDTOs, pageable, demands.getTotalElements());
         }

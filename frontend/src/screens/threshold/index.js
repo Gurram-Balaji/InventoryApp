@@ -17,7 +17,7 @@ async function getData(page = 0, search = '',searchBy='') {
       errorToast(response.data.message);
       return { content: [], page: { totalElements: 0 } }
     }
-    else if (response.data.success === true) {
+    else if (response.data.success ) {
       return response.data.payload;
     }
   } catch (error) {

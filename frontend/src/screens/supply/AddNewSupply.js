@@ -34,7 +34,7 @@ export default function NewSupplyForm({ supplyOptions, fetchRow, page, setOpenAd
 
             if (response.data.status === 404)
                 errorToast(response.data.message);
-            else if (response.data.success === true) {
+            else if (response.data.success ) {
                 successToast("Supply added successfully!");
                
                 fetchRow(page);
@@ -66,7 +66,7 @@ export default function NewSupplyForm({ supplyOptions, fetchRow, page, setOpenAd
         });
         setLocationOptions(locations);
     } catch (error) {
-        console.error("Error fetching locations:", error);
+         console.error("Error fetching locations:", error);
         errorToast("Failed to fetch locations");
     }
 };
@@ -85,7 +85,7 @@ const fetchItems = async (searchTerm = '') => {
         });
         setItemOptions(items);
     } catch (error) {
-        console.error("Error fetching items:", error);
+         console.error("Error fetching items:", error);
         errorToast("Failed to fetch items");
     }
 };
@@ -98,7 +98,7 @@ useEffect(() => {
 
 
     return (
-         <Dialog PaperProps={{className: 'dialog-custom',  }}open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
+         <Dialog PaperProps={{className: 'dialog-custom' }} open={openAddDialog} maxWidth="md" fullWidth>
             <DialogTitle className="dialog-title-custom" >Add New Supply</DialogTitle>
             <DialogContent style={{ padding: '30px 50px 10px' }}>
                  {/* Location Autocomplete */}

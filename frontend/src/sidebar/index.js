@@ -247,13 +247,17 @@ const Sidebar = () => {
           dispatch(setUsername(initials)); // Set the initials as the username
         })
         .catch(error => {
-          if (error.response && error.response.status === 403) {
-            // If unauthorized, clear the token and username, then navigate to login page
-            dispatch(clearUsername());
-            dispatch(logout());
-            navigate('/');
-          } else {
-            console.error('An error occurred:', error);
+          // Improved error handling
+          if (error.response) {
+            if (error.response.status === 403) {
+
+              // If unauthorized, clear the token and username, then navigate to login page
+              dispatch(clearUsername());
+              dispatch(logout());
+              navigate('/'); // Navigate to login page
+            } else {
+               console.error('An error occurred:', error.response.data.message || error.message);
+            }
           }
         });
     }

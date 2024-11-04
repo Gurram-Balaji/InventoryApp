@@ -20,7 +20,7 @@ async function getData(page = 0, search = '', searchBy = '') {
       return { content: [], page: { totalElements: 0 } }; // Return default on final failure
 
     }
-    else if (response.data.success === true)
+    else if (response.data.success )
       return response.data.payload;
   } catch (error) {
     errorToast(error);
@@ -58,7 +58,7 @@ const ReactVirtualizedTable = () => {
   const fetchRow = async (page, search, searchBy) => {
     setLoading(true);
     const { content, page: { totalElements } } = await getData(page, search, searchBy);
-    console.log(content);
+    console.error(content);
     const formattedRow = content.map(supply => createData(supply.supplyId, supply.itemDescription + ' (' + supply.itemId + ')', supply.locationDescription
       + ' (' + supply.locationId + ')', supply.supplyType, supply.quantity));
     setSupply(formattedRow);

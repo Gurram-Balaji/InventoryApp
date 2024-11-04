@@ -20,26 +20,32 @@ const LoginForm = ({ mode, toggleMode }) => {
 
 	const handleLogin = async (event) => {
 		event.preventDefault();
-		setLoading(true);
-
+	
+		// Validate email and password before making the request
+		if (!email || !password) {
+			errorToast('Please enter both email and password.');
+			return;
+		}
+	
+		setLoading(true);  // Set loading only after validation
+	
 		try {
-			if (!email || !password) {
-				errorToast('Please enter both email and password.');
-				return;
-			}
 			const response = await apiClient.post('/auth/signin', { email, password });
-			if (response.data.status === 404)
-				errorToast(response.data.message);
-			else {
+	
+			if (response.data.status === 404) {
+				errorToast(response.data.message);  // Show error message from response
+			} else {
 				dispatch(loginSuccess(response.data.payload));  // Save token in Redux store
-				navigation('/dashboard');
+				navigation('/dashboard');  // Redirect to dashboard
 			}
 		} catch (error) {
-			errorToast('Something went wrong..');
-		}finally {
-			setLoading(false);
-		  }
+				errorToast('Something went wrong. Please try again.');  // Generic error for network issues
+		} finally {
+			setLoading(false);  // Ensure loading is reset after request
+		}
 	};
+	
+
 	const handleSignup = async (event) => {
 		event.preventDefault();
 		setLoading(true);
@@ -74,7 +80,7 @@ const LoginForm = ({ mode, toggleMode }) => {
 
 			if (SignUppassword !== SignUpconfirmPassword) {
 				errorToast("Passwords do not match");
-				return
+				return;
 			}
 
 			const response = await apiClient.post('/auth/signup', {
@@ -82,11 +88,11 @@ const LoginForm = ({ mode, toggleMode }) => {
 				email: SignUpemail,
 				password: SignUppassword,
 			});
+			
 			if (response.data.status === 404) {
 				errorToast(response.data.message);
 				return;
-			}
-			else if (response.data.success === true) {
+			}else if (response.data.success) {
 				successToast(response.data.payload);
 				successToast(response.data.message);
 				toggleMode();
@@ -106,15 +112,14 @@ const LoginForm = ({ mode, toggleMode }) => {
 		<form onSubmit={mode === 'login' ? handleLogin : handleSignup}>
 			<div className="form-block__input-wrapper">
 				<div className=" form-group--login">
-					<Input type="text" id="Email" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} disabled={mode === 'signup'} />
-					<Input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} label="password" disabled={mode === 'signup'} />
+					<Input type="text" id="Email" data-testid="email-signin-input" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} disabled={mode === 'signup'} />
+					<Input type="password" id="password" data-testid="password-signin-input" value={password} onChange={(e) => setPassword(e.target.value)} label="Password" disabled={mode === 'signup'} />
 				</div>
 				<div className=" form-group--signup">
-					<Input type="text" id="fullname" label="Full name" disabled={mode === 'login'} value={SignUpfullName} onChange={(e) => setSignUpFullName(e.target.value)} />
-					<Input type="email" id="email" label="Email" disabled={mode === 'login'} value={SignUpemail} onChange={(e) => setSignUpEmail(e.target.value)} />
-					<Input type="password" id="createpassword" label="Password" disabled={mode === 'login'} value={SignUppassword} onChange={(e) => setSignUpPassword(e.target.value)} />
-
-					<Input type="password" id="repeatpassword" label="Repeat password" disabled={mode === 'login'} value={SignUpconfirmPassword} onChange={(e) => setSignUpConfirmPassword(e.target.value)} />
+					<Input type="text" id="fullname" data-testid="fullname-signup-input" label="Your fullname" disabled={mode === 'login'} value={SignUpfullName} onChange={(e) => setSignUpFullName(e.target.value)} />
+					<Input type="email" id="email" data-testid="email-signup-input" label="Your email" disabled={mode === 'login'} value={SignUpemail} onChange={(e) => setSignUpEmail(e.target.value)} />
+					<Input type="password" id="createpassword" data-testid="cpassword-signup-input" label="Create password" disabled={mode === 'login'} value={SignUppassword} onChange={(e) => setSignUpPassword(e.target.value)} />
+					<Input type="password" id="repeatpassword" data-testid="rpassword-signup-input" label="Repeat password" disabled={mode === 'login'} value={SignUpconfirmPassword} onChange={(e) => setSignUpConfirmPassword(e.target.value)} />
 				</div>
 			</div>
 			<button className="button button--primary full-width"  disabled={loading}>

@@ -26,7 +26,7 @@ public class AtpThresholdController {
         return APIResponseForFoundOrNot.generateResponse(thresholds, "ATP Thresholds Found", "No ATP Thresholds Found");
     }
 
-    // gett all item and location with names
+    // getting all item and location with names
     @GetMapping("/all")
     public ResponseEntity<ApiResponse<Page<ThresholdDTO>>> getAllThresholdWithDetails(
             @RequestParam(defaultValue = "0") int page,

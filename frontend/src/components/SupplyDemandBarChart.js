@@ -51,7 +51,6 @@ const SupplyDemandBarChart = () => {
             });
             setLocationOptions(locations);
         } catch (error) {
-            console.error("Error fetching locations:", error);
             errorToast("Failed to fetch locations");
         }
     };
@@ -59,7 +58,6 @@ const SupplyDemandBarChart = () => {
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
             const { Name, Supply, Demand, itemPrice } = payload[0].payload;
-    
             return (
                 <div style={{
                     border: '1px solid #cccccc',

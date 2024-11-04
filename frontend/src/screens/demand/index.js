@@ -11,19 +11,20 @@ import TableDemand from './TableDemand';
 
 
 // Fetch paginated data
-async function getData(page = 0, search = '',searchBy='') {
+async function getData(page = 0, search = '', searchBy = '') {
   try {
     const response = await apiClient.get(`/demand/all?page=${page}&search=${search}&searchBy=${searchBy}`);
-    if (response.data.status === 404){
+   
+    if (response.data.status === 404) {
       errorToast(response.data.message);
       return { content: [], page: { totalElements: 0 } }
     }
-    else if (response.data.success === true) {
+    else if (response.data.success ) {
       return response.data.payload;
     }
   } catch (error) {
-      errorToast(error);
-      return { content: [], page: { totalElements: 0 } }; // Return default on final failure
+    errorToast(error);
+    return { content: [], page: { totalElements: 0 } }; // Return default on final failure
   }
 }
 
@@ -58,15 +59,14 @@ const ReactVirtualizedTable = () => {
     const { content, page: { totalElements } } = await getData(page, search, searchBy);
     const formattedRow = content.map(demand => createData(demand.demandId, demand.itemDescription + ' (' + demand.itemId + ')', demand.locationDescription
       + ' (' + demand.locationId + ')', demand.demandType, demand.quantity));
-    setDemand(formattedRow);
-    setTotal(totalElements);
-    setLoading(false);
+      setDemand(formattedRow);
+      setTotal(totalElements);
+      setLoading(false);
   };
 
   useEffect(() => {
     fetchRow(page, searchQuery, searchBy);
   }, [page, searchQuery, searchBy]);
-
 
   const handleEditOpen = (row) => {
     setEditData(row);
@@ -89,10 +89,10 @@ const ReactVirtualizedTable = () => {
 
   const handleSearchChange = (e) => {
     const value = e.target.value;
-  
+
     // Regular expression to allow only numbers and alphabets
     const regex = /^[a-zA-Z0-9\s]*$/;
-  
+
     // Check if the value contains any special characters
     if (!regex.test(value)) {
       errorToast("Error: Search query contains special characters!");

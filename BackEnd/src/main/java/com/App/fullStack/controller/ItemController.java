@@ -40,7 +40,7 @@ public class ItemController {
             @RequestParam(defaultValue = DEFAULT_PAGE) int page,
             @RequestParam(defaultValue = DEFAULT_SIZE) int size,
             @RequestParam(required = false) String search) {
-        
+
         Page<Item> items = itemService.getAllItems(page, size, search);
         return APIResponseForFoundOrNot.generateResponse(items, ITEMS_FOUND, ITEMS_NOT_FOUND);
     }
@@ -76,9 +76,9 @@ public class ItemController {
 
     // Get all item IDs
     @GetMapping("/ids")
-    public ResponseEntity<ApiResponse<Page<String>>> getAllItemIds( @RequestParam(defaultValue = DEFAULT_PAGE) int page,
-                                                                    @RequestParam(defaultValue = DEFAULT_SIZE) int size,
-                                                                    @RequestParam(required = false) String search) {
+    public ResponseEntity<ApiResponse<Page<String>>> getAllItemIds(@RequestParam(defaultValue = DEFAULT_PAGE) int page,
+                                                                   @RequestParam(defaultValue = DEFAULT_SIZE) int size,
+                                                                   @RequestParam(required = false) String search) {
 
         Page<String> itemIds = itemService.getAllItemIds(page, size, search);
         return APIResponseForFoundOrNot.generateResponse(itemIds, ITEMS_FOUND, ITEMS_NOT_FOUND);

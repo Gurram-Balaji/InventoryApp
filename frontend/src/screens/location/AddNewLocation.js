@@ -3,7 +3,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Checkbox, Te
 import { errorToast, successToast } from '../../components/Toast';
 import apiClient from '../../components/baseUrl';
 
-export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOpenAddDialog, openAddDialog }) {
+export default function NewLocationForm({ locationTypeOptions, fetchRow, page, setOpenAddDialog, openAddDialog }) {
 
     const [newData, setNewData] = useState({
         "locationId": "",
@@ -35,9 +35,8 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
 
             if (response.data.status === 404)
                 errorToast(response.data.message);
-            else if (response.data.success === true) {
+            else if (response.data.success ) {
                 successToast("Location added successfully!");
-               
                 fetchRow(page);
             }
 
@@ -63,7 +62,7 @@ export default function NewItemForm({ locationTypeOptions, fetchRow, page, setOp
     };
 
     return (
-         <Dialog PaperProps={{className: 'dialog-custom',  }}open={openAddDialog} onClose={() => setOpenAddDialog(false)} maxWidth="md" fullWidth>
+         <Dialog PaperProps={{className: 'dialog-custom',  }}open={openAddDialog} maxWidth="md" fullWidth>
             <DialogTitle className="dialog-title-custom" >Add New Location...</DialogTitle>
             <DialogContent style={{ padding: '30px 50px 10px' }}>
                 <TextField

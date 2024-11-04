@@ -68,7 +68,6 @@ public class AvailabilityService {
         return new AvailabilityResponseV2V3(itemId, locationId, availableQty, stockLevel);
     }
 
-    
 
     public AvailabilityResponseV2V3 calculateV2AvailabilityInAllLocation(String itemId) {
         int availableQty = calculateAvailabilityByItem(itemId);
@@ -110,7 +109,7 @@ public class AvailabilityService {
         return new AvailabilityResponseV2V3(itemId, locationId, totalQTY, stockLevel);
     }
 
-    private String calculateStockLevel(Optional<AtpThreshold> thresholdOpt, int availableQty) {
+    String calculateStockLevel(Optional<AtpThreshold> thresholdOpt, int availableQty) {
         if (thresholdOpt.isPresent()) {
             AtpThreshold threshold = thresholdOpt.get();
             if (availableQty < threshold.getMinThreshold())
@@ -136,35 +135,33 @@ public class AvailabilityService {
     }
 
 
-
     public ScatterLocationDataDTO getAvailabilityScatterData(String locationId) {
         List<Item> items = itemRepository.findAll();
         // Initialize a list to store the scatter data
         List<ScatterDataDTO> scatterData = new ArrayList<>();
 
         String locationName;
-            Optional<Location> location = locationRepository.findByLocationId(locationId);
-            if(location.isPresent())
-                locationName=location.get().getLocationDesc();
-            else
-                locationName="NETWORK";
+        Optional<Location> location = locationRepository.findByLocationId(locationId);
+        if (location.isPresent())
+            locationName = location.get().getLocationDesc();
+        else
+            locationName = "NETWORK";
         // Calculate availability for each item
         for (Item item : items) {
             String itemId = item.getItemId();
-            int supplyQuantity,demandQuantity=0;
-            if(Objects.equals(locationName, "NETWORK")) {
+            int supplyQuantity, demandQuantity;
+            List<Supply> supplies;
+            List<Demand> demands;
+            if (Objects.equals(locationName, "NETWORK")) {
 
-                List<Supply> supplies = supplyRepository.findByItemIdAndSupplyType(itemId, "ONHAND");
-                List<Demand> demands = demandRepository.findByItemIdAndDemandType(itemId, "HARD_PROMISED");
-                supplyQuantity= SupplyQTYSum(supplies);
-                demandQuantity=DemandsQTYSum(demands);
+                supplies = supplyRepository.findByItemIdAndSupplyType(itemId, "ONHAND");
+                demands = demandRepository.findByItemIdAndDemandType(itemId, "HARD_PROMISED");
+            } else {
+                supplies = supplyRepository.findByItemIdAndLocationIdAndSupplyType(itemId, locationId, "ONHAND");
+                demands = demandRepository.findByItemIdAndLocationIdAndDemandType(itemId, locationId, "HARD_PROMISED");
             }
-            else {
-                List<Supply> supplies = supplyRepository.findByItemIdAndLocationIdAndSupplyType(itemId, locationId, "ONHAND");
-                List<Demand> demands = demandRepository.findByItemIdAndLocationIdAndDemandType(itemId, locationId,"HARD_PROMISED");
-                supplyQuantity= SupplyQTYSum(supplies);
-                demandQuantity=DemandsQTYSum(demands);
-            }
+            supplyQuantity = SupplyQTYSum(supplies);
+            demandQuantity = DemandsQTYSum(demands);
 
             scatterData.add(new ScatterDataDTO(
                     item.getPrice(), // Assuming price is stored as String
@@ -173,6 +170,6 @@ public class AvailabilityService {
                     item.getItemDescription()
             ));
         }
-        return new ScatterLocationDataDTO(scatterData,locationName);
+        return new ScatterLocationDataDTO(scatterData, locationName);
     }
 }

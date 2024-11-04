@@ -10,7 +10,7 @@ export default function Delete({ openDeleteDialog, selectedRow, fetchRow, page, 
       const response = await apiClient.delete(`/atpThresholds/${selectedRow.thresholdId}`);
       if (response.data.status === 404)
         errorToast(response.data.message);
-      else if (response.data.success === true) {
+      else if (response.data.success) {
         successToast("Threshold deleted successfully!");
         fetchRow(page);
       }

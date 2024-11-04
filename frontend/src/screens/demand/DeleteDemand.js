@@ -1,28 +1,26 @@
-
-
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import apiClient from '../../components/baseUrl';
 import { errorToast, successToast } from '../../components/Toast';
 
-export default function Delete({openDeleteDialog, selectedRow, fetchRow, page, setOpenDeleteDialog}){
-    const handleDeleteConfirm = async () => {
-        try {
-          const response = await apiClient.delete(`/demand/${selectedRow.demandId}`);
-          if (response.data.status === 404)
-            errorToast(response.data.message);
-          else if (response.data.success === true) {
-            successToast("Demand deleted successfully!");
-            fetchRow(page); // Refresh locations after delete
-          }
-        } catch (error) {
-          errorToast("Failed to delete Damand");
-        }
-        setOpenDeleteDialog(false);
-      };
+export default function Delete({ openDeleteDialog, selectedRow, fetchRow, page, setOpenDeleteDialog }) {
+  const handleDeleteConfirm = async () => {
+    try {
+      const response = await apiClient.delete(`/demand/${selectedRow.demandId}`);
+      if (response.data.status === 404){
+        errorToast(response.data.message);
+      }else if (response.data.success) {
+        successToast("Demand deleted successfully!");
+        fetchRow(page); // Refresh locations after delete
+      }
+    } catch (error) {
+      errorToast("Failed to delete Damand");
+    }
+    setOpenDeleteDialog(false);
+  };
 
-    return ( <Dialog PaperProps={{className: 'dialog-custom',  }}open={openDeleteDialog} onClose={() => setOpenDeleteDialog(false)} maxWidth="sm" fullWidth>
+  return (<Dialog PaperProps={{ className: 'dialog-custom', }} open={openDeleteDialog} onClose={() => setOpenDeleteDialog(false)} maxWidth="sm" fullWidth>
     <DialogTitle className="dialog-title-custom" >Confirm Delete...</DialogTitle>
-    <DialogContent style={{marginTop:'30px'}}>
+    <DialogContent style={{ marginTop: '30px' }}>
       {selectedRow && (
         <div style={{
           textAlign: 'center',
@@ -45,19 +43,19 @@ export default function Delete({openDeleteDialog, selectedRow, fetchRow, page, s
           <p style={{
             fontSize: '16px',
           }}>
-              <p style={{
-            fontWeight: 'bold',
-            fontSize: '18px',
-          }}>
-            {selectedRow.itemId}
-          </p>
-          <p style={{
-            fontWeight: 'bold',
-            fontSize: '18px',
-            margin: '10px 0',
-          }}>
-            {selectedRow.itemDescription}
-          </p>
+            <p style={{
+              fontWeight: 'bold',
+              fontSize: '18px',
+            }}>
+              {selectedRow.itemId}
+            </p>
+            <p style={{
+              fontWeight: 'bold',
+              fontSize: '18px',
+              margin: '10px 0',
+            }}>
+              {selectedRow.itemDescription}
+            </p>
             Are you sure you want to delete this demand?
           </p>
         </div>
@@ -91,5 +89,5 @@ export default function Delete({openDeleteDialog, selectedRow, fetchRow, page, s
       </Button>
     </DialogActions>
   </Dialog>
-    )
+  )
 }

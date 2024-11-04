@@ -69,15 +69,9 @@ const ProfileForm = () => {
         errorToast(response.data.message);
       } else if (response.data.success) {
         successToast('Profile updated successfully!');
-        const { fullName, email } = response.data.payload;
+        const { fullName } = response.data.payload;
         const username = fullName.match(/\b(\w)/g).join('');
         dispatch(setUsername(username)); // Set the initials as the username
-        setFormData({
-          fullName,
-          email,
-          password: '', 
-          confirmPassword: ''
-        });
       }
     } catch (error) {
       errorToast('Error updating profile.');
@@ -201,11 +195,11 @@ const ProfileForm = () => {
       {showPasswordFields && (
         <>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="newpassword">New Password</label>
             <input
               type="password"
-              id="password"
-              name="password"
+              id="newpassword"
+              name="newpassword"
               value={formData.password}
               onChange={handleChange}
               required={showPasswordFields}

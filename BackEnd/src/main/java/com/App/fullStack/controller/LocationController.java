@@ -33,7 +33,6 @@ public class LocationController {
     private static final String LOCATION_UPDATED = "Location Updated";
     private static final String LOCATION_NOT_UPDATED = "Location Not Updated";
     private static final String LOCATION_DELETE_OPERATION = "Location Delete Operation.";
-    private static final String LOCATION_IDS_FOUND = "Location ids found.";
 
     // Get all locations with optional search and pagination
     @GetMapping
@@ -64,7 +63,7 @@ public class LocationController {
     @PatchMapping("/{locationId}")
     public ResponseEntity<ApiResponse<Location>> updateLocation(
             @PathVariable String locationId, @RequestBody Location locationDetails) {
-        
+
         Location updatedLocation = locationService.updateLocation(locationId, locationDetails);
         return APIResponseForFoundOrNot.generateResponse(updatedLocation, LOCATION_UPDATED, LOCATION_NOT_UPDATED);
     }
@@ -91,7 +90,7 @@ public class LocationController {
 
     @GetMapping("/stackedBarData")
     public ResponseEntity<ApiResponse<List<LocationData>>> stackedBarData() {
-        return APIResponseForFoundOrNot.generateResponse(locationService.getStackedBarData(),  LOCATIONS_FOUND, LOCATIONS_NOT_FOUND);
+        return APIResponseForFoundOrNot.generateResponse(locationService.getStackedBarData(), LOCATIONS_FOUND, LOCATIONS_NOT_FOUND);
     }
 
 

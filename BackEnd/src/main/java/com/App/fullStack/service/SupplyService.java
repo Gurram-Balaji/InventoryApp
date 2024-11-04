@@ -33,7 +33,7 @@ public class SupplyService {
     public ItemRepository itemRepository;
 
     @Autowired
-    public LocationRepository  locationRepository;
+    public LocationRepository locationRepository;
 
     @Autowired
     public ItemAndLocationIDChecker itemAndLocationIDChecker;
@@ -99,7 +99,6 @@ public class SupplyService {
     }
 
     public Supply addSupply(Supply supply) {
-
         if (supplyRepository.existsByItemIdAndLocationIdAndSupplyType(supply.getItemId(), supply.getLocationId(),
                 supply.getSupplyType()))
             throw new FoundException("Supplies with itemId: " + supply.getItemId() + ", locationId: "
@@ -115,6 +114,8 @@ public class SupplyService {
 
         Optional<Supply> existingSupply = supplyRepository.findBySupplyId(supplyId);
 
+        if(supplyDetails.getQuantity()<=0)
+            throw new FoundException("Invalid quantity");
         if (existingSupply.isPresent()) {
             Supply supply = existingSupply.get();
             supply.setQuantity(supplyDetails.getQuantity());
@@ -141,21 +142,21 @@ public class SupplyService {
         Pageable pageable = PageRequest.of(page, size);
         if (search != null && !search.trim().isEmpty()) {
             Page<Supply> supplies = null;
-if(Objects.equals(searchBy, "item")) {
-    List<Item> itemIdList = itemRepository.searchItemIdsByKeywordGetIds(search);
-    if (itemIdList.isEmpty())
-        throw new FoundException("Supplies not found.");
-    List<String> itemIds = itemIdList.stream()
-            .map(Item::getItemId)
-            .collect(Collectors.toList());
+            if (Objects.equals(searchBy, "item")) {
+                List<Item> itemIdList = itemRepository.searchItemIdsByKeywordGetIds(search);
+                if (itemIdList.isEmpty())
+                    throw new FoundException("Supplies not found.");
+                List<String> itemIds = itemIdList.stream()
+                        .map(Item::getItemId)
+                        .collect(Collectors.toList());
 
-    supplies = supplyRepository.findByItemIdIn(itemIds, pageable);
+                supplies = supplyRepository.findByItemIdIn(itemIds, pageable);
 
-    if (supplies.getContent().isEmpty())
-        throw new FoundException("Supplies not found..");
-}
+                if (supplies.getContent().isEmpty())
+                    throw new FoundException("Supplies not found.");
+            }
 
-            if(Objects.equals(searchBy, "location")) {
+            if (Objects.equals(searchBy, "location")) {
                 List<Location> locationsIdList = locationRepository.searchLocationIdsByKeywordGetIds(search);
                 if (locationsIdList.isEmpty())
                     throw new FoundException("Supplies not found.");
@@ -170,7 +171,7 @@ if(Objects.equals(searchBy, "item")) {
             }
 
 
-            if(Objects.equals(searchBy, "supplyType")) {
+            if (Objects.equals(searchBy, "supplyType")) {
 
                 supplies = supplyRepository.findBySupplyType(search, pageable);
 
@@ -180,8 +181,8 @@ if(Objects.equals(searchBy, "item")) {
 
             assert supplies != null;
             List<SupplyDTO> supplyDTOs = addAllSuppliesWithDetails(supplies.getContent());
-                // Return the PageImpl with the paginated results and total count of the original list
-                return new PageImpl<>(supplyDTOs, pageable, supplies.getTotalElements());
+            // Return the PageImpl with the paginated results and total count of the original list
+            return new PageImpl<>(supplyDTOs, pageable, supplies.getTotalElements());
 
         } else {
             // Fetch supplies with pagination directly from the DB

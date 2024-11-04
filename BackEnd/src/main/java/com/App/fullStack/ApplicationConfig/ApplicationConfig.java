@@ -30,7 +30,7 @@ public class ApplicationConfig {
 		return http.build();
 	}
 
-	private CorsConfigurationSource corsConfigurationSource() {
+	CorsConfigurationSource corsConfigurationSource() {
 		return new CorsConfigurationSource() {
 			@SuppressWarnings("null")
 			@Override

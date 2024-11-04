@@ -10,7 +10,7 @@ export default function DeleteItem({openDeleteDialog, selectedItem, fetchItems, 
           const response = await apiClient.delete(`/items/${selectedItem.itemid}`);
           if (response.data.status === 404)
             errorToast(response.data.message);
-          else if (response.data.success === true) {
+          else if (response.data.success ) {
             successToast("Item deleted successfully!");
             fetchItems(page); // Refresh items after delete
           }

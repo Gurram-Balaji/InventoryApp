@@ -104,7 +104,7 @@ public class ItemService {
         throw new FoundException("Item with itemId " + itemId + " not exist.");
     }
 
-    public Page<String> getAllItemIds(int page,int size,String search ) {
+    public Page<String> getAllItemIds(int page, int size, String search) {
 
         Pageable pageable = PageRequest.of(page, size);
 
@@ -119,8 +119,8 @@ public class ItemService {
         Optional<Item> existingItem = itemRepository.findByItemId(itemId);
 
         if (existingItem.isPresent())
-         return existingItem.get();
-         else
-         return null;
+            return existingItem.get();
+        else
+            return null;
     }
 }

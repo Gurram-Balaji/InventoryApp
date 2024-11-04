@@ -12,10 +12,10 @@ import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
 import LoginComponent from './screens/login/LoginPage';
 import PrivateRoute from "./components/PrivateRoute";
-import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import StackedBarChart from "./screens/stackedBarChat";
 import VerifyEmail from "./screens/email/VerifyEmail";
+import "react-toastify/dist/ReactToastify.css";
 
 const Pages = styled.div`
   width: 100vw;

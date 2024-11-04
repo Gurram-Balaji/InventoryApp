@@ -47,17 +47,16 @@ public class UserService {
         return new ApiResponse<>(true, "Email sent, Please verify your email.", "Registered successfully.");
     }
 
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    public ApiResponse loginUser(User loginRequest) {
+    public ApiResponse<String> loginUser(User loginRequest) {
         String email = loginRequest.getEmail();
         String password = loginRequest.getPassword();
         Authentication authentication = authenticate(email, password);
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String token = JwtProvider.generateToken(authentication);
-        return new ApiResponse(true, "Logged in Success", token);
+        return new ApiResponse<>(true, "Logged in Success", token);
     }
 
-    private Authentication authenticate(String email, String password) {
+    Authentication authenticate(String email, String password) {
 
         UserDetails userDetails = loadUserByEmail(email);
 
@@ -74,15 +73,13 @@ public class UserService {
     public UserDetails loadUserByEmail(String email) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email);
         if (user == null) {
-            throw new FoundException("Invalid email and password. ");
+            throw new FoundException("Invalid email and password.");
         }
         if(!user.isVerified()){
-            throw new FoundException("Email is not verified. ");
-
+            throw new FoundException("Email is not verified.");
         }
 
         List<GrantedAuthority> authorities = new ArrayList<>();
-
         return new org.springframework.security.core.userdetails.User(
                 user.getEmail(),
                 user.getPassword(),
@@ -142,7 +139,8 @@ public class UserService {
         throw new FoundException("Invalid user token.");
     }
 
-    private void sendVerificationEmail(String email, String token) throws MessagingException {
+    void sendVerificationEmail(String email, String token) throws MessagingException {
+        try {
         String url = "http://localhost:3000/verify-email?token=" + token;
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
@@ -183,6 +181,9 @@ public class UserService {
         helper.setSubject(subject);
         helper.setText(content, true);  // true indicates HTML content
         mailSender.send(mimeMessage);
+        } catch (MessagingException e) {
+            throw new RuntimeException("Email sending failed", e);
+        }
     }
 
     public boolean verifyEmail(String token) {

@@ -10,7 +10,7 @@ export default function Delete({openDeleteDialog, selectedRow, fetchRow, page, s
           const response = await apiClient.delete(`/supply/${selectedRow.supplyId}`);
           if (response.data.status === 404)
             errorToast(response.data.message);
-          else if (response.data.success === true) {
+          else if (response.data.success ) {
             successToast("Supply deleted successfully!");
             fetchRow(page);
           }

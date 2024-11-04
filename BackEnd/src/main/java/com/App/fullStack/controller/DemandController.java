@@ -32,7 +32,7 @@ public class DemandController {
     public ResponseEntity<ApiResponse<Page<Demand>>> getAllDemands(
             @RequestParam(defaultValue = DEFAULT_PAGE) int page,
             @RequestParam(defaultValue = DEFAULT_SIZE) int size) {
-        
+
         Page<Demand> demands = demandService.getAllDemands(page, size);
         return APIResponseForFoundOrNot.generateResponse(demands, DEMANDS_FOUND, DEMANDS_NOT_FOUND);
     }

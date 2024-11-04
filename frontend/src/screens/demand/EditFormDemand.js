@@ -1,6 +1,6 @@
 
 import { errorToast, successToast } from '../../components/Toast';
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField} from '@mui/material';
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
 import apiClient from '../../components/baseUrl';
 
 export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetchRow, page, setEditData, editData }) {
@@ -15,18 +15,18 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
         return;
       }
 
-      if (quantity<0) {
+      if (quantity < 0) {
         errorToast("Quantity should not be negitive.");
         return;
-    }
+      }
 
-      const response=await apiClient.patch(`/demand/${editData.demandId}`, editData);
+      const response = await apiClient.patch(`/demand/${editData.demandId}`, editData);
       if (response.data.status === 404)
-          errorToast(response.data.message);
-        else if (response.data.success === true) {
-          successToast("Demand updated successfully!");
-          fetchRow(page); // Refresh items after delete
-        }
+        errorToast(response.data.message);
+      else if (response.data.success ) {
+        successToast("Demand updated successfully!");
+        fetchRow(page); 
+      }
     } catch (error) {
       errorToast("Failed to update demand");
     }
@@ -34,15 +34,17 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
   };
 
   return (
-     <Dialog PaperProps={{className: 'dialog-custom',  }}open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
+    <Dialog
+      PaperProps={{ className: 'dialog-custom' }}
+      open={openEditDialog}
+      maxWidth="md" fullWidth data-testid="edit-demand-dialog">
       <DialogTitle className="dialog-title-custom" >Edit Demand...</DialogTitle>
       <DialogContent style={{ padding: '30px 50px 10px' }}>
-
+        
         <TextField
           label="Item"
           fullWidth
           margin="normal"
-          
           value={editData.itemId || ''}
           InputProps={{
             readOnly: true,
@@ -56,7 +58,6 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
           label="Location"
           fullWidth
           margin="normal"
-          
           value={editData.locationId || ''}
           InputProps={{
             readOnly: true,
@@ -70,8 +71,7 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
           label="Demand Type"
           fullWidth
           margin="normal"
-          
-          value={String(editData.demandType).replace(/_/g, ' ')  || ''}
+          value={String(editData.demandType).replace(/_/g, ' ') || ''}
           InputProps={{
             readOnly: true,
             style: {
@@ -79,17 +79,16 @@ export default function EditFormDemand({ openEditDialog, setOpenEditDialog, fetc
             },
           }}
         />
-
         {/* Quantity Field */}
         <TextField
           label="Quantity"
           type="number"
           fullWidth
           margin="normal"
-          
           value={editData.quantity || ''}
           onChange={(e) => setEditData({ ...editData, quantity: e.target.value })}
         />
+
       </DialogContent>
       <DialogActions style={{ display: 'flex', justifyContent: 'center', padding: '30px' }}>
         <Button

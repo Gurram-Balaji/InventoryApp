@@ -1,18 +1,15 @@
 package com.App.fullStack.service;
 
-import com.App.fullStack.dto.SupplyDTO;
 import com.App.fullStack.dto.ThresholdDTO;
 import com.App.fullStack.exception.FoundException;
 import com.App.fullStack.pojos.AtpThreshold;
 import com.App.fullStack.pojos.Item;
 import com.App.fullStack.pojos.Location;
-import com.App.fullStack.pojos.Supply;
 import com.App.fullStack.repositories.AtpThresholdRepository;
 import com.App.fullStack.repositories.ItemRepository;
 import com.App.fullStack.repositories.LocationRepository;
 import com.App.fullStack.utility.ItemAndLocationIDChecker;
 
-import jdk.jfr.Threshold;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -128,7 +125,7 @@ public class AtpThresholdService {
         Pageable pageable = PageRequest.of(page, size);
         if (search != null && !search.trim().isEmpty()) {
             Page<AtpThreshold> Thresholds = null;
-            if(Objects.equals(searchBy, "item")) {
+            if (Objects.equals(searchBy, "item")) {
                 List<Item> itemIdList = itemRepository.searchItemIdsByKeywordGetIds(search);
                 if (itemIdList.isEmpty())
                     throw new FoundException("Thresholds not found.");
@@ -142,7 +139,7 @@ public class AtpThresholdService {
                     throw new FoundException("Thresholds not found..");
             }
 
-            if(Objects.equals(searchBy, "location")) {
+            if (Objects.equals(searchBy, "location")) {
                 List<Location> locationsIdList = locationRepository.searchLocationIdsByKeywordGetIds(search);
                 if (locationsIdList.isEmpty())
                     throw new FoundException("Thresholds not found.");
@@ -159,7 +156,7 @@ public class AtpThresholdService {
             List<ThresholdDTO> ThresholdDTOs = AddThresholdDetails(Thresholds.getContent());
             // Return the PageImpl with the paginated results and total count of the original list
             return new PageImpl<>(ThresholdDTOs, pageable, Thresholds.getTotalElements());
-        }else{
+        } else {
             // Fetch all demands (or better filter directly from DB using pageable)
             Page<AtpThreshold> thresholds = atpThresholdRepository.findAll(pageable);
 
@@ -167,7 +164,7 @@ public class AtpThresholdService {
                 throw new FoundException("Threshold not found.");
             }
 
-          List<ThresholdDTO> thresholdDTOs =AddThresholdDetails(thresholds.getContent());
+            List<ThresholdDTO> thresholdDTOs = AddThresholdDetails(thresholds.getContent());
             return new PageImpl<>(thresholdDTOs, pageable, thresholds.getTotalElements());
         }
     }
@@ -192,6 +189,5 @@ public class AtpThresholdService {
         }
         return thresholdDTOs;
     }
-
 
 }

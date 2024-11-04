@@ -24,11 +24,10 @@ public class UserController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    // User signin (login)
+    // User sign in (login)
     @PostMapping("/signin")
-    public ResponseEntity<ApiResponse<User>> signIn(@RequestBody User loginRequest) {
-        @SuppressWarnings("unchecked")
-        ApiResponse<User> response = userService.loginUser(loginRequest);
+    public ResponseEntity<ApiResponse<String>> signIn(@RequestBody User loginRequest) {
+        ApiResponse<String> response = userService.loginUser(loginRequest);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 

@@ -1,6 +1,5 @@
-package com.App.fullStack.controler;
+package com.App.fullStack.controller;
 
-import com.App.fullStack.controller.DemandController;
 import com.App.fullStack.dto.DemandDTO;
 import com.App.fullStack.dto.DemandDetailsResponse;
 import com.App.fullStack.dto.DemandSummaryResponse;

@@ -29,7 +29,6 @@ const Available = () => {
             });
             setLocationOptions(locations);
         } catch (error) {
-            console.error("Error fetching locations:", error);
             errorToast("Failed to fetch locations");
         }
     };
@@ -48,7 +47,6 @@ const Available = () => {
             });
             setItemOptions(items);
         } catch (error) {
-            console.error("Error fetching items:", error);
             errorToast("Failed to fetch items");
         }
     };
@@ -73,18 +71,20 @@ const Available = () => {
 
         try {
             const response = await apiClient.get(url);
-            if (response.data.status === 404) errorToast(response.data.message);
-            else setResponseData(response.data);
+            if (response.data.status === 404)
+                errorToast(response.data.message);
+            else                 
+                setResponseData(response.data);
         } catch (error) {
-            console.error("Error fetching availability data:", error);
+             console.error("Error fetching availability data:", error);
         }
     };
 
     const getColorIndicator = (stockLevel) => {
         switch (stockLevel) {
-            case 'Yellow': return 'yellow';
-            case 'Red': return 'red';
-            case 'Green': return 'green';
+            case 'Yellow': return 'gold';
+            case 'Red': return 'orangered';
+            case 'Green': return 'lime';
             default: return 'white';
         }
     };

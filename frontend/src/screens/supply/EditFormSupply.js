@@ -24,7 +24,7 @@ export default function EditFormSupply({ openEditDialog, setOpenEditDialog, fetc
 
       if (response.data.status === 404)
         errorToast(response.data.message);
-      else if (response.data.success === true) {
+      else if (response.data.success ) {
         successToast("Supply updated successfully!");
         fetchRow(page);
       }
@@ -36,7 +36,7 @@ export default function EditFormSupply({ openEditDialog, setOpenEditDialog, fetc
   };
 
   return (
-     <Dialog PaperProps={{className: 'dialog-custom',  }}open={openEditDialog} onClose={() => setOpenEditDialog(false)} maxWidth="md" fullWidth>
+     <Dialog PaperProps={{className: 'dialog-custom',  }}open={openEditDialog}  maxWidth="md" fullWidth>
       <DialogTitle className="dialog-title-custom" >Edit Supply...</DialogTitle>
       <DialogContent style={{ padding: '30px 50px 10px' }}>
 
